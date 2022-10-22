@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "293025106697",
+    "firebase_url": "https://ottawa-mealer-default-rtdb.firebaseio.com",
+    "project_id": "ottawa-mealer",
+    "storage_bucket": "ottawa-mealer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293025106697:android:8fe8b18af423c1d91221d8",
+        "android_client_info": {
+          "package_name": "com.example.ottawamealer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293025106697-8km91of562hoj09eqimof1b5v9jvomen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChslFdDOe88VEiyCJbN6LG7RSbBbWnJ_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293025106697-8km91of562hoj09eqimof1b5v9jvomen.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
