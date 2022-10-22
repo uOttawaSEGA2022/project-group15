@@ -19,8 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class LoginCook extends AppCompatActivity implements View.OnClickListener {
     private TextView register;
     private EditText editTextEmail, editTextPassword;
     private Button signIn;
@@ -28,50 +27,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth mAuth;
     private ProgressBar progress_Bar;
     private TextView forgotPassword;
-    private Button cookLogin;
+    private Button user_login;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login_cook);
 
-        cookLogin = (Button) findViewById(R.id.cookLogin);
-        cookLogin.setOnClickListener(this);
-
-        register = (TextView) findViewById(R.id.reg);
+        user_login = (Button) findViewById(R.id.cookLogin);
+        user_login.setOnClickListener(this);
+        register = (TextView) findViewById(R.id.regc);
         register.setOnClickListener(this);
 
-        signIn = (Button) findViewById(R.id.login_btn);
+        signIn = (Button) findViewById(R.id.login_btnc);
         signIn.setOnClickListener(this);
 
-        editTextEmail = (EditText) findViewById(R.id.email);
-        editTextPassword = (EditText) findViewById(R.id.pswrd);
+        editTextEmail = (EditText) findViewById(R.id.emailc);
+        editTextPassword = (EditText) findViewById(R.id.pswrdc);
 
-        progress_Bar = (ProgressBar) findViewById(R.id.progressBar2);
+        progress_Bar = (ProgressBar) findViewById(R.id.progressBar2c);
 
 
         mAuth = FirebaseAuth.getInstance();
 
-        forgotPassword = (TextView) findViewById(R.id.ForgotPassword);
+        forgotPassword = (TextView) findViewById(R.id.ForgotPasswordc);
         forgotPassword.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.reg:
-                startActivity(new Intent(this, RegisterUser.class));
+        switch (v.getId()) {
+            case R.id.regc:
+                startActivity(new Intent(this, RegisterCook.class));
                 break;
 
-            case R.id.login_btn:
+            case R.id.login_btnc:
                 userLogin();
                 break;
 
-            case R.id.ForgotPassword:
+            case R.id.ForgotPasswordc:
                 startActivity(new Intent(this, ForgotPassword.class));
                 break;
-
             case R.id.cookLogin:
-                startActivity(new Intent(this, LoginCook.class));
+                startActivity(new Intent(this, MainActivity.class));
+                break;
         }
     }
 
@@ -79,22 +78,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        if(email.isEmpty()){
+        if (email.isEmpty()) {
             editTextEmail.setError("Email is required");
             editTextEmail.requestFocus();
             return;
         }
 
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             editTextEmail.setError("Please enter a valid email!");
             editTextEmail.requestFocus();
         }
-        if(password.isEmpty()){
+        if (password.isEmpty()) {
             editTextPassword.setError("Password is required");
             editTextPassword.requestFocus();
             return;
         }
-        if(password.length()<6){
+        if (password.length() < 6) {
             editTextPassword.setError("Min password length should be 6 characters!");
             editTextPassword.requestFocus();
             return;
@@ -102,20 +101,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         progress_Bar.setVisibility(View.VISIBLE);
 
-        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    if(user.isEmailVerified()){
+                if (task.isSuccessful()) {
+                    FirebaseUser userCook = FirebaseAuth.getInstance().getCurrentUser();
+                    if (userCook.isEmailVerified()) {
                         // redirect to user profile
-                        startActivity(new Intent(MainActivity.this, Welcome.class));
-                    }else{
-                        user.sendEmailVerification();
-                        Toast.makeText(MainActivity.this, "Check your email to verify your account!",Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(LoginCook.this, WelcomeCook.class));
+                    } else {
+                        userCook.sendEmailVerification();
+                        Toast.makeText(LoginCook.this, "Check your email to verify your account!", Toast.LENGTH_LONG).show();
                     }
-                }else{
-                    Toast.makeText(MainActivity.this, "Failed to login! Please check your credentials", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(LoginCook.this, "Failed to login! Please check your credentials", Toast.LENGTH_LONG).show();
 
                 }
             }
