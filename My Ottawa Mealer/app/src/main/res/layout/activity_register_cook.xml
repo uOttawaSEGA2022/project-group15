@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterCook"
+    android:background="@drawable/mainbackground"
+    android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/bannerc"
+            android:layout_width="200dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-40dp"
+            android:src="@drawable/logo2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/firstNamec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_person_icon"
+                android:layout_marginTop="-10dp"
+                android:layout_weight="1"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+
+            <EditText
+                android:id="@+id/lastNamec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Last Name"
+                android:layout_marginTop="-10dp"
+                android:drawableLeft="@drawable/ic_person_icon"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+
+
+
+        </LinearLayout>
+
+
+
+    <EditText
+        android:id="@+id/email_regc"
+        android:layout_width="371dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Email"
+        android:drawableLeft="@drawable/ic_email_icon"
+        android:inputType="textEmailAddress"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/pswrd_regc"
+        android:layout_width="370dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Account password"
+        android:drawableLeft="@drawable/ic_lock_icon"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/addressc"
+        android:layout_width="370dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Address"
+        android:drawableLeft="@drawable/ic_location_icon"
+        android:inputType="text" />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="371dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Short description of the cook"
+            android:drawableLeft="@drawable/ic_description_icon"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Void Check"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            />
+        <Button
+            android:id="@+id/registerCook"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="Register cook"
+            android:backgroundTint="@color/dbrown"
+            android:textSize="20dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarc"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/regUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="User REGISTRATION"
+            android:backgroundTint="@color/dbrown"
+            android:textColorHighlight="@color/white"
+            android:layout_gravity="center"
+
+             />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
