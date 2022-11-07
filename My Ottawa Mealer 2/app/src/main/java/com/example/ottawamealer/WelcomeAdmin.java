@@ -20,17 +20,17 @@ public class WelcomeAdmin extends AppCompatActivity implements View.OnClickListe
         inbox = (Button) findViewById(R.id.inbox_admin_button);
         inbox.setOnClickListener(this);
 
-        cooks = (Button) findViewById(R.id.cookButton);
-        cooks.setOnClickListener(this);
+//        cooks = (Button) findViewById(R.id.cookButton);
+//        cooks.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.cookButton:
-                startActivity(new Intent(this, ListOfCooks.class));
-                break;
+//            case R.id.cookButton:
+//                startActivity(new Intent(this, ListOfCooks.class));
+//                break;
             case R.id.inbox_admin_button:
                 startActivity(new Intent(this, AdminInbox.class));
                 break;
