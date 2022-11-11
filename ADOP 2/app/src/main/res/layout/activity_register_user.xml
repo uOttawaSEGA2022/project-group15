@@ -39,7 +39,9 @@
                 android:drawableLeft="@drawable/ic_person_icon"
                 android:inputType="textPersonName"
                 android:layout_weight="1"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                />
 
             <EditText
                 android:id="@+id/lastName"
@@ -49,7 +51,9 @@
                 android:hint="Last Name"
                 android:inputType="textPersonName"
                 android:layout_weight="1"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                />
 
 
 
@@ -71,7 +75,9 @@
             android:hint="Email"
             android:drawableLeft="@drawable/ic_email_icon"
             android:inputType="textEmailAddress"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:textColor="@color/black"
+            />
 
         <EditText
             android:id="@+id/pswrd_reg"
@@ -81,7 +87,9 @@
             android:ems="10"
             android:hint="Account password"
             android:drawableLeft="@drawable/ic_lock_icon"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            />
 
         <EditText
             android:id="@+id/address"
@@ -91,7 +99,9 @@
             android:ems="10"
             android:hint="Address"
             android:drawableLeft="@drawable/ic_location_icon"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textColor="@color/black"
+            />
 
         <EditText
             android:id="@+id/credit_card"
@@ -101,7 +111,9 @@
             android:ems="10"
             android:hint="Credit card number"
             android:inputType="number"
-            android:maxLength="16" />
+            android:maxLength="16"
+            android:textColor="@color/black"
+            />
 
         <EditText
             android:id="@+id/expiry_date"
@@ -113,7 +125,9 @@
             android:hint="MM/YY"
             android:inputType="number"
             android:maxLength="4"
-            android:maxLines="1" />
+            android:maxLines="1"
+            android:textColor="@color/black"
+            />
 
         <EditText
             android:id="@+id/CVV"
