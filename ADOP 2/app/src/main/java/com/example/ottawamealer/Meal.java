@@ -7,7 +7,7 @@ public class Meal {
     private String mealName, mealType, cuisineType, description;
     private List<String> listOfIngredients, listOfAllergens;
     private int mealPrice;
-    private String status; //available or notAvailable
+    private Boolean status; //available (true) or notAvailable (false)
 
     public Meal(){
     }
@@ -20,6 +20,7 @@ public class Meal {
         this. listOfAllergens = listOfAllergens;
         this.mealPrice = mealPrice;
         this.description = description;
+        status = false;
     }
 
     public String getMealName(){return mealName;}
@@ -30,4 +31,4 @@ public class Meal {
     public int getMealPrice(){return mealPrice;}
     public String getDescription(){return description;}
 
-}
+} 
