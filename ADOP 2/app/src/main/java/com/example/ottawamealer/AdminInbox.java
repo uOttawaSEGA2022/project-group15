@@ -50,7 +50,6 @@ public class AdminInbox extends AppCompatActivity implements View.OnClickListene
                             if(data1.equals("")==false){
                                 complaints.add(new Complaint(data,data1));
                                 //temp=("Name: " +data +" \nThe complaint: " + data1);
-
                             }
                         }
                         ComplaintList complaintAdapter = new ComplaintList(AdminInbox.this, complaints);
@@ -152,7 +151,7 @@ public class AdminInbox extends AppCompatActivity implements View.OnClickListene
 
     }
 
-    private boolean dismiss(String name, String userUid) {
+    private void dismiss(String name, String userUid) {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
         reference.child(userUid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
         @Override
@@ -184,7 +183,6 @@ public class AdminInbox extends AppCompatActivity implements View.OnClickListene
 
         }
     });
-        return true;
 
     }
 

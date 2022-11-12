@@ -7,6 +7,7 @@ public class Meal {
     private String mealName, mealType, cuisineType, description;
     private List<String> listOfIngredients, listOfAllergens;
     private int mealPrice;
+    private String status; //available or notAvailable
 
     public Meal(){
     }
