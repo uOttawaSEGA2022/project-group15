@@ -24,6 +24,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView register;
@@ -31,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button signIn;
 
     private FirebaseAuth mAuth;
-    private String userType, cookStatus;
+    private String endDate, cookStatus;
     private ProgressBar progress_Bar;
     private TextView forgotPassword;
     private void checkUserAccessLevel(String username){
@@ -45,13 +49,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         //Toast.makeText(MainActivity.this, "Successfully read", Toast.LENGTH_SHORT).show();
                         DataSnapshot dataSnapshot = task.getResult();
                         cookStatus = String.valueOf(dataSnapshot.child("cookStatus").getValue());
-                        Toast.makeText(MainActivity.this, username, Toast.LENGTH_SHORT).show();
-
+                        endDate = String.valueOf(dataSnapshot.child("endDate").getValue());
                             if(cookStatus.equals("active")) {
                                 startActivity(new Intent(MainActivity.this, WelcomeCook.class));
                             }
-                            else if(cookStatus.equals("temporarily suspended")){
-                                startActivity(new Intent(MainActivity.this, TemporarilySuspended.class));
+                            else if(cookStatus.equals("temporarily suspended")) {
+                                Date currentDay = new Date();
+                                SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
+
+                                if (endDate.compareTo(formatter.format(currentDay)) < 1) {
+                                    startActivity(new Intent(MainActivity.this, TemporarilySuspended.class));
+                                } else {
+                                    startActivity(new Intent(MainActivity.this, WelcomeCook.class));
+                                }
                             }
                             else if(cookStatus.equals("indefinitely suspended")){
                                 startActivity(new Intent(MainActivity.this, IndefinetlySuspended.class));
@@ -119,6 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         forgotPassword = (TextView) findViewById(R.id.ForgotPassword);
         forgotPassword.setOnClickListener(this);
+
     }
 
     @Override

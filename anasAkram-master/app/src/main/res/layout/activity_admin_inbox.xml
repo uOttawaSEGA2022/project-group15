@@ -13,10 +13,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-                <TextView
-                    android:id="@+id/testing"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
 
 
                 <ImageView
@@ -78,14 +74,6 @@
                     android:divider="@android:color/darker_gray"
                     />
 
-
-                <Button
-                    android:id="@+id/dismissOrSuspend"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Click here To dismiss a complaint or suspend a cook "
-                    />
 
         </LinearLayout>
 

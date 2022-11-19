@@ -3,9 +3,13 @@ package com.example.ottawamealer;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,15 +19,25 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-public class FireCook extends AppCompatActivity implements View.OnClickListener {
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.List;
+
+public class FireCook extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
 
     Button dismiss, tempSuspended, indSuspended;
-    EditText nameOfCook;
-    TextView writeComplaint;
-    String nameOfTheCook;
+    EditText nameOfCook, nameOfComplaint;
+    String cookUid;
+    CalendarView calendar;
+    TextView date_view;
+    Complaint complaint;
+    String date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +56,26 @@ public class FireCook extends AppCompatActivity implements View.OnClickListener 
         indSuspended.setOnClickListener(this);
 
         nameOfCook = (EditText) findViewById(R.id.nameOfTheCook);
-        //writeComplaint = (TextView) findViewById(R.id.complaint);
+        date_view = (TextView) findViewById(R.id.date_view);
+        date_view.setOnClickListener(this);
+
+        nameOfComplaint= (EditText) findViewById(R.id.nameOfTheComplaint);
+
+        Intent intent = getIntent();
+        complaint = (Complaint) intent.getSerializableExtra("Complaint");
+
+        // name of Cook and the complaint displayed on the screen
+        nameOfCook.setText(complaint.getCookName());
+        nameOfComplaint.setText(complaint.getComplaint());
+
+        // name and complaint cannot be edited
+        nameOfCook.setEnabled(false);
+        nameOfComplaint.setEnabled(false);
+
+
+
     }
+
 
     @Override
     public void onClick(View view) {
@@ -55,6 +87,9 @@ public class FireCook extends AppCompatActivity implements View.OnClickListener 
         case R.id.indSuspended:
             funcIndSuspended();
             break;
+        case R.id.date_view:
+            funcDate();
+            break;
 
         case R.id.tempSuspended:
             funcTempSuspended();
@@ -62,136 +97,158 @@ public class FireCook extends AppCompatActivity implements View.OnClickListener 
     }
 }
 
-    private void funcIndSuspended() {
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        nameOfTheCook = nameOfCook.getText().toString().trim();
-        checkCookIndSuspended(user.getUid(), nameOfTheCook);
+    private void funcDate() {
+        showDatePickerDialog(String.valueOf(date_view));
     }
-    private void funcTempSuspended() {
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        nameOfTheCook = nameOfCook.getText().toString().trim();
-        checkCookTempSuspended(user.getUid(), nameOfTheCook);
-    }
-
-    private void checkCookTempSuspended(String uid, String nameOfTheCook) {
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
-        reference.child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DataSnapshot> task) {
-                if(task.isSuccessful()) {
-                    if (task.getResult().exists()) {
-                        DataSnapshot dataSnapshot = task.getResult();
-                        String userName;
-                        for(DataSnapshot dsp :dataSnapshot.child("listOfComplaints").getChildren()){
-                            if (String.valueOf(dsp.child("cookName").getValue()).equals(nameOfTheCook)){
-                                userName= String.valueOf(dsp.getKey());
-                                Toast.makeText(FireCook.this, userName, Toast.LENGTH_SHORT).show();
-                                dataSnapshot.child("listOfComplaints").child(userName).child("complaints").getRef().setValue("");
-                                DatabaseReference referenceCook = FirebaseDatabase.getInstance().getReference("User");
-                                referenceCook.child(userName).child("cookStatus").setValue("temporarily suspended");
-                                referenceCook.child(userName).child("complaints").setValue("");
-                            }
-                        }
-
-                    }
-
-                    else {
-                        Toast.makeText(FireCook.this, "Failed to take cook name", Toast.LENGTH_SHORT).show();
-                    }
-                }
-                else {
-                    Toast.makeText(FireCook.this, "Failed to read", Toast.LENGTH_SHORT).show();
-                }
-
-
-            }
-        });
-    }
-
-    private void checkCookIndSuspended(String uid, String nameOfTheCook) {
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
-        reference.child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DataSnapshot> task) {
-                if(task.isSuccessful()) {
-                    if (task.getResult().exists()) {
-                        DataSnapshot dataSnapshot = task.getResult();
-                        String userName;
-                        for(DataSnapshot dsp :dataSnapshot.child("listOfComplaints").getChildren()){
-                            if (String.valueOf(dsp.child("cookName").getValue()).equals(nameOfTheCook)){
-                                userName= String.valueOf(dsp.getKey());
-                                Toast.makeText(FireCook.this, userName, Toast.LENGTH_SHORT).show();
-                                dataSnapshot.child("listOfComplaints").child(userName).child("complaints").getRef().setValue("");
-                                DatabaseReference referenceCook = FirebaseDatabase.getInstance().getReference("User");
-                                referenceCook.child(userName).child("cookStatus").setValue("indefinitely suspended");
-                                referenceCook.child(userName).child("complaints").setValue("");
-                            }
-                        }
-
-                    }
-
-                    else {
-                        Toast.makeText(FireCook.this, "Failed to take cook name", Toast.LENGTH_SHORT).show();
-                    }
-                }
-                else {
-                    Toast.makeText(FireCook.this, "Failed to read", Toast.LENGTH_SHORT).show();
-                }
-
-
-            }
-        });
-
-    }
-
 
 
     private void funcDismiss() {
-
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        nameOfTheCook = nameOfCook.getText().toString().trim();
-        checkCookDismiss(user.getUid(), nameOfTheCook);
-
-
+        checkCookDismiss(complaint.getTimeOfComplaint());
+        startActivity(new Intent(this,AdminInbox.class));
     }
-
-    private void checkCookDismiss(String uid, String nameOfTheCook) {
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
-        reference.child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+    private void funcIndSuspended() {
+        String name = nameOfCook.getText().toString().trim();
+        DatabaseReference user = FirebaseDatabase.getInstance().getReference("CookNameToID");
+        user.child(name).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if(task.isSuccessful()) {
                     if (task.getResult().exists()) {
                         DataSnapshot dataSnapshot = task.getResult();
-                        String userName;
-                        for(DataSnapshot dsp :dataSnapshot.child("listOfComplaints").getChildren()){
-                            if (String.valueOf(dsp.child("cookName").getValue()).equals(nameOfTheCook)){
-                                userName= String.valueOf(dsp.getKey());
-                                Toast.makeText(FireCook.this, userName, Toast.LENGTH_SHORT).show();
-                                dataSnapshot.child("listOfComplaints").child(userName).child("complaints").getRef().setValue("");
-                                DatabaseReference referenceCook = FirebaseDatabase.getInstance().getReference("User");
-                                referenceCook.child(userName).child("complaints").setValue("");
+                        String userUid = String.valueOf(dataSnapshot.getValue());
+                        cookUid = String.valueOf(dataSnapshot.getValue());
+                        checkCookIndSuspended(name,userUid);
+
+                        dataSnapshot.getRef().removeValue();
+                    }
+                    else{
+                        Toast.makeText(FireCook.this, "Task not found ", Toast.LENGTH_SHORT).show();
+                    }
+                }else {
+                    Toast.makeText(FireCook.this, "Not successful", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        startActivity(new Intent(this,AdminInbox.class));
+
+    }
+    private void funcTempSuspended() {
+        String date = date_view.getText().toString().trim();
+        System.out.println(date_view);
 
 
-                            }
+        if (!date.isEmpty()) {
+            String name = nameOfCook.getText().toString().trim();
+            DatabaseReference user = FirebaseDatabase.getInstance().getReference("CookNameToID");
+            user.child(name).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DataSnapshot> task) {
+                    if (task.isSuccessful()) {
+                        if (task.getResult().exists()) {
+                            DataSnapshot dataSnapshot = task.getResult();
+                            String userUid = String.valueOf(dataSnapshot.getValue());
+                            checkCookTempSuspended(name, userUid);
+
+                        } else {
+                            Toast.makeText(FireCook.this, "Task not found ", Toast.LENGTH_SHORT).show();
                         }
-
-
-
-
-                    }
-
-                    else {
-                        Toast.makeText(FireCook.this, "Failed to take cook name", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(FireCook.this, "Not successful", Toast.LENGTH_SHORT).show();
                     }
                 }
-                else {
-                    Toast.makeText(FireCook.this, "Failed to read", Toast.LENGTH_SHORT).show();
-                }
+            });
+        }
+        else{
+            date_view.setError("Date is required");
+            date_view.requestFocus();
+            return;
+        }
+        startActivity(new Intent(this,AdminInbox.class));
 
+
+
+    }
+
+
+
+    private void checkCookDismiss(String timeOfComplaint) {
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Complaints").child(timeOfComplaint+"");
+        reference.removeValue();
+    }
+
+
+
+    private void checkCookTempSuspended(String name, String userUid) {
+        DatabaseReference timeOfComplaint = FirebaseDatabase.getInstance().getReference("Complaints");
+        timeOfComplaint.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dsp : snapshot.getChildren()){
+                    if(name.equals(String.valueOf(dsp.child("cookName").getValue()))){
+                        dsp.getRef().removeValue();
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
 
+        DatabaseReference changingStatus = FirebaseDatabase.getInstance().getReference("Users").child("Cook").child(userUid);
+        changingStatus.child("cookStatus").setValue("temporarily suspended");
+        changingStatus.child("endDate").setValue(date);
     }
+
+    private void checkCookIndSuspended(String name, String userUid) {
+        DatabaseReference timeOfComplaint = FirebaseDatabase.getInstance().getReference("Complaints");
+        timeOfComplaint.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dsp : snapshot.getChildren()){
+                    if(name.equals(String.valueOf(dsp.child("cookName").getValue()))){
+                        dsp.getRef().removeValue();
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        DatabaseReference changingStatus = FirebaseDatabase.getInstance().getReference("Users").child("Cook").child(userUid).child("cookStatus");
+        changingStatus.setValue("indefinitely suspended");
+
+    }
+
+
+
+
+    //The calendar methods
+
+    public void showDatePickerDialog(String date_view){
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                this,
+                this,
+                Calendar.getInstance().get(Calendar.YEAR),
+                Calendar.getInstance().get(Calendar.MONTH),
+                Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
+        datePickerDialog.show();
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        date =year + "/" + month + "/" + dayOfMonth;
+
+        date_view.setText(date);
+
+    }
+
+
+
+
+
 }

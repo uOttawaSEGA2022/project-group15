@@ -10,15 +10,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import java.io.Serializable;
 import java.util.List;
-import java.util.zip.Inflater;
 
-public class ComplaintList extends ArrayAdapter<Complaint> implements Serializable {
+public class CookComplaintAdapter extends ArrayAdapter<Complaint> {
     private Activity context;
     List<Complaint> complaints;
 
-    public ComplaintList(Activity context, List<Complaint> complaints){
+    public CookComplaintAdapter(Activity context, List<Complaint> complaints){
         super(context,R.layout.complaint_list,complaints);
         this.context = context;
         this.complaints = complaints;

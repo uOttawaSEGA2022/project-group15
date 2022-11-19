@@ -1,6 +1,8 @@
 package com.example.ottawamealer;
 
-public class Complaint {
+import java.io.Serializable;
+
+public class Complaint implements Serializable {
     private String cookName;
     private String complaint;
     private String timeOfComplaint;
