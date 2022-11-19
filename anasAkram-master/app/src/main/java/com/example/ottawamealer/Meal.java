@@ -15,6 +15,15 @@ public class Meal {
     public Meal(){
 
     }
+    public Meal(String mealName, String mealType, String cuisineType, String description, String mealPrice, List<String> listOfIngredients, Boolean status) {
+        this.mealName = mealName;
+        this.mealType = mealType;
+        this.cuisineType = cuisineType;
+        this.description = description;
+        this.mealPrice = mealPrice;
+        this.listOfIngredients = listOfIngredients;
+        this.status = status;
+    }
 
     public Meal(String mealName, String mealType, String cuisineType, String description, String mealPrice, List<String> listOfIngredients, String listOfAllergens, Boolean status) {
         this.mealName = mealName;
