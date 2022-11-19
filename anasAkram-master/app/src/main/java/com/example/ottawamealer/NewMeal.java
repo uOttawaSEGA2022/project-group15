@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,11 +32,12 @@ public class NewMeal extends AppCompatActivity {
 
     DatabaseReference reference;
     Button addMeal, addIngredient;
-    EditText mealName, cuisineType, mealDescription, mealPrice;
+    EditText mealName, cuisineType, mealDescription, mealPrice, allergens;
     ListView listOfIngredients;
     ArrayList<String> arrayListOfIngredients;
     ArrayAdapter<String> adapter;
     ListView ingredientListView;
+    Switch foodEnabled;
 
 
     @Override
@@ -51,20 +53,18 @@ public class NewMeal extends AppCompatActivity {
         mealDescription = (EditText) findViewById(R.id.mealDescription);
         mealPrice = (EditText) findViewById(R.id.mealPrice);
         ingredientListView = (ListView) findViewById(R.id.listOfIngredients);
+        allergens =(EditText) findViewById(R.id.stringOfAllergens);
 
         arrayListOfIngredients = new ArrayList<>();
 
         mealTypeAutoCompleteTextView = findViewById(R.id.mealTypeAutoCompleteTextView);
+
         adapterMealType = new ArrayAdapter<String>(this, R.layout.meal_type, mealTypeList);
         mealTypeAutoCompleteTextView.setAdapter(adapterMealType);
 
 
-        mealTypeAutoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                mealTp = adapterView.getItemAtPosition(i).toString();
-            }
-        });
+
+
 
 
         //get from different activity
@@ -93,7 +93,17 @@ public class NewMeal extends AppCompatActivity {
                 String cuisine = cuisineType.getText().toString();
                 String description = mealDescription.getText().toString();
                 String price = mealPrice.getText().toString();
-                Meal meal = new Meal(name,mealTp,cuisine,description,price,arrayListOfIngredients,null,false);
+                String allergensString = allergens.getText().toString();
+                foodEnabled = (Switch) findViewById(R.id.enabledSwitch);
+                mealTypeAutoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        mealTp = adapterView.getItemAtPosition(i).toString();
+                    }
+                });
+                mealTypeAutoCompleteTextView.setText(mealTp);
+                boolean activeFood = foodEnabled.isChecked();
+                Meal meal = new Meal(name,mealTp,cuisine,description,price,arrayListOfIngredients,allergensString,activeFood);
                 reference.child(name).setValue(meal);
 
                 Intent intent = new Intent(NewMeal.this,CookMenu.class);

@@ -22,6 +22,13 @@
             android:textSize="20sp"
             android:textColor="@color/black"/>
 
+        <Switch
+            android:id="@+id/enabledSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:showText="true"
+            android:text="Set Active"/>
+
         <EditText
             android:id="@+id/mealName"
             android:layout_width="match_parent"
@@ -108,11 +115,14 @@
         <ListView
             android:id="@+id/listOfIngredients"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
             android:textColor="@color/black" />
 
-
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Press Ingredient to Delete it."
+            android:layout_marginBottom="10dp"/>
 
 
         <EditText
@@ -127,12 +137,19 @@
             android:text="Meal Description"
             android:layout_marginBottom="20dp"/>
 
+        <EditText
+            android:id="@+id/stringOfAllergens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Allergens (If Applicable)" />
+
         <Button
             android:id="@+id/addMeal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add MEAL"
             android:layout_gravity="center_horizontal"/>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="60dp"/>

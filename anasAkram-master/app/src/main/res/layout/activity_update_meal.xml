@@ -10,6 +10,7 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,6 +20,12 @@
             android:layout_marginBottom="15dp"
             android:textSize="20sp"
             android:textColor="@color/black"/>
+        <Switch
+            android:id="@+id/updateSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:showText="true"
+            android:text="Set Active"/>
 
         <EditText
             android:id="@+id/mealName"
@@ -32,11 +39,21 @@
             android:text="Meal Name"
             android:layout_marginBottom="20dp"/>
 
-        <EditText
-            android:id="@+id/mealType"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Meal Type" />
+            android:layout_margin="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/mealTypeAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <TextView
             android:layout_width="wrap_content"

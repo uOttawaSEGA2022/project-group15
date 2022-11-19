@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,11 +30,21 @@ public class UpdateMeal extends AppCompatActivity {
     DatabaseReference reference, retrieveRef;
     FirebaseAuth authRef;
     String myUser;
-    EditText mealType, cuisineType, mealPrice, description, newIngredient ;
+    EditText cuisineType, mealPrice, description, newIngredient ;
     TextView mealName;
     ListView listOfIngredients;
     ArrayList<String> ingredientArrayList;
     Button addIngredientButton, updateMeal, deleteMeal;
+    boolean isActivated;
+    Switch activateMeal;
+
+
+
+    String[] mealTypeList = {"Appetizer", "Main Dish", "Side Dish", "Dessert", "Beverage"};
+    AutoCompleteTextView mealTypeAutoCompleteTextView;
+    ArrayAdapter<String> adapterMealType;
+    String mealTp;
+    private String receivedMealName;
 
     private String mealNameText, cuisineTypeText, mealDescriptionText, mealPriceText, mealTypeText;
 
@@ -44,7 +56,7 @@ public class UpdateMeal extends AppCompatActivity {
 
 
         Intent receivedIntent = getIntent();
-        String receivedMealName = receivedIntent.getStringExtra("mealName");
+        receivedMealName = receivedIntent.getStringExtra("mealName");
         ingredientArrayList = new ArrayList<>();
 
         authRef = FirebaseAuth.getInstance();
@@ -54,7 +66,7 @@ public class UpdateMeal extends AppCompatActivity {
 
         mealName = (TextView) findViewById(R.id.mealName);
 
-        mealType = (EditText) findViewById(R.id.mealType);
+       // mealType = (EditText) findViewById(R.id.mealType);
 
         cuisineType = (EditText) findViewById(R.id.cuisineType);
 
@@ -66,6 +78,9 @@ public class UpdateMeal extends AppCompatActivity {
         addIngredientButton = (Button) findViewById(R.id.addIngredientButton);
         updateMeal = (Button) findViewById(R.id.updateMeal);
         deleteMeal = (Button) findViewById(R.id.deleteMeal);
+
+        activateMeal = (Switch) findViewById(R.id.updateSwitch);
+
         deleteMeal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,6 +89,21 @@ public class UpdateMeal extends AppCompatActivity {
                 startActivity( new Intent(UpdateMeal.this, CookMenu.class));
             }
         });
+
+        mealTypeAutoCompleteTextView = findViewById(R.id.mealTypeAutoCompleteTextView);
+        adapterMealType = new ArrayAdapter<String>(this, R.layout.meal_type, mealTypeList);
+        mealTypeAutoCompleteTextView.setAdapter(adapterMealType);
+
+
+
+
+        mealTypeAutoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                mealTp = adapterView.getItemAtPosition(i).toString();
+            }
+        });
+
 
         retrieveRef = FirebaseDatabase.getInstance().getReference("Users").child("Cook").child(myUser).child("Menu").child(receivedMealName);
         retrieveRef.addValueEventListener(new ValueEventListener() {
@@ -92,8 +122,33 @@ public class UpdateMeal extends AppCompatActivity {
                 mealPriceText = String.valueOf(snapshot.child("mealPrice").getValue());
                 mealPrice.setText(mealPriceText);
 
-                mealTypeText = String.valueOf(snapshot.child("mealType").getValue());
-                mealType.setText(mealTypeText);
+
+                Switch activateMeal = (Switch) findViewById(R.id.updateSwitch);
+
+                Boolean foodEnabled = snapshot.child("status").getValue(Boolean.class);
+                System.out.println(foodEnabled);
+                try {
+                    if(foodEnabled ==true){
+                        activateMeal.setChecked(true);
+                    }else{
+                        activateMeal.setChecked(false);
+                    }
+                }
+                catch ( NullPointerException e){
+
+                }
+
+
+
+
+
+
+
+//                mealTp = snapshot.child("mealType").getValue(String.class);
+//                mealTypeAutoCompleteTextView.setText(mealTp);
+
+//                mealTypeText = String.valueOf(snapshot.child("mealType").getValue());
+//                mealType.setText(mealTypeText);
 
 
             }
@@ -117,7 +172,6 @@ public class UpdateMeal extends AppCompatActivity {
                 }
                 ArrayAdapter<String> adapter = new ArrayAdapter<>(UpdateMeal.this,android.R.layout.simple_list_item_1,ingredientArrayList);
                 listOfIngredients.setAdapter(adapter);
-                System.out.println(ingredientArrayList);
             }
 
             @Override
@@ -128,7 +182,6 @@ public class UpdateMeal extends AppCompatActivity {
         listOfIngredients.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                System.out.println(ingredientArrayList.get(i));
                 ingredientArrayList.remove(i);
                 reference.setValue(ingredientArrayList);
 
@@ -143,7 +196,32 @@ public class UpdateMeal extends AppCompatActivity {
                 ingredientArrayList.add(ingredientName);
                 ArrayAdapter<String> adapter = new ArrayAdapter<>(UpdateMeal.this, android.R.layout.simple_list_item_1,ingredientArrayList);
                 listOfIngredients.setAdapter(adapter);
-                reference.setValue(ingredientArrayList);
+                //reference.setValue(ingredientArrayList);
+            }
+        });
+
+
+
+        updateMeal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                DatabaseReference referenceUpdate = FirebaseDatabase.getInstance().getReference("Users").child("Cook").child(myUser).child("Menu");
+                referenceUpdate.child(receivedMealName).removeValue();
+                EditText mealName = (EditText) findViewById(R.id.mealName);
+                AutoCompleteTextView mealType = (AutoCompleteTextView) findViewById(R.id.mealTypeAutoCompleteTextView);
+                EditText mealPrice = (EditText) findViewById(R.id.mealPrice);
+                EditText description = (EditText) findViewById(R.id.mealDescription);
+                EditText cuisineType = (EditText) findViewById(R.id.cuisineType);
+                receivedMealName =mealName.getText().toString().trim();
+                Switch activateMeal = (Switch) findViewById(R.id.updateSwitch);
+                boolean mealActivated = activateMeal.isChecked();
+                referenceUpdate.child(receivedMealName).setValue(new Meal(mealName.getText().toString().trim(),
+                        mealType.getText().toString().trim(),  cuisineType.getText().toString().trim(),
+                        description.getText().toString().trim(),  mealPrice.getText().toString().trim(),  ingredientArrayList, "listOfAllergens", mealActivated));
+
+                startActivity(new Intent(UpdateMeal.this,CookMenu.class));
+
             }
         });
     }

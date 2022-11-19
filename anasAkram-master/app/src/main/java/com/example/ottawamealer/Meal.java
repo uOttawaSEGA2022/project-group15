@@ -1,12 +1,14 @@
 package com.example.ottawamealer;
 
+import android.widget.Switch;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Meal {
-    private String mealName, mealType, cuisineType, description, mealPrice;
+    private String mealName, mealType, cuisineType, description, mealPrice, Allergens;
     //double mealPrice;
-    private List<String> listOfIngredients, listOfAllergens;
+    private List<String> listOfIngredients;
 
     private Boolean status; //available (true) or notAvailable (false)
 
@@ -14,14 +16,14 @@ public class Meal {
 
     }
 
-    public Meal(String mealName, String mealType, String cuisineType, String description, String mealPrice, List<String> listOfIngredients, List<String> listOfAllergens, Boolean status) {
+    public Meal(String mealName, String mealType, String cuisineType, String description, String mealPrice, List<String> listOfIngredients, String listOfAllergens, Boolean status) {
         this.mealName = mealName;
         this.mealType = mealType;
         this.cuisineType = cuisineType;
         this.description = description;
         this.mealPrice = mealPrice;
         this.listOfIngredients = listOfIngredients;
-        this.listOfAllergens = listOfAllergens;
+        Allergens = listOfAllergens;
         this.status = status;
     }
 
@@ -73,12 +75,12 @@ public class Meal {
         this.listOfIngredients = listOfIngredients;
     }
 
-    public List<String> getListOfAllergens() {
-        return listOfAllergens;
+    public String getListOfAllergens() {
+        return Allergens;
     }
 
-    public void setListOfAllergens(List<String> listOfAllergens) {
-        this.listOfAllergens = listOfAllergens;
+    public void setAllergens(String Allergens) {
+        this.Allergens = Allergens;
     }
 
     public Boolean getStatus() {
