@@ -8,21 +8,39 @@
     tools:context=".CookMenu">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Meals / Edit current meals and thier status"
+        android:text="Main Menu"
+        android:gravity="center_horizontal"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="70sp"
         />
 
-    <Button
-        android:id="@+id/addMeal"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ADD Meal"
-        android:layout_gravity="center_horizontal"
-        />
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/addMeal"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD Meal"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+
+            />
+        <Button
+            android:id="@+id/goHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="5"/>
+    </LinearLayout>
+"
 
     <ListView
         android:id="@+id/cooKMenu"

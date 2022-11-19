@@ -57,6 +57,7 @@ public class UpdateMeal extends AppCompatActivity {
 
         Intent receivedIntent = getIntent();
         receivedMealName = receivedIntent.getStringExtra("mealName");
+        String homePage = receivedIntent.getStringExtra("homePage");
         ingredientArrayList = new ArrayList<>();
 
         authRef = FirebaseAuth.getInstance();
@@ -84,9 +85,19 @@ public class UpdateMeal extends AppCompatActivity {
         deleteMeal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(activateMeal.isChecked()){
+                    Toast.makeText(UpdateMeal.this, "Can't Delete, Please Turn The Switch Off", Toast.LENGTH_SHORT).show();
+                    return ;
+                }
                 DatabaseReference delete = FirebaseDatabase.getInstance().getReference("Users").child("Cook").child(myUser).child("Menu");
                 delete.child(receivedMealName).removeValue();
-                startActivity( new Intent(UpdateMeal.this, CookMenu.class));
+                Intent intent;
+                if(homePage.equals("CookActiveMenuList")){
+                    intent = new Intent(UpdateMeal.this, CookActiveMenu.class);
+                }else{
+                    intent = new Intent(UpdateMeal.this,CookMenu.class);
+                }
+                startActivity(intent);
             }
         });
 
@@ -219,8 +230,13 @@ public class UpdateMeal extends AppCompatActivity {
                 referenceUpdate.child(receivedMealName).setValue(new Meal(mealName.getText().toString().trim(),
                         mealType.getText().toString().trim(),  cuisineType.getText().toString().trim(),
                         description.getText().toString().trim(),  mealPrice.getText().toString().trim(),  ingredientArrayList, "listOfAllergens", mealActivated));
-
-                startActivity(new Intent(UpdateMeal.this,CookMenu.class));
+                Intent intent;
+                if(homePage.equals("CookActiveMenuList")){
+                    intent = new Intent(UpdateMeal.this, CookActiveMenu.class);
+                }else{
+                    intent = new Intent(UpdateMeal.this,CookMenu.class);
+                }
+                startActivity(intent);
 
             }
         });

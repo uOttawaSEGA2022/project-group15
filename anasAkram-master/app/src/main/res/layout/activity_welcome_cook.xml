@@ -37,6 +37,13 @@
         android:textSize="26sp"
         android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/activeMenuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="active Menu"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"/>
 
         <Button
             android:id="@+id/logOutc"
@@ -46,4 +53,5 @@
             android:layout_gravity="center_horizontal"
             android:textSize="26sp"
             android:layout_marginTop ="50dp"/>
+
 </LinearLayout>

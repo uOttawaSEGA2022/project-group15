@@ -28,7 +28,7 @@ public class CookMenu extends AppCompatActivity {
 
     ListView mealsListView;
     DatabaseReference myRef;
-    Button addFoodBtn;
+    Button addFoodBtn, goHome;
     ArrayList<Meal> meals;
 
     @Override
@@ -41,6 +41,18 @@ public class CookMenu extends AppCompatActivity {
         String userId = user.getUid();
         meals = new ArrayList<Meal>();
         mealsListView = (ListView) findViewById(R.id.cooKMenu);
+
+
+
+
+        goHome = (Button) findViewById(R.id.goHome);
+        goHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CookMenu.this,WelcomeCook.class);
+                startActivity(intent);
+            }
+        });
 
 
         addFoodBtn = (Button) findViewById(R.id.addMeal);
@@ -80,6 +92,7 @@ public class CookMenu extends AppCompatActivity {
                 //testing.setText(complaint.getTimeOfComplaint());
                 Intent intent = new Intent(CookMenu.this,UpdateMeal.class);
                 intent.putExtra("mealName",meal.getMealName());
+                intent.putExtra("homePage","CookMenu");
                 startActivity(intent);
                 //showUpdateDeleteDialog(meal);
             }

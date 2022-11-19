@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class WelcomeCook extends AppCompatActivity {
 
-    private Button logOut, menu;
+    private Button logOut, menu, activeMenuBtn;
     TextView textView;
     String first;
     String last;
@@ -68,6 +68,15 @@ public class WelcomeCook extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(WelcomeCook.this,CookMenu.class);
 
+                startActivity(intent);
+            }
+        });
+
+        activeMenuBtn = (Button) findViewById(R.id.activeMenuBtn);
+        activeMenuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WelcomeCook.this, CookActiveMenu.class);
                 startActivity(intent);
             }
         });
