@@ -15,30 +15,46 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="50dp" />
 
-
+    <EditText
+        android:id="@+id/theSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
 
         <TextView
+            android:id="@+id/searchAll"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:textSize="17sp"
             android:text="All"/>
         <TextView
+            android:id="@+id/searchMealName"
             android:layout_width="85dp"
             android:layout_height="wrap_content"
             android:textSize="17sp"
             android:text="Dish Name"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="15dp"/>
         <TextView
+            android:id="@+id/searchMealType"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="Dish Type">
+            android:text="Dish Type"
+            android:textSize="17sp"
+            android:layout_marginRight="15dp"/>
+
+        <TextView
+            android:id="@+id/searchCuisineType"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Cuisine Type"
+            android:textSize="17sp">
 
         </TextView>
-
 
     </LinearLayout>
 
