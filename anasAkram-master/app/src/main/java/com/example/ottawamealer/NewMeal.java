@@ -87,9 +87,7 @@ public class NewMeal extends AppCompatActivity {
         addMeal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //String mealName, String mealType, String cuisineType, String description, String mealPrice, List<String> listOfIngredients, List<String> listOfAllergens, Boolean status
                 String name = mealName.getText().toString();
-                //String type = mealType.getText().toString();
                 String cuisine = cuisineType.getText().toString();
                 String description = mealDescription.getText().toString();
                 String price = mealPrice.getText().toString();

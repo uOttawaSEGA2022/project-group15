@@ -1,13 +1,17 @@
 package com.example.ottawamealer;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -21,15 +25,20 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.io.File;
+import java.io.IOException;
 
 public class RegisterCook extends AppCompatActivity implements View.OnClickListener {
     private TextView registerCook, registerUser;
     private ImageView banner;
     private EditText editTextFirstName, editTextLastName, editTextAddress, editTextEmail, editTextPassword, editTextDescription;
     private ProgressBar progressBar;
-
+    private StorageReference storageReference;
     private FirebaseAuth mAuth;
-
+    Uri imageUri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,7 +136,6 @@ public class RegisterCook extends AppCompatActivity implements View.OnClickListe
             editTextDescription.requestFocus();
             return;
         }
-
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -162,6 +170,10 @@ public class RegisterCook extends AppCompatActivity implements View.OnClickListe
                         }
                     }
                 });
+        Intent intent = new Intent(RegisterCook.this,VoidCheckUploadPage.class);
+        intent.putExtra("email",email);
+        startActivity(intent);
 
     }
+
 }
