@@ -30,8 +30,7 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
     Button searchMealButton;
     DatabaseReference reference, referenceMeal;
     ArrayList<String> ingredients;
-    Boolean searchTypeSelected = false;
-    int bold = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,59 +127,46 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
     public void searchGiven(){
     }
 
-    public void unbold(){
-        switch(bold){
-            case 1:
-                searchAll.setTypeface(null, Typeface.NORMAL);
-                break;
-            case 2:
-                searchMealName.setTypeface(null, Typeface.NORMAL);
-                break;
-            case 3:
-                searchMealType.setTypeface(null, Typeface.NORMAL);
-                break;
-            case 4:
-                searchCuisineType.setTypeface(null, Typeface.BOLD);
-                break;
-        }
-    }
+
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.searchAll:
-                if(searchTypeSelected.equals("true")){
-                    unbold();
-                }
+                searchMealName.setTypeface(null, Typeface.NORMAL);
+                searchMealType.setTypeface(null, Typeface.NORMAL);
+                searchCuisineType.setTypeface(null, Typeface.NORMAL);
+
                 searchAll.setTypeface(null, Typeface.BOLD);
-                searchTypeSelected = true;
-                bold = 1;
+                searchType = "searchAll";
+
                 break;
             case R.id.searchMealName:
-                if(searchTypeSelected.equals("true")){
-                    unbold();
-                }
+                searchAll.setTypeface(null, Typeface.NORMAL);
+                searchMealType.setTypeface(null, Typeface.NORMAL);
+                searchCuisineType.setTypeface(null, Typeface.NORMAL);
+
                 searchMealName.setTypeface(null, Typeface.BOLD);
                 searchType = "mealName";
-                searchTypeSelected = true;
-                bold = 2;
+
                 break;
             case R.id.searchMealType:
-                if(searchTypeSelected.equals("true")){
-                    unbold();
-                }
+                searchAll.setTypeface(null, Typeface.NORMAL);
+                searchMealName.setTypeface(null, Typeface.NORMAL);
+                searchCuisineType.setTypeface(null, Typeface.NORMAL);
+
                 searchMealType.setTypeface(null, Typeface.BOLD);
                 searchType = "mealType";
-                searchTypeSelected = true;
-                bold = 3;
+
                 break;
             case R.id.searchCuisineType:
-                if(searchTypeSelected.equals("true")){
-                    unbold();
-                }
+                searchAll.setTypeface(null, Typeface.NORMAL);
+                searchMealName.setTypeface(null, Typeface.NORMAL);
+                searchMealType.setTypeface(null, Typeface.NORMAL);
+
                 searchCuisineType.setTypeface(null, Typeface.BOLD);
                 searchType = "cuisineType";
-                bold = 4;
+
                 break;
             case R.id.searchMealButton:
 
