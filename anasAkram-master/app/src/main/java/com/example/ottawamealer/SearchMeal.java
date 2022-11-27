@@ -35,11 +35,6 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_meal);
 
-        searchAll = (TextView) findViewById(R.id.searchAll);
-        searchMealName = (TextView) findViewById(R.id.searchMealName);
-        searchMealType = (TextView) findViewById(R.id.searchMealType);
-        searchCuisineType = (TextView) findViewById(R.id.searchCuisineType);
-
         theSearch = (EditText) findViewById(R.id.theSearch);
         theSearchStr = theSearch.getText().toString();
 
@@ -86,6 +81,12 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                             for (DataSnapshot ing : dspMenu.child("listOfIngredients").getChildren()){
                                 ingredients.add(String.valueOf(ing));
                             }
+                            System.out.println(String.valueOf(dspMenu.child("mealName")));
+                            System.out.println(String.valueOf(dspMenu.child("mealType")));
+                            System.out.println(String.valueOf(dspMenu.child("cuisineType")));
+                            System.out.println(String.valueOf(dspMenu.child("description")));
+
+
                             mealFound = new Meal(String.valueOf(dspMenu.child("mealName")), String.valueOf(dspMenu.child("mealType")),
                                     String.valueOf(dspMenu.child("cuisineType")), String.valueOf(dspMenu.child("description")),
                                     String.valueOf(dspMenu.child("mealPrice")), ingredients,

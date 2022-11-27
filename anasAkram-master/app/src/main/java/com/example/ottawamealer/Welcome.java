@@ -22,7 +22,7 @@ public class Welcome extends AppCompatActivity {
     String first,last;
     TextView textView;
 
-    private Button logout;
+    private Button logout, menuButton;
     private Button makeComplaint;
 
     @Override
@@ -31,6 +31,7 @@ public class Welcome extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
 
         logout = (Button) findViewById(R.id.logOut);
+        menuButton = (Button) findViewById(R.id.menuButton);
         textView =(TextView) findViewById(R.id.textView) ;
 
 
@@ -57,6 +58,13 @@ public class Welcome extends AppCompatActivity {
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(Welcome.this, MainActivity.class));
+            }
+        });
+
+        menuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Welcome.this, SearchMeal.class));
             }
         });
 
