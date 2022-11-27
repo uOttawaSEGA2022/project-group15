@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 Date currentDay = new Date();
                                 SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
 
-                                if (endDate.compareTo(formatter.format(currentDay)) < 1) {
+                                if (endDate.compareTo(formatter.format(currentDay)) > 0) {
                                     startActivity(new Intent(MainActivity.this, TemporarilySuspended.class));
                                 } else {
                                     startActivity(new Intent(MainActivity.this, WelcomeCook.class));

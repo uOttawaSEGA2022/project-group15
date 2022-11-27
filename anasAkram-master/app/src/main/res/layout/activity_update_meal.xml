@@ -27,11 +27,10 @@
             android:showText="true"
             android:text="Set Active"/>
 
-        <EditText
+        <TextView
             android:id="@+id/mealName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Lasagne" />
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:layout_width="wrap_content"

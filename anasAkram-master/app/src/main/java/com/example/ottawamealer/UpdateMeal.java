@@ -35,7 +35,6 @@ public class UpdateMeal extends AppCompatActivity {
     ListView listOfIngredients;
     ArrayList<String> ingredientArrayList;
     Button addIngredientButton, updateMeal, deleteMeal;
-    boolean isActivated;
     Switch activateMeal;
 
 
@@ -45,8 +44,6 @@ public class UpdateMeal extends AppCompatActivity {
     ArrayAdapter<String> adapterMealType;
     String mealTp;
     private String receivedMealName;
-
-    private String mealNameText, cuisineTypeText, mealDescriptionText, mealPriceText, mealTypeText;
 
 
     @Override
@@ -66,8 +63,6 @@ public class UpdateMeal extends AppCompatActivity {
 
 
         mealName = (TextView) findViewById(R.id.mealName);
-
-       // mealType = (EditText) findViewById(R.id.mealType);
 
         cuisineType = (EditText) findViewById(R.id.cuisineType);
 
@@ -116,61 +111,85 @@ public class UpdateMeal extends AppCompatActivity {
         });
 
 
+        //reference to meal
         retrieveRef = FirebaseDatabase.getInstance().getReference("Users").child("Cook").child(myUser).child("Menu").child(receivedMealName);
-        retrieveRef.addValueEventListener(new ValueEventListener() {
+
+
+        //auto-set the meal price
+        retrieveRef.child("mealPrice").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                mealNameText = String.valueOf(snapshot.child("mealName").getValue());
-                mealName.setText(mealNameText);
+                String price = snapshot.getValue(String.class);
+                mealPrice.setText(price);
 
-                cuisineTypeText= String.valueOf(snapshot.child("cuisineType").getValue());
-                cuisineType.setText(cuisineTypeText);
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-                mealDescriptionText = String.valueOf(snapshot.child("description").getValue());
-                description.setText(mealDescriptionText);
+            }
+        });
 
-                mealPriceText = String.valueOf(snapshot.child("mealPrice").getValue());
-                mealPrice.setText(mealPriceText);
-
-
-                Switch activateMeal = (Switch) findViewById(R.id.updateSwitch);
-
-                Boolean foodEnabled = snapshot.child("status").getValue(Boolean.class);
-                System.out.println(foodEnabled);
+        //auto-set to meal status
+        retrieveRef.child("status").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Boolean mealStatus = snapshot.getValue(Boolean.class);
                 try {
-                    if(foodEnabled ==true){
-                        activateMeal.setChecked(true);
-                    }else{
-                        activateMeal.setChecked(false);
-                    }
+                    activateMeal.setChecked(mealStatus);
                 }
-                catch ( NullPointerException e){
+                catch (NullPointerException e){
 
                 }
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+        //auto-set the cuisine type
+        retrieveRef.child("cuisineType").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String cuisine = snapshot.getValue(String.class);
+                cuisineType.setText(cuisine);
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
 
+        //auto-set the meal type
+        retrieveRef.child("mealType").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String type = snapshot.getValue(String.class);
+                mealTypeAutoCompleteTextView.setText(type,false);
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-//                mealTp = snapshot.child("mealType").getValue(String.class);
-//                mealTypeAutoCompleteTextView.setText(mealTp);
-
-//                mealTypeText = String.valueOf(snapshot.child("mealType").getValue());
-//                mealType.setText(mealTypeText);
+            }
+        });
+        //auto-set description
+        retrieveRef.child("description").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String descriptionString = snapshot.getValue(String.class);
+                description.setText(descriptionString);
 
 
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(UpdateMeal.this, "This is not working!", Toast.LENGTH_SHORT).show();
 
             }
         });
-
 
         reference = FirebaseDatabase.getInstance().getReference("Users").child("Cook").child(myUser).child("Menu").child(receivedMealName).child("listOfIngredients");
         reference.addValueEventListener(new ValueEventListener() {
@@ -217,19 +236,17 @@ public class UpdateMeal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                DatabaseReference referenceUpdate = FirebaseDatabase.getInstance().getReference("Users").child("Cook").child(myUser).child("Menu");
+                DatabaseReference referenceUpdate = FirebaseDatabase.getInstance().getReference("Users").child("Cook").child(myUser).child("Menu").child(receivedMealName);
                 referenceUpdate.child(receivedMealName).removeValue();
-                EditText mealName = (EditText) findViewById(R.id.mealName);
                 AutoCompleteTextView mealType = (AutoCompleteTextView) findViewById(R.id.mealTypeAutoCompleteTextView);
-                EditText mealPrice = (EditText) findViewById(R.id.mealPrice);
-                EditText description = (EditText) findViewById(R.id.mealDescription);
-                EditText cuisineType = (EditText) findViewById(R.id.cuisineType);
-                receivedMealName =mealName.getText().toString().trim();
-                Switch activateMeal = (Switch) findViewById(R.id.updateSwitch);
                 boolean mealActivated = activateMeal.isChecked();
-                referenceUpdate.child(receivedMealName).setValue(new Meal(mealName.getText().toString().trim(),
-                        mealType.getText().toString().trim(),  cuisineType.getText().toString().trim(),
-                        description.getText().toString().trim(),  mealPrice.getText().toString().trim(),  ingredientArrayList, "listOfAllergens", mealActivated));
+
+
+                referenceUpdate.child("mealPrice").setValue(mealPrice.getText().toString().trim());
+                referenceUpdate.child("mealType").setValue(mealType.getText().toString());
+                referenceUpdate.child("cuisineType").setValue(cuisineType.getText().toString().trim());
+                referenceUpdate.child("status").setValue(activateMeal.isChecked());
+                referenceUpdate.child("description").setValue(description.getText().toString().trim());
                 Intent intent;
                 if(homePage.equals("CookActiveMenuList")){
                     intent = new Intent(UpdateMeal.this, CookActiveMenu.class);
