@@ -12,8 +12,12 @@
       <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anasAkram-master/app/src/main/java/com/example/ottawamealer/SearchMeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/app/src/main/java/com/example/ottawamealer/SearchMeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anasAkram-master/app/src/main/java/com/example/ottawamealer/Welcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/app/src/main/java/com/example/ottawamealer/Welcome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anasAkram-master/app/src/main/res/layout/activity_search_meal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/app/src/main/res/layout/activity_search_meal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anasAkram-master/app/src/main/res/layout/activity_welcome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/app/src/main/res/layout/activity_welcome.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

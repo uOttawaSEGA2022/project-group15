@@ -68,7 +68,7 @@ public class Welcome extends AppCompatActivity {
             }
         });
 
-        Button makeComplaint = (Button) findViewById(R.id.makeComplaint);
+        makeComplaint = (Button) findViewById(R.id.makeComplaint);
         makeComplaint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
