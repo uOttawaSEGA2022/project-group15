@@ -26,7 +26,7 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
     EditText theSearch;
     String theSearchStr, searchType;
     Meal mealFound;
-    //String mealNameStr, mealTypeStr, cuisineTypeStr;
+
     Button searchMealButton;
     DatabaseReference reference, referenceMeal;
     ArrayList<String> ingredients;
