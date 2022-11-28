@@ -30,6 +30,7 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
     Button searchMealButton;
     DatabaseReference reference, referenceMeal;
     ArrayList<String> ingredients;
+    ArrayList<Meal> listOfMealResults = new ArrayList<>();;
 
 
     @Override
@@ -61,12 +62,41 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dsp : snapshot.getChildren()){
-//                    if(){
-//
-//                    }
-                }
-            }
+                    DataSnapshot cookUid = dsp.child("Menu");
 
+                    for ( DataSnapshot dspMenu : cookUid.getChildren() ){
+
+                        Boolean statusBool;
+                        if(String.valueOf(dspMenu.child("status")).equals("true")){
+                            statusBool = true;
+                        }else{
+                            statusBool = false;
+                        }
+                        for (DataSnapshot ing : dspMenu.child("listOfIngredients").getChildren()){
+                            ingredients.add(String.valueOf(ing));
+                        }
+                        mealFound = new Meal(String.valueOf(dspMenu.child("mealName").getValue()), String.valueOf(dspMenu.child("mealType").getValue()),
+                                String.valueOf(dspMenu.child("cuisineType").getValue()), String.valueOf(dspMenu.child("description").getValue()),
+                                String.valueOf(dspMenu.child("mealPrice").getValue()), ingredients,
+                                String.valueOf(dspMenu.child("listOfAllergens").getValue()), statusBool);
+
+                        System.out.println("ANOTHER MEAL");
+                        System.out.println("MEAL NAME: " +String.valueOf(dspMenu.child("mealName").getValue()));
+                        System.out.println("MEAL TYPE: " +String.valueOf(dspMenu.child("mealType").getValue()));
+                        System.out.println("CUISINE TYPE: " +String.valueOf(dspMenu.child("cuisineType").getValue()));
+                        System.out.println("DESCRIPTION: " +String.valueOf(dspMenu.child("description").getValue()));
+
+                        if((searchStr.equals(String.valueOf(dspMenu.child("mealName").getValue()))) || (searchStr.equals(String.valueOf(dspMenu.child("mealType").getValue())))
+                            ||(searchStr.equals(String.valueOf(dspMenu.child("cuisineType").getValue()))) || (searchStr.equals(String.valueOf(dspMenu.child("description").getValue())))){
+                            System.out.println("HEEREEE: " + mealFound.getMealName());
+                            listOfMealResults.add(mealFound);
+                        }
+
+                    }
+                }
+                displaySearchResult();
+                listOfMealResults.clear();
+            }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
@@ -74,6 +104,7 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
         });
 
     }
+
 
     public void startSearchSpecific(String searchType, String searchStr) {
         reference = FirebaseDatabase.getInstance().getReference("Users").child("Cook");
@@ -84,7 +115,7 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                 //System.out.println(String.valueOf(snapshot.getValue()));
                 for ( DataSnapshot dsp : snapshot.getChildren() ){
                     DataSnapshot cookUid = dsp.child("Menu");
-                    System.out.println(String.valueOf(cookUid.getValue()));
+                    //System.out.println(String.valueOf(cookUid.getValue()));
 
                     for ( DataSnapshot dspMenu : cookUid.getChildren() ){
                         if (searchStr.equals(String.valueOf(dspMenu.child(searchType).getValue()))){
@@ -99,22 +130,26 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                             }
                             //Toast.makeText(SearchMeal.this, String.valueOf(dspMenu.child("cuisineType").getValue()), Toast.LENGTH_SHORT).show();
 
-                            System.out.println(String.valueOf(dspMenu.child("mealName").getValue()));
-                            System.out.println(String.valueOf(dspMenu.child("mealType").getValue()));
-                            System.out.println(String.valueOf(dspMenu.child("cuisineType").getValue()));
-                            System.out.println(String.valueOf(dspMenu.child("description").getValue()));
-                            for (String str :ingredients){
-                                System.out.println(str);
-                            }
+//                            System.out.println(String.valueOf(dspMenu.child("mealName").getValue()));
+//                            System.out.println(String.valueOf(dspMenu.child("mealType").getValue()));
+//                            System.out.println(String.valueOf(dspMenu.child("cuisineType").getValue()));
+//                            System.out.println(String.valueOf(dspMenu.child("description").getValue()));
+//                            for (String str :ingredients){
+//                                System.out.println(str);
+//                            }
 
-                            mealFound = new Meal(String.valueOf(dspMenu.child("mealName")), String.valueOf(dspMenu.child("mealType")),
-                                    String.valueOf(dspMenu.child("cuisineType")), String.valueOf(dspMenu.child("description")),
-                                    String.valueOf(dspMenu.child("mealPrice")), ingredients,
-                                    String.valueOf(dspMenu.child("listOfAllergens")), statusBool);
+                            mealFound = new Meal(String.valueOf(dspMenu.child("mealName").getValue()), String.valueOf(dspMenu.child("mealType").getValue()),
+                                    String.valueOf(dspMenu.child("cuisineType").getValue()), String.valueOf(dspMenu.child("description").getValue()),
+                                    String.valueOf(dspMenu.child("mealPrice").getValue()), ingredients,
+                                    String.valueOf(dspMenu.child("listOfAllergens").getValue()), statusBool);
+
+                            listOfMealResults.add(mealFound);
                             ingredients.clear();
                         }
                     }
                 }
+                displaySearchResult();
+                listOfMealResults.clear();
             }
 
             @Override
@@ -124,8 +159,8 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
         });
     }
 
-    public void searchGiven(){
-    }
+    public void displaySearchResult(){
+        }
 
 
 
@@ -136,48 +171,39 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                 searchMealName.setTypeface(null, Typeface.NORMAL);
                 searchMealType.setTypeface(null, Typeface.NORMAL);
                 searchCuisineType.setTypeface(null, Typeface.NORMAL);
-
                 searchAll.setTypeface(null, Typeface.BOLD);
                 searchType = "searchAll";
-
                 break;
             case R.id.searchMealName:
                 searchAll.setTypeface(null, Typeface.NORMAL);
                 searchMealType.setTypeface(null, Typeface.NORMAL);
                 searchCuisineType.setTypeface(null, Typeface.NORMAL);
-
                 searchMealName.setTypeface(null, Typeface.BOLD);
                 searchType = "mealName";
-
                 break;
             case R.id.searchMealType:
                 searchAll.setTypeface(null, Typeface.NORMAL);
                 searchMealName.setTypeface(null, Typeface.NORMAL);
                 searchCuisineType.setTypeface(null, Typeface.NORMAL);
-
                 searchMealType.setTypeface(null, Typeface.BOLD);
                 searchType = "mealType";
-
                 break;
             case R.id.searchCuisineType:
                 searchAll.setTypeface(null, Typeface.NORMAL);
                 searchMealName.setTypeface(null, Typeface.NORMAL);
                 searchMealType.setTypeface(null, Typeface.NORMAL);
-
                 searchCuisineType.setTypeface(null, Typeface.BOLD);
                 searchType = "cuisineType";
-
                 break;
             case R.id.searchMealButton:
-
                 theSearchStr = theSearch.getText().toString().trim();
                 if(searchType.equals("searchAll")){
-                    Toast.makeText(SearchMeal.this, theSearchStr, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SearchMeal.this, "searchSTR" + theSearchStr, Toast.LENGTH_SHORT).show();
                     startSearchAll(theSearchStr);
                 }else{
                     startSearchSpecific(searchType, theSearchStr);
-                    Toast.makeText(SearchMeal.this, searchType, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(SearchMeal.this, theSearchStr, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SearchMeal.this, "searchTYPE" + searchType, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SearchMeal.this, "searchSTR" + theSearchStr, Toast.LENGTH_SHORT).show();
                 }
         }
     }

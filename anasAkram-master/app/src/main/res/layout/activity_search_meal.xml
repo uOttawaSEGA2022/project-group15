@@ -65,4 +65,9 @@
         android:text="SEARCH"
         android:layout_gravity="center_horizontal"/>
 
+    <ListView
+        android:id="@+id/listViewSearchResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </LinearLayout>
