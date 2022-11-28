@@ -292,7 +292,7 @@ public class UpdateMeal extends AppCompatActivity {
 
 
     private void retrieveImageFromFirebase(){
-        firebaseStorage = FirebaseStorage.getInstance().getReference("Cook").child("Menu").child(receivedMealName);
+        firebaseStorage = FirebaseStorage.getInstance().getReference("Cook").child(authRef.getCurrentUser().getUid()).child("Menu").child(mealName.getText().toString().trim());
         try {
             File file = File.createTempFile("tmpFile",".jpg");
             firebaseStorage.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
