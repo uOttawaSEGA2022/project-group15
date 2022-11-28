@@ -64,8 +64,6 @@ public class CookMenu extends AppCompatActivity {
             }
         });
 
-
-        /*problem starts here*/
         myRef = FirebaseDatabase.getInstance().getReference("Users").child("Cook").child(userId).child("Menu");
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -83,7 +81,6 @@ public class CookMenu extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
-        /*problem ends here*/
 
         mealsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -161,15 +158,15 @@ public class CookMenu extends AppCompatActivity {
 
     //}
 
-    private void deleteMeal(Meal meal){
-        meals.remove(meal);
-        myRef.child(meal.getMealName()).removeValue();
-    }
-
-    private void updateMeal(Meal meal, String originalName){
-        meals.add(meal);
-        myRef.child(originalName).removeValue();
-        myRef.child(meal.getMealName()).setValue(meal);
-
-    }
+//    private void deleteMeal(Meal meal){
+//        meals.remove(meal);
+//        myRef.child(meal.getMealName()).removeValue();
+//    }
+//
+//    private void updateMeal(Meal meal, String originalName){
+//        meals.add(meal);
+//        myRef.child(originalName).removeValue();
+//        myRef.child(meal.getMealName()).setValue(meal);
+//
+//    }
 }
