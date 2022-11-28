@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Void Check"
+        android:textSize="50sp"
+        android:gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/voidCheckUploadBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to Upload"
+        android:layout_gravity="center_horizontal"/>
+    <ImageView
+        android:id="@+id/voidCheckImage"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20sp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/voidCheckBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GO Back"
+            android:layout_weight="1"/>
+        <View
+            android:layout_width="10sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/voidCheckSubmitBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -170,7 +170,8 @@ public class RegisterCook extends AppCompatActivity implements View.OnClickListe
                         }
                     }
                 });
-        Intent intent = new Intent(RegisterCook.this,MainActivity.class);
+        Intent intent = new Intent(RegisterCook.this,VoidCheckUploadPage.class);
+        intent.putExtra("email",email);
         startActivity(intent);
 
     }
