@@ -1,9 +1,13 @@
 package com.example.ottawamealer;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,22 +15,28 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
-
 public class UpdateMeal extends AppCompatActivity {
-
     DatabaseReference reference, retrieveRef;
     FirebaseAuth authRef;
     String myUser;
@@ -34,10 +44,12 @@ public class UpdateMeal extends AppCompatActivity {
     TextView mealName;
     ListView listOfIngredients;
     ArrayList<String> ingredientArrayList;
-    Button addIngredientButton, updateMeal, deleteMeal;
+    Button addIngredientButton, updateMeal, deleteMeal, updateImageBtn;
     Switch activateMeal;
+    ImageView updateFoodImage;
+    StorageReference firebaseStorage;
 
-
+    Uri imageUri;
 
     String[] mealTypeList = {"Appetizer", "Main Dish", "Side Dish", "Dessert", "Beverage"};
     AutoCompleteTextView mealTypeAutoCompleteTextView;
@@ -63,6 +75,7 @@ public class UpdateMeal extends AppCompatActivity {
 
 
         mealName = (TextView) findViewById(R.id.mealName);
+        mealName.setText(receivedMealName);
 
         cuisineType = (EditText) findViewById(R.id.cuisineType);
 
@@ -74,8 +87,13 @@ public class UpdateMeal extends AppCompatActivity {
         addIngredientButton = (Button) findViewById(R.id.addIngredientButton);
         updateMeal = (Button) findViewById(R.id.updateMeal);
         deleteMeal = (Button) findViewById(R.id.deleteMeal);
+        updateImageBtn = (Button) findViewById(R.id.updateImageBtn);
+
+
 
         activateMeal = (Switch) findViewById(R.id.updateSwitch);
+        updateFoodImage = (ImageView) findViewById(R.id.updateFoodImage);
+
 
         deleteMeal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,6 +113,8 @@ public class UpdateMeal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        retrieveImageFromFirebase();
 
         mealTypeAutoCompleteTextView = findViewById(R.id.mealTypeAutoCompleteTextView);
         adapterMealType = new ArrayAdapter<String>(this, R.layout.meal_type, mealTypeList);
@@ -257,5 +277,49 @@ public class UpdateMeal extends AppCompatActivity {
 
             }
         });
+
+        updateImageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firebaseStorage = FirebaseStorage.getInstance().getReference("Cook").child(authRef.getCurrentUser().getUid()).child("Menu").child(receivedMealName);
+                Intent updateImageIntent = new Intent();
+                updateImageIntent.setType("image/*");
+                updateImageIntent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(updateImageIntent,500);
+            }
+        });
+    }
+
+
+    private void retrieveImageFromFirebase(){
+        firebaseStorage = FirebaseStorage.getInstance().getReference("Cook").child(authRef.getCurrentUser().getUid()).child("Menu").child(mealName.getText().toString().trim());
+        try {
+            File file = File.createTempFile("tmpFile",".jpg");
+            firebaseStorage.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                    Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
+                    updateFoodImage.setImageBitmap(bitmap);
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 500 && data!= null && data.getData()!=null){
+            imageUri = data.getData();
+            updateFoodImage.setImageURI(imageUri);
+            firebaseStorage.putFile(imageUri);
+        }
     }
 }

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,12 +31,20 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
     Button searchMealButton;
     DatabaseReference reference, referenceMeal;
     ArrayList<String> ingredients;
+    ArrayList<Meal> listOfMealResults;
+
+    ListView mealsSearchListView;
+    ArrayList<Meal> mealsSearch;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_meal);
+        listOfMealResults = new ArrayList<>();
+        mealsSearch = new ArrayList<Meal>();
+        mealsSearchListView = (ListView) findViewById(R.id.listViewSearchResult);
+
         ingredients = new ArrayList<>();
         searchAll = (TextView) findViewById(R.id.searchAll);
         searchAll.setOnClickListener(this);
@@ -51,43 +60,32 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
 
         searchMealButton = (Button) findViewById(R.id.searchMealButton);
         searchMealButton.setOnClickListener(this);
-        searchType="searchAll";
+        searchType = "searchAll";
 
     }
+
+    /**
+     *
+     * @param searchStr
+     *
+     */
 
     public void startSearchAll(String searchStr) {
-        reference = FirebaseDatabase.getInstance().getReference("Users").child("Cook");
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot dsp : snapshot.getChildren()){
-//                    if(){
-//
-//                    }
-                }
-            }
+        listOfMealResults.clear();
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+        if(searchStr.equals("")){
+            displaySearchResult();
+        }
+        else{
+            reference = FirebaseDatabase.getInstance().getReference("Users").child("Cook");
+            reference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot dsp : snapshot.getChildren()){
+                        DataSnapshot cookUid = dsp.child("Menu");
 
-            }
-        });
+                        for ( DataSnapshot dspMenu : cookUid.getChildren() ){
 
-    }
-
-    public void startSearchSpecific(String searchType, String searchStr) {
-        reference = FirebaseDatabase.getInstance().getReference("Users").child("Cook");
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                //Toast.makeText(SearchMeal.this, String.valueOf(snapshot.getValue()), Toast.LENGTH_SHORT).show();
-                //System.out.println(String.valueOf(snapshot.getValue()));
-                for ( DataSnapshot dsp : snapshot.getChildren() ){
-                    DataSnapshot cookUid = dsp.child("Menu");
-                    System.out.println(String.valueOf(cookUid.getValue()));
-
-                    for ( DataSnapshot dspMenu : cookUid.getChildren() ){
-                        if (searchStr.equals(String.valueOf(dspMenu.child(searchType).getValue()))){
                             Boolean statusBool;
                             if(String.valueOf(dspMenu.child("status")).equals("true")){
                                 statusBool = true;
@@ -97,35 +95,111 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                             for (DataSnapshot ing : dspMenu.child("listOfIngredients").getChildren()){
                                 ingredients.add(String.valueOf(ing));
                             }
-                            //Toast.makeText(SearchMeal.this, String.valueOf(dspMenu.child("cuisineType").getValue()), Toast.LENGTH_SHORT).show();
+                            mealFound = new Meal(String.valueOf(dspMenu.child("mealName").getValue()), String.valueOf(dspMenu.child("mealType").getValue()),
+                                    String.valueOf(dspMenu.child("cuisineType").getValue()), String.valueOf(dspMenu.child("description").getValue()),
+                                    String.valueOf(dspMenu.child("mealPrice").getValue()), ingredients,
+                                    String.valueOf(dspMenu.child("listOfAllergens").getValue()), statusBool);
 
-                            System.out.println(String.valueOf(dspMenu.child("mealName").getValue()));
-                            System.out.println(String.valueOf(dspMenu.child("mealType").getValue()));
-                            System.out.println(String.valueOf(dspMenu.child("cuisineType").getValue()));
-                            System.out.println(String.valueOf(dspMenu.child("description").getValue()));
-                            for (String str :ingredients){
-                                System.out.println(str);
+                            System.out.println("ANOTHER MEAL");
+                            System.out.println("MEAL NAME: " +String.valueOf(dspMenu.child("mealName").getValue()));
+                            System.out.println("MEAL TYPE: " +String.valueOf(dspMenu.child("mealType").getValue()));
+                            System.out.println("CUISINE TYPE: " +String.valueOf(dspMenu.child("cuisineType").getValue()));
+                            System.out.println("DESCRIPTION: " +String.valueOf(dspMenu.child("description").getValue()));
+
+                            if((searchStr.equals(String.valueOf(dspMenu.child("mealName").getValue()))) || (searchStr.equals(String.valueOf(dspMenu.child("mealType").getValue())))
+                                    ||(searchStr.equals(String.valueOf(dspMenu.child("cuisineType").getValue()))) || (searchStr.equals(String.valueOf(dspMenu.child("description").getValue())))){
+                                System.out.println("HEEREEE: " + mealFound.getMealName());
+                                listOfMealResults.add(mealFound);
                             }
 
-                            mealFound = new Meal(String.valueOf(dspMenu.child("mealName")), String.valueOf(dspMenu.child("mealType")),
-                                    String.valueOf(dspMenu.child("cuisineType")), String.valueOf(dspMenu.child("description")),
-                                    String.valueOf(dspMenu.child("mealPrice")), ingredients,
-                                    String.valueOf(dspMenu.child("listOfAllergens")), statusBool);
-                            ingredients.clear();
                         }
                     }
+                    displaySearchResult();
                 }
-            }
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(SearchMeal.this, "something went wrong!", Toast.LENGTH_SHORT).show();
-            }
-        });
+                }
+            });
+        }
+
+
     }
 
-    public void searchGiven(){
+
+    public void startSearchSpecific(String searchType, String searchStr) {
+        listOfMealResults.clear();
+
+        if(searchStr.equals("")){
+            displaySearchResult();
+        }
+        else{
+            reference = FirebaseDatabase.getInstance().getReference("Users").child("Cook");
+            reference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    //Toast.makeText(SearchMeal.this, String.valueOf(snapshot.getValue()), Toast.LENGTH_SHORT).show();
+                    //System.out.println(String.valueOf(snapshot.getValue()));
+                    for ( DataSnapshot dsp : snapshot.getChildren() ){
+                        DataSnapshot cookUid = dsp.child("Menu");
+
+                        for ( DataSnapshot dspMenu : cookUid.getChildren() ){
+                            if (searchStr.equals(String.valueOf(dspMenu.child(searchType).getValue()))){
+                                Boolean statusBool;
+                                if(String.valueOf(dspMenu.child("status")).equals("true")){
+                                    statusBool = true;
+                                }else{
+                                    statusBool = false;
+                                }
+                                for (DataSnapshot ing : dspMenu.child("listOfIngredients").getChildren()){
+                                    ingredients.add(String.valueOf(ing));
+                                }
+                                //Toast.makeText(SearchMeal.this, String.valueOf(dspMenu.child("cuisineType").getValue()), Toast.LENGTH_SHORT).show();
+
+//                            System.out.println(String.valueOf(dspMenu.child("mealName").getValue()));
+//                            System.out.println(String.valueOf(dspMenu.child("mealType").getValue()));
+//                            System.out.println(String.valueOf(dspMenu.child("cuisineType").getValue()));
+//                            System.out.println(String.valueOf(dspMenu.child("description").getValue()));
+//                            for (String str :ingredients){
+//                                System.out.println(str);
+//                            }
+
+                                mealFound = new Meal(String.valueOf(dspMenu.child("mealName").getValue()), String.valueOf(dspMenu.child("mealType").getValue()),
+                                        String.valueOf(dspMenu.child("cuisineType").getValue()), String.valueOf(dspMenu.child("description").getValue()),
+                                        String.valueOf(dspMenu.child("mealPrice").getValue()), ingredients,
+                                        String.valueOf(dspMenu.child("listOfAllergens").getValue()), statusBool);
+
+                                listOfMealResults.add(mealFound);
+                                ingredients.clear();
+                            }
+                        }
+                    }
+                    displaySearchResult();
+
+//                for(int i = 0; i < listOfMealResults.size(); i++){
+//                    System.out.println(listOfMealResults.get(i).getMealName());
+//                }
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    Toast.makeText(SearchMeal.this, "something went wrong!", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+
     }
+
+    public void displaySearchResult(){
+//        System.out.println("In display search method");
+
+//        for(int i = 0; i < listOfMealResults.size(); i++){
+//            System.out.println(listOfMealResults.get(i).getMealName());
+//        }
+        SearchMealAdapter searchMealAdapter = new SearchMealAdapter(SearchMeal.this,listOfMealResults);
+        mealsSearchListView.setAdapter(searchMealAdapter);
+        }
 
 
 
@@ -136,48 +210,39 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                 searchMealName.setTypeface(null, Typeface.NORMAL);
                 searchMealType.setTypeface(null, Typeface.NORMAL);
                 searchCuisineType.setTypeface(null, Typeface.NORMAL);
-
                 searchAll.setTypeface(null, Typeface.BOLD);
                 searchType = "searchAll";
-
                 break;
             case R.id.searchMealName:
                 searchAll.setTypeface(null, Typeface.NORMAL);
                 searchMealType.setTypeface(null, Typeface.NORMAL);
                 searchCuisineType.setTypeface(null, Typeface.NORMAL);
-
                 searchMealName.setTypeface(null, Typeface.BOLD);
                 searchType = "mealName";
-
                 break;
             case R.id.searchMealType:
                 searchAll.setTypeface(null, Typeface.NORMAL);
                 searchMealName.setTypeface(null, Typeface.NORMAL);
                 searchCuisineType.setTypeface(null, Typeface.NORMAL);
-
                 searchMealType.setTypeface(null, Typeface.BOLD);
                 searchType = "mealType";
-
                 break;
             case R.id.searchCuisineType:
                 searchAll.setTypeface(null, Typeface.NORMAL);
                 searchMealName.setTypeface(null, Typeface.NORMAL);
                 searchMealType.setTypeface(null, Typeface.NORMAL);
-
                 searchCuisineType.setTypeface(null, Typeface.BOLD);
                 searchType = "cuisineType";
-
                 break;
             case R.id.searchMealButton:
-
                 theSearchStr = theSearch.getText().toString().trim();
                 if(searchType.equals("searchAll")){
-                    Toast.makeText(SearchMeal.this, theSearchStr, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SearchMeal.this, "searchSTR" + theSearchStr, Toast.LENGTH_SHORT).show();
                     startSearchAll(theSearchStr);
                 }else{
                     startSearchSpecific(searchType, theSearchStr);
-                    Toast.makeText(SearchMeal.this, searchType, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(SearchMeal.this, theSearchStr, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SearchMeal.this, "searchTYPE" + searchType, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SearchMeal.this, "searchSTR" + theSearchStr, Toast.LENGTH_SHORT).show();
                 }
         }
     }

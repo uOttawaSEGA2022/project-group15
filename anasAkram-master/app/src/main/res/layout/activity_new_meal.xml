@@ -12,6 +12,15 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_margin="20dp">
+        <ImageView
+            android:id="@+id/newMealImage"
+            android:layout_width="400dp"
+            android:layout_height="200dp"/>
+        <Button
+            android:id="@+id/uploadNewMealImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="upload image"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

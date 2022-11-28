@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class UserCook {
     private String firstName, lastName, email, cookStatus = "active", fullName, endDate ;
+    boolean hasVoidCheck = false;
 
     public UserCook() {
     }
@@ -76,4 +77,7 @@ public class UserCook {
         this.endDate = endDate;
     }
 
+    public boolean hasVoidCheck() {
+        return hasVoidCheck;
+    }
 }

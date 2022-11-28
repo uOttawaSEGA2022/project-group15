@@ -1,8 +1,10 @@
 package com.example.ottawamealer;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -19,6 +22,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
@@ -31,14 +36,17 @@ public class NewMeal extends AppCompatActivity {
     String mealTp;
 
     DatabaseReference reference;
-    Button addMeal, addIngredient;
+    Button addMeal, addIngredient,uploadImageBtn;
     EditText mealName, cuisineType, mealDescription, mealPrice, allergens;
     ListView listOfIngredients;
     ArrayList<String> arrayListOfIngredients;
     ArrayAdapter<String> adapter;
     ListView ingredientListView;
     Switch foodEnabled;
+    ImageView newMealImage;
 
+    StorageReference storageReference;
+    Uri imageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +62,9 @@ public class NewMeal extends AppCompatActivity {
         mealPrice = (EditText) findViewById(R.id.mealPrice);
         ingredientListView = (ListView) findViewById(R.id.listOfIngredients);
         allergens =(EditText) findViewById(R.id.stringOfAllergens);
+        newMealImage = (ImageView) findViewById(R.id.newMealImage);
+        uploadImageBtn = (Button) findViewById(R.id.uploadNewMealImage);
+
 
         arrayListOfIngredients = new ArrayList<>();
 
@@ -87,9 +98,7 @@ public class NewMeal extends AppCompatActivity {
         addMeal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //String mealName, String mealType, String cuisineType, String description, String mealPrice, List<String> listOfIngredients, List<String> listOfAllergens, Boolean status
                 String name = mealName.getText().toString();
-                //String type = mealType.getText().toString();
                 String cuisine = cuisineType.getText().toString();
                 String description = mealDescription.getText().toString();
                 String price = mealPrice.getText().toString();
@@ -105,6 +114,9 @@ public class NewMeal extends AppCompatActivity {
                 boolean activeFood = foodEnabled.isChecked();
                 Meal meal = new Meal(name,mealTp,cuisine,description,price,arrayListOfIngredients,allergensString,activeFood);
                 reference.child(name).setValue(meal);
+
+                storageReference = FirebaseStorage.getInstance().getReference("Cook").child("Menu").child(name);
+                storageReference.putFile(imageUri);
 
                 Intent intent = new Intent(NewMeal.this,CookMenu.class);
                 startActivity(intent);
@@ -123,5 +135,27 @@ public class NewMeal extends AppCompatActivity {
 
             }
         });
+
+        uploadImageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent,1);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode ==1 && data!=null && data.getData()!=null){
+            imageUri = data.getData();
+            newMealImage.setImageURI(imageUri);
+
+
+
+        }
     }
 }
