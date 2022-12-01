@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -27,6 +28,7 @@ public class CookMenuAdapter extends ArrayAdapter<Meal> {
     private Activity context;
     List<Meal> meals;
     StorageReference storageReference;
+    FirebaseAuth auth;
 
     public CookMenuAdapter(Activity context, List<Meal> products) {
         super(context, R.layout.food_list, products);
@@ -40,14 +42,22 @@ public class CookMenuAdapter extends ArrayAdapter<Meal> {
         View listViewItem = inflater.inflate(R.layout.food_list, null, true);
 
 
+
+        //get meal
+        Meal meal = meals.get(position);
+
+
         //initialize textviews
         TextView textViewName = (TextView) listViewItem.findViewById(R.id.mealName);
         TextView textViewPrice = (TextView) listViewItem.findViewById(R.id.mealPrice);
 
         //initialize image
         ImageView foodImage = (ImageView) listViewItem.findViewById(R.id.foodImage);
+        //get current user ID
+        auth = FirebaseAuth.getInstance();
+        String crntUser = auth.getCurrentUser().getUid();
         //Give it an image
-        storageReference = FirebaseStorage.getInstance().getReference("Cook").child("Menu").child(position+"");
+        storageReference = FirebaseStorage.getInstance().getReference("Cook").child(crntUser).child("Menu").child(meal.getMealName());
         try {
             File localFile = File.createTempFile("tmpFile",".jpg");
             storageReference.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
@@ -68,7 +78,6 @@ public class CookMenuAdapter extends ArrayAdapter<Meal> {
         }
 
 
-        Meal meal = meals.get(position);
         textViewName.setText(meal.getMealName());
         textViewPrice.setText(String.valueOf(meal.getMealPrice()));
         return listViewItem;
