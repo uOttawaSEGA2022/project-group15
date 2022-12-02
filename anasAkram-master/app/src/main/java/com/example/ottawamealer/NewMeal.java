@@ -28,7 +28,6 @@ import com.google.firebase.storage.StorageReference;
 import java.util.ArrayList;
 
 public class NewMeal extends AppCompatActivity {
-    EditText mealType;
 
     String[] mealTypeList = {"Appetizer", "Main Dish", "Side Dish", "Dessert", "Beverage"};
     AutoCompleteTextView mealTypeAutoCompleteTextView;
