@@ -62,13 +62,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".AddIngrediants"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".NewMeal"
             android:exported="false">
             <meta-data

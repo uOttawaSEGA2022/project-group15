@@ -35,6 +35,8 @@ public class RegisterCook extends AppCompatActivity implements View.OnClickListe
     private TextView registerCook, registerUser;
     private ImageView banner;
     private EditText editTextFirstName, editTextLastName, editTextAddress, editTextEmail, editTextPassword, editTextDescription;
+    Button uploadImageButton;
+    ImageView profilePic;
     private ProgressBar progressBar;
     private StorageReference storageReference;
     private FirebaseAuth mAuth;
@@ -63,6 +65,23 @@ public class RegisterCook extends AppCompatActivity implements View.OnClickListe
         editTextDescription = (EditText) findViewById(R.id.description);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBarc);
+
+        //initialize Buttons
+        uploadImageButton = (Button) findViewById(R.id.UploadImageButton);
+        profilePic = (ImageView) findViewById(R.id.ProfilePic);
+
+        //upload button onClicker
+        uploadImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent,1);
+
+
+            }
+        });
 
     }
 
@@ -136,6 +155,12 @@ public class RegisterCook extends AppCompatActivity implements View.OnClickListe
             editTextDescription.requestFocus();
             return;
         }
+
+        if (profilePic.getDrawable() == null) {
+            Toast.makeText(this, "A Profile Picture Must Be Uploaded", Toast.LENGTH_SHORT).show();
+            profilePic.requestFocus();
+            return;
+        }
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -145,14 +170,21 @@ public class RegisterCook extends AppCompatActivity implements View.OnClickListe
                             UserCook user = new UserCook(firstName, lastName, email);
 
                             // We can make it so that a cook is stored inside the admin
-                            FirebaseDatabase.getInstance().getReference("Users/Cook")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("Users/Cook")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+
+                            myRef.setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful()){
                                                 DatabaseReference nameToID = FirebaseDatabase.getInstance().getReference("CookNameToID");
                                                 nameToID.child(user.getFullName()).setValue(FirebaseAuth.getInstance().getCurrentUser().getUid());
+
+                                                myRef.child("Address").setValue(address);
+                                                myRef.child("Description").setValue(description);
+                                                //uploads profile pic to firebase based on email
+                                                storageReference = FirebaseStorage.getInstance().getReference("Cook").child(email);
+                                                storageReference.putFile(imageUri);
                                                 Toast.makeText(RegisterCook.this, "User has been registered successfully", Toast.LENGTH_LONG).show();
                                                 progressBar.setVisibility(View.GONE);
 
@@ -175,4 +207,12 @@ public class RegisterCook extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1 && data!= null && data.getData()!=null){
+            imageUri = data.getData();
+            profilePic.setImageURI(imageUri);
+        }
+    }
 }

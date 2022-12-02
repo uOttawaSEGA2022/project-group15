@@ -20,7 +20,8 @@
             android:id="@+id/uploadNewMealImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="upload image"/>
+            android:text="upload image"
+            android:backgroundTint="@color/dbrown"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -110,7 +111,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Add" />
+                android:text="Add"
+                android:backgroundTint="@color/dbrown"/>
 
 
         </LinearLayout>
@@ -157,7 +159,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add MEAL"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/dbrown"/>
 
         <View
             android:layout_width="match_parent"

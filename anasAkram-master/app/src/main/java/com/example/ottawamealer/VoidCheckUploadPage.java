@@ -72,7 +72,6 @@ public class VoidCheckUploadPage extends AppCompatActivity {
         if(requestCode == 1 && data!= null && data.getData()!=null){
             imageUri = data.getData();
             voidCheckImage.setImageURI(imageUri);
-            System.out.println("First checkPoint");
         }
     }
 }
