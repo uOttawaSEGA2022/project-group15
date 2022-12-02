@@ -71,49 +71,51 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
      */
 
     public void startSearchAll(String searchStr) {
+        //clear the ArrayList with past results
+        //this is to ensure a fresh listview for a new search
         listOfMealResults.clear();
 
         if(searchStr.equals("")){
             displaySearchResult();
         }
         else{
+            //access the Cook in database
             reference = FirebaseDatabase.getInstance().getReference("Users").child("Cook");
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    //iterate through all Cooks
                     for (DataSnapshot dsp : snapshot.getChildren()){
                         DataSnapshot cookUid = dsp.child("Menu");
-
+                        //iterate through each Cook's Menu (check each Meal in the Menu)
                         for ( DataSnapshot dspMenu : cookUid.getChildren() ){
-
                             Boolean statusBool;
+                            //set the statusBool based on Meal's status
                             if(String.valueOf(dspMenu.child("status")).equals("true")){
                                 statusBool = true;
                             }else{
                                 statusBool = false;
                             }
+                            //iterate through the list of ingredients for the Meal
                             for (DataSnapshot ing : dspMenu.child("listOfIngredients").getChildren()){
                                 ingredients.add(String.valueOf(ing));
                             }
+                            //create a new object of type Meal
                             mealFound = new Meal(String.valueOf(dspMenu.child("mealName").getValue()), String.valueOf(dspMenu.child("mealType").getValue()),
                                     String.valueOf(dspMenu.child("cuisineType").getValue()), String.valueOf(dspMenu.child("description").getValue()),
                                     String.valueOf(dspMenu.child("mealPrice").getValue()), ingredients,
                                     String.valueOf(dspMenu.child("listOfAllergens").getValue()), statusBool);
 
-                            System.out.println("ANOTHER MEAL");
-                            System.out.println("MEAL NAME: " +String.valueOf(dspMenu.child("mealName").getValue()));
-                            System.out.println("MEAL TYPE: " +String.valueOf(dspMenu.child("mealType").getValue()));
-                            System.out.println("CUISINE TYPE: " +String.valueOf(dspMenu.child("cuisineType").getValue()));
-                            System.out.println("DESCRIPTION: " +String.valueOf(dspMenu.child("description").getValue()));
-
-                            if((searchStr.equals(String.valueOf(dspMenu.child("mealName").getValue()))) || (searchStr.equals(String.valueOf(dspMenu.child("mealType").getValue())))
-                                    ||(searchStr.equals(String.valueOf(dspMenu.child("cuisineType").getValue()))) || (searchStr.equals(String.valueOf(dspMenu.child("description").getValue())))){
-                                System.out.println("HEEREEE: " + mealFound.getMealName());
+                            //check to see if that Meal matches the search (searchStr)
+                            //to do so, check to see if any of the attributes (of the Meal) matches the String searchStr
+                            //(String.valueOf(dspMenu.child(searchType).getValue()).indexOf(searchStr)) != -1
+                            if(((String.valueOf(dspMenu.child("mealName").getValue()).indexOf(searchStr)) != -1) || ((String.valueOf(dspMenu.child("mealTypw").getValue()).indexOf(searchStr)) != -1)
+                                    ||((String.valueOf(dspMenu.child("cuisineType").getValue()).indexOf(searchStr)) != -1) || ((String.valueOf(dspMenu.child("description").getValue()).indexOf(searchStr)) != -1)){
                                 listOfMealResults.add(mealFound);
                             }
-
                         }
                     }
+                    //display the results (display the Meals in the ArrayList named "listOfMealResults" on the List View named "mealsSearchListView"
                     displaySearchResult();
                 }
                 @Override
@@ -122,48 +124,49 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                 }
             });
         }
-
-
     }
 
-
     public void startSearchSpecific(String searchType, String searchStr) {
+        //clear the ArrayList with past results
+        //this is to ensure a fresh listview for a new search
         listOfMealResults.clear();
 
         if(searchStr.equals("")){
             displaySearchResult();
         }
         else{
+            //access the Cook in database
             reference = FirebaseDatabase.getInstance().getReference("Users").child("Cook");
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    int r = 0;
                     //Toast.makeText(SearchMeal.this, String.valueOf(snapshot.getValue()), Toast.LENGTH_SHORT).show();
                     //System.out.println(String.valueOf(snapshot.getValue()));
+
+                    //iterate through all Cooks
                     for ( DataSnapshot dsp : snapshot.getChildren() ){
                         DataSnapshot cookUid = dsp.child("Menu");
 
+                        //iterate through each Cook's Menu (check each Meal in the Menu)
                         for ( DataSnapshot dspMenu : cookUid.getChildren() ){
-                            if (searchStr.equals(String.valueOf(dspMenu.child(searchType).getValue()))){
+
+                            //check to see if the searchStr matches the the value of searchType in the data base
+
+                            if ((String.valueOf(dspMenu.child(searchType).getValue()).indexOf(searchStr)) != -1){
+
                                 Boolean statusBool;
+                                //set the statusBool based on Meal's status
                                 if(String.valueOf(dspMenu.child("status")).equals("true")){
                                     statusBool = true;
                                 }else{
                                     statusBool = false;
                                 }
+                                //iterate through the list of ingredients for the Meal
                                 for (DataSnapshot ing : dspMenu.child("listOfIngredients").getChildren()){
                                     ingredients.add(String.valueOf(ing));
                                 }
-                                //Toast.makeText(SearchMeal.this, String.valueOf(dspMenu.child("cuisineType").getValue()), Toast.LENGTH_SHORT).show();
-
-//                            System.out.println(String.valueOf(dspMenu.child("mealName").getValue()));
-//                            System.out.println(String.valueOf(dspMenu.child("mealType").getValue()));
-//                            System.out.println(String.valueOf(dspMenu.child("cuisineType").getValue()));
-//                            System.out.println(String.valueOf(dspMenu.child("description").getValue()));
-//                            for (String str :ingredients){
-//                                System.out.println(str);
-//                            }
-
+                                //create a new object of type Meal
                                 mealFound = new Meal(String.valueOf(dspMenu.child("mealName").getValue()), String.valueOf(dspMenu.child("mealType").getValue()),
                                         String.valueOf(dspMenu.child("cuisineType").getValue()), String.valueOf(dspMenu.child("description").getValue()),
                                         String.valueOf(dspMenu.child("mealPrice").getValue()), ingredients,
@@ -175,11 +178,6 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                         }
                     }
                     displaySearchResult();
-
-//                for(int i = 0; i < listOfMealResults.size(); i++){
-//                    System.out.println(listOfMealResults.get(i).getMealName());
-//                }
-
                 }
 
                 @Override
@@ -188,20 +186,12 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                 }
             });
         }
-
     }
 
     public void displaySearchResult(){
-//        System.out.println("In display search method");
-
-//        for(int i = 0; i < listOfMealResults.size(); i++){
-//            System.out.println(listOfMealResults.get(i).getMealName());
-//        }
         SearchMealAdapter searchMealAdapter = new SearchMealAdapter(SearchMeal.this,listOfMealResults);
         mealsSearchListView.setAdapter(searchMealAdapter);
         }
-
-
 
     @Override
     public void onClick(View view) {
@@ -236,10 +226,17 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                 break;
             case R.id.searchMealButton:
                 theSearchStr = theSearch.getText().toString().trim();
+
                 if(searchType.equals("searchAll")){
                     Toast.makeText(SearchMeal.this, "searchSTR" + theSearchStr, Toast.LENGTH_SHORT).show();
+                    int strL = theSearchStr.length()+1;
+                    //call the suitable search method (startSearchAll)
                     startSearchAll(theSearchStr);
+
+
                 }else{
+                    int strL = theSearchStr.length();
+                    //call the suitable search method (startSearchSpecific)
                     startSearchSpecific(searchType, theSearchStr);
                     Toast.makeText(SearchMeal.this, "searchTYPE" + searchType, Toast.LENGTH_SHORT).show();
                     Toast.makeText(SearchMeal.this, "searchSTR" + theSearchStr, Toast.LENGTH_SHORT).show();

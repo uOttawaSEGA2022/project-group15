@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ChefComplaint"
     android:orientation="vertical"
+    android:background="@drawable/new_background"
     android:padding="15dp">
-    <!--android:background="@drawable/greenbackground"-->
 
 
 
