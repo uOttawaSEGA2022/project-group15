@@ -339,6 +339,34 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
     }
 
     private void showCartDialog(ArrayList<Meal> cartList){
-        
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.activity_cart, null);
+        dialogBuilder.setView(dialogView);
+
+        final ListView cartListView = (ListView) dialogView.findViewById(R.id.cartListView);
+
+        final Button checkoutBtn = (Button) dialogView.findViewById(R.id.checkoutBtn);
+        final Button cancelBtn = (Button) dialogView.findViewById(R.id.cancelBtn);
+
+        cartListView.setEnabled(true);
+
+
+        final AlertDialog b = dialogBuilder.create();
+        b.show();
+
+        checkoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                b.dismiss();
+            }
+        });
+
+        cancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                b.dismiss();
+            }
+        });
     }
 }
