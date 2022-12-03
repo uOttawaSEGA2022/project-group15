@@ -233,8 +233,8 @@ public class UpdateMeal extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 ingredientArrayList.remove(i);
-                reference.setValue(ingredientArrayList);
-
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(UpdateMeal.this, android.R.layout.simple_list_item_1,ingredientArrayList);
+                listOfIngredients.setAdapter(adapter);
             }
         });
 
@@ -246,6 +246,7 @@ public class UpdateMeal extends AppCompatActivity {
                 ingredientArrayList.add(ingredientName);
                 ArrayAdapter<String> adapter = new ArrayAdapter<>(UpdateMeal.this, android.R.layout.simple_list_item_1,ingredientArrayList);
                 listOfIngredients.setAdapter(adapter);
+                newIngredient.setText("");
                 //reference.setValue(ingredientArrayList);
             }
         });

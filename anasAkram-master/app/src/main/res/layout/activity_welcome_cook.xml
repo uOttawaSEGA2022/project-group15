@@ -27,14 +27,14 @@
             android:gravity="center"
             android:textColor="@color/dbrown"
             android:textStyle="bold"
-            android:textSize="40dp" />
+            android:textSize="30dp" />
 
     <Button
         android:id="@+id/menuButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Menu"
-        android:textSize="26sp"
+        android:textSize="25sp"
         android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"/>
     <Button
@@ -42,6 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="active Menu"
+        android:textSize="25sp"
         android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"/>
 
@@ -51,7 +52,7 @@
             android:layout_width="165dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textSize="26sp"
+            android:textSize="25sp"
             android:layout_marginTop ="50dp"/>
 
 </LinearLayout>

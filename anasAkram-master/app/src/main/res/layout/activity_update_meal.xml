@@ -19,7 +19,9 @@
             android:id="@+id/updateImageBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="update Image"/>
+            android:text="update Image"
+            android:textSize="15dp"
+            android:backgroundTint="@color/dbrown"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,14 +29,15 @@
             android:text="Please Update or Delete Meal:"
             android:gravity="center_horizontal"
             android:layout_marginBottom="15dp"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textColor="@color/black"/>
         <Switch
             android:id="@+id/updateSwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:showText="true"
-            android:text="Set Active"/>
+            android:text="Set Active"
+            android:textSize="20dp"/>
 
         <TextView
             android:id="@+id/mealName"
@@ -45,7 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Meal Name"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:textSize="20dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -67,19 +71,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Meal Type"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:textSize="20dp"/>
 
         <EditText
             android:id="@+id/cuisineType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Italian"/>
+            android:hint="Italian"
+            android:textSize="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cuisine Type"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:textSize="17dp"/>
 
         <LinearLayout
 
@@ -90,12 +97,15 @@
                 android:id="@+id/addIngredient"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
-                android:hint="New Ingredient"/>
+                android:hint="New Ingredient"
+                android:textSize="20dp"/>
             <Button
                 android:id="@+id/addIngredientButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Add"/>
+                android:text="Add"
+                android:textSize="15dp"
+                android:backgroundTint="@color/dbrown"/>
 
         </LinearLayout>
 
@@ -103,45 +113,51 @@
             android:id="@+id/listOfIngredients"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:textSize="17sp"/>
+            android:textSize="20sp"/>
 
         <EditText
             android:id="@+id/mealPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="$15.50"/>
+            android:hint="$15.50"
+            android:textSize="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Meal Price"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:textSize="17dp"/>
 
         <EditText
             android:id="@+id/mealDescription"
             android:layout_width="match_parent"
             android:layout_height="114dp"
-            android:hint="(optional)" />
+            android:hint="(optional)"
+            android:textSize="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Meal Description"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:textSize="17dp"/>
 
         <Button
             android:id="@+id/updateMeal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Update MEAL"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"/>
 
         <Button
             android:id="@+id/deleteMeal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Delete MEAL"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"/>
 
     </LinearLayout>
 

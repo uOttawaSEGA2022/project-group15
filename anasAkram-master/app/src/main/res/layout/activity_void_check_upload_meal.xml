@@ -15,7 +15,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Click to Upload"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:backgroundTint="@color/dbrown"/>
     <ImageView
         android:id="@+id/voidCheckImage"
         android:layout_width="400dp"
@@ -31,7 +33,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="GO Back"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:backgroundTint="@color/dbrown"/>
         <View
             android:layout_width="10sp"
             android:layout_height="wrap_content"/>
@@ -40,7 +44,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textSize="17dp"
+            android:backgroundTint="@color/dbrown"/>
 
     </LinearLayout>
 
