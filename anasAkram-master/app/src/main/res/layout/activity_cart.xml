@@ -21,18 +21,64 @@ android:background="@drawable/new_background">
         android:layout_gravity="center_horizontal"
         android:textSize="30sp"
         android:textColor="@color/black"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="2dp"/>
 
     <ListView
         android:id="@+id/cartListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="400dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subtotal             $"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:id="@+id/subtotalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total                   $"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
 
     <Button
         android:id="@+id/checkoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Checkout"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"/>
     <Button
         android:id="@+id/cancelBtn"

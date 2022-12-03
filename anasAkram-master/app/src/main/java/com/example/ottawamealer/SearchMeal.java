@@ -17,12 +17,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,12 +39,10 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
     Button searchMealButton;
     DatabaseReference reference, referenceMeal;
     ArrayList<String> ingredients;
-    ArrayList<Meal> listOfMealResults;
 
+    ArrayList<Meal> listOfMealResults, cartList;
     ListView mealsSearchListView;
-    ArrayList<Meal> mealsSearch;
 
-    ArrayList<Meal> cartList;
     int numberOfItemsInCartInt;
 
 
@@ -51,7 +51,7 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_meal);
         listOfMealResults = new ArrayList<>();
-        mealsSearch = new ArrayList<Meal>();
+        //mealsSearch = new ArrayList<Meal>();
         mealsSearchListView = (ListView) findViewById(R.id.listViewSearchResult);
 
         cartList = new ArrayList<Meal>();
@@ -71,12 +71,13 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
         theSearch = (EditText) findViewById(R.id.theSearch);
         theSearchStr = theSearch.getText().toString().trim();
 
+
         searchMealButton = (Button) findViewById(R.id.searchMealButton);
         searchMealButton.setOnClickListener(this);
         searchType = "searchAll";
 
         cart = (ImageView) findViewById(R.id.cart);
-
+       // cart.setOnClickListener(this);
 
         mealsSearchListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -86,6 +87,12 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
             }
         });
 
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showCartDialog(cartList);
+            }
+        });
     }
 
     /**
@@ -214,6 +221,11 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
         mealsSearchListView.setAdapter(searchMealAdapter);
     }
 
+    public void displayCart(ListView cartListView){
+        SearchMealAdapter cartAdapter = new SearchMealAdapter(SearchMeal.this, cartList);
+        cartListView.setAdapter(cartAdapter);
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -261,13 +273,12 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                     Toast.makeText(SearchMeal.this, "searchTYPE" + searchType, Toast.LENGTH_SHORT).show();
                     Toast.makeText(SearchMeal.this, "searchSTR" + theSearchStr, Toast.LENGTH_SHORT).show();
                 }
-                break;
 
-            case R.id.cart:
-//                Intent intent = new Intent(SearchMeal.this, Cart.class);
-//                startActivity(intent);
-                showCartDialog(cartList);
-                break;
+//            case R.id.cart:
+////                Intent intent = new Intent(SearchMeal.this, Cart.class);
+////                startActivity(intent);
+//                showCartDialog(cartList);
+//                break;
         }
     }
 
@@ -344,6 +355,29 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
         final View dialogView = inflater.inflate(R.layout.activity_cart, null);
         dialogBuilder.setView(dialogView);
 
+        final TextView subtotalTv = (TextView) dialogView.findViewById(R.id.subtotalTextView);
+        final TextView totalTv = (TextView) dialogView.findViewById(R.id.totalTextView);
+
+        subtotalTv.setEnabled(true);
+        totalTv.setEnabled(true);
+
+
+        double subtotalDouble = 0.0;
+
+        for (int i = 0; i < cartList.size(); i++){
+            char firstC = cartList.get(i).getMealPrice().charAt(0);
+            String priceOfMeal = cartList.get(i).getMealPrice();
+            if (firstC == '$'){
+                subtotalDouble += Double.valueOf(priceOfMeal.substring(1,priceOfMeal.length()));
+            }else{
+                subtotalDouble += Double.valueOf(priceOfMeal);
+            }
+        }
+
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+        subtotalTv.setText(decimalFormat.format(subtotalDouble));
+        totalTv.setText(decimalFormat.format(subtotalDouble*1.13));
+
         final ListView cartListView = (ListView) dialogView.findViewById(R.id.cartListView);
 
         final Button checkoutBtn = (Button) dialogView.findViewById(R.id.checkoutBtn);
@@ -351,6 +385,7 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
 
         cartListView.setEnabled(true);
 
+        displayCart(cartListView);
 
         final AlertDialog b = dialogBuilder.create();
         b.show();
@@ -358,6 +393,7 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
         checkoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(SearchMeal.this, "Your meal requests have been sent to the cooks, please check your PENDING orders!", Toast.LENGTH_SHORT).show();
                 b.dismiss();
             }
         });
