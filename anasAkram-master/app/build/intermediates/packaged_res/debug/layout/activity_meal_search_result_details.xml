@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/new_background">
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/new_background"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/mealImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/teal_200"/>
+
+    <TextView
+        android:id="@+id/searchMealName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Meal Name"
+        android:layout_gravity="center_horizontal"
+        android:textSize="27sp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/searchMealType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Meal Type"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Type"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/searchCuisineType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Cuisine Type"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Cuisine"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/searchMealPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Meal Price"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Price"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/searchMealDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Meal Description"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Description"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/searchMealIngredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Meal Ingredients"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Ingredients"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/searchMealAllergens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Meal Allergens"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Allergens"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/addToCartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to Cart"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Cancel"
+        android:layout_gravity="center_horizontal"/>
+
+
+</LinearLayout>
+
+
+</ScrollView>

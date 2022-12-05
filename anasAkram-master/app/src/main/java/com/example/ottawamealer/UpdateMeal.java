@@ -269,11 +269,7 @@ public class UpdateMeal extends AppCompatActivity {
                 referenceUpdate.child("status").setValue(activateMeal.isChecked());
                 referenceUpdate.child("description").setValue(description.getText().toString().trim());
                 Intent intent;
-                if(homePage.equals("CookActiveMenuList")){
-                    intent = new Intent(UpdateMeal.this, CookActiveMenu.class);
-                }else{
-                    intent = new Intent(UpdateMeal.this,CookMenu.class);
-                }
+                intent = new Intent(UpdateMeal.this,CookMenu.class);
                 startActivity(intent);
 
             }
@@ -293,7 +289,7 @@ public class UpdateMeal extends AppCompatActivity {
 
 
     private void retrieveImageFromFirebase(){
-        firebaseStorage = FirebaseStorage.getInstance().getReference("Cook").child(authRef.getCurrentUser().getUid()).child("Menu").child(mealName.getText().toString().trim());
+        firebaseStorage = FirebaseStorage.getInstance().getReference("Cook").child(authRef.getCurrentUser().getUid().toString()).child("Menu").child(mealName.getText().toString().trim());
         try {
             File file = File.createTempFile("tmpFile",".jpg");
             firebaseStorage.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {

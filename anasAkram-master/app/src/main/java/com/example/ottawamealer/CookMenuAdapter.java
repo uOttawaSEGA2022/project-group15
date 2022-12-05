@@ -45,6 +45,7 @@ public class CookMenuAdapter extends ArrayAdapter<Meal> {
 
         //get meal
         Meal meal = meals.get(position);
+        System.out.println(meal.getMealName());
 
 
         //initialize textviews

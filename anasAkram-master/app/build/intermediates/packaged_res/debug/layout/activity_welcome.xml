@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Welcome"
+    android:background="@drawable/admin"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/bannerc"
+        android:layout_width="300dp"
+        android:layout_height="175dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo2"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Welcome! You are logged in as a client."
+        android:textSize="40dp"
+        android:textColor="@color/dbrown"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+
+    <Button
+        android:id="@+id/makeComplaint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Complaint"
+        android:textSize="25sp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/dbrown"/>
+    <Button
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Menus"
+        android:textSize="25sp"
+        android:backgroundTint="@color/dbrown"/>
+
+    <Button
+        android:id="@+id/logOut"
+        android:text="Log out"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="26sp"
+        android:backgroundTint="@color/dbrown"
+        />
+</LinearLayout>

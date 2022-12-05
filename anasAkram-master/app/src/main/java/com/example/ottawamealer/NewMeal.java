@@ -17,6 +17,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -25,18 +26,19 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class NewMeal extends AppCompatActivity {
 
-    String[] mealTypeList = {"Appetizer", "Main Dish", "Side Dish", "Dessert", "Beverage"};
+    String[] mealTypeList = {"Select An Option","Appetizer", "Main Dish", "Side Dish", "Dessert", "Beverage"};
     AutoCompleteTextView mealTypeAutoCompleteTextView;
     ArrayAdapter<String> adapterMealType;
     String mealTp;
 
     DatabaseReference reference;
     Button addMeal, addIngredient,uploadImageBtn;
-    EditText mealName, cuisineType, mealDescription, mealPrice, allergens;
+    EditText mealName, cuisineType, mealDescription, mealPrice, allergens,addIngredientText;
     ListView listOfIngredients;
     ArrayList<String> arrayListOfIngredients;
     ArrayAdapter<String> adapter;
@@ -46,6 +48,8 @@ public class NewMeal extends AppCompatActivity {
 
     StorageReference storageReference;
     Uri imageUri;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +67,9 @@ public class NewMeal extends AppCompatActivity {
         allergens =(EditText) findViewById(R.id.stringOfAllergens);
         newMealImage = (ImageView) findViewById(R.id.newMealImage);
         uploadImageBtn = (Button) findViewById(R.id.uploadNewMealImage);
+        foodEnabled = (Switch) findViewById(R.id.enabledSwitch);
+        addIngredientText = (EditText) findViewById(R.id.addIngredientText);
+
 
 
         arrayListOfIngredients = new ArrayList<>();
@@ -85,11 +92,11 @@ public class NewMeal extends AppCompatActivity {
         addIngredient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText ingredientName = (EditText) findViewById(R.id.addIngredientText);
-                String name = ingredientName.getText().toString().trim();
-                arrayListOfIngredients.add(name);
+                String ingredient = addIngredientText.getText().toString().trim();
+                arrayListOfIngredients.add(ingredient);
                 adapter = new ArrayAdapter<>(NewMeal.this, android.R.layout.simple_list_item_1,arrayListOfIngredients);
                 ingredientListView.setAdapter(adapter);
+                addIngredientText.setText("");
             }
         });
 
@@ -97,24 +104,75 @@ public class NewMeal extends AppCompatActivity {
         addMeal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name = mealName.getText().toString();
-                String cuisine = cuisineType.getText().toString();
-                String description = mealDescription.getText().toString();
-                String price = mealPrice.getText().toString();
-                String allergensString = allergens.getText().toString();
-                foodEnabled = (Switch) findViewById(R.id.enabledSwitch);
-                mealTypeAutoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        mealTp = adapterView.getItemAtPosition(i).toString();
-                    }
-                });
-                mealTypeAutoCompleteTextView.setText(mealTp);
-                boolean activeFood = foodEnabled.isChecked();
-                Meal meal = new Meal(name,mealTp,cuisine,description,price,arrayListOfIngredients,allergensString,activeFood);
-                reference.child(name).setValue(meal);
+                //get the mealname as a string
+                String mealNameString = mealName.getText().toString().trim();
+                if (mealNameString.isEmpty()){
+                    mealName.setError("Meal Name Is Missing");
+                    mealName.requestFocus();
+                    return;
+                }
+                //get the mealtype as a string
+                mealTp = mealTypeAutoCompleteTextView.getText().toString();
+//                mealTypeAutoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                    @Override
+//                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                        mealTp = adapterView.getItemAtPosition(i).toString();
+//                    }});
+                if(mealTp.equals("Select An Option")){
+                    Toast.makeText(NewMeal.this,"Please Select A Meal Type",Toast.LENGTH_LONG).show();
+                    return;
+                }
+                //get the cuisine type as a string
+                String cuisineTypeString = cuisineType.getText().toString().trim();
+                if(cuisineTypeString.isEmpty()){
+                    cuisineType.setError("Cuisine Type Is Missing");
+                    cuisineType.requestFocus();
+                    return;
+                }
+                //get the price in a string
+                String priceString;
+                //convert to positive 2 decimal place number
+                try{
+                    double priceDouble = Math.abs(Double.parseDouble(mealPrice.getText().toString().trim()));
+                    DecimalFormat df = new DecimalFormat("0.00");
+                    priceString = df.format(priceDouble);
+                    mealPrice.setText(priceString);
 
-                storageReference = FirebaseStorage.getInstance().getReference("Cook").child("Menu").child(name);
+
+                }catch(NumberFormatException e){
+                    mealPrice.setError("Invalid Price");
+                    mealPrice.requestFocus();
+                    return;
+                }
+                //check if ingredient list is empty
+                if(arrayListOfIngredients.isEmpty()){
+                    addIngredientText.setError("Ingredients Are Missing");
+                    addIngredientText.requestFocus();
+                    return;
+                }
+
+                //check if image has been inserted
+                if (newMealImage.getDrawable() ==null){
+                    Toast.makeText(NewMeal.this,"Insert An Image",Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                //get the switch as a boolean
+                boolean activeFood = foodEnabled.isChecked();
+
+                //get the description
+                String description = mealDescription.getText().toString();
+
+                //get the allergens
+                String allergensString = allergens.getText().toString();
+
+                //mealTypeAutoCompleteTextView.setText(mealTp);
+
+                Meal meal = new Meal(mealNameString,mealTp,cuisineTypeString,description,priceString,arrayListOfIngredients,allergensString,activeFood);
+
+                reference.child(mealNameString).setValue(meal);
+
+                storageReference = FirebaseStorage.getInstance().getReference("Cook").child(userID).child("Menu").child(mealNameString);
                 storageReference.putFile(imageUri);
 
                 Intent intent = new Intent(NewMeal.this,CookMenu.class);
@@ -157,4 +215,5 @@ public class NewMeal extends AppCompatActivity {
 
         }
     }
+
 }
