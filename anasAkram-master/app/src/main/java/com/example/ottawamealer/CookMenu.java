@@ -2,6 +2,8 @@ package com.example.ottawamealer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -26,11 +28,13 @@ import java.util.ArrayList;
 
 public class CookMenu extends AppCompatActivity {
 
-    ListView mealsListView;
+    RecyclerView mealsListView;
     DatabaseReference myRef;
     Button addFoodBtn, goHome;
     ArrayList<Meal> meals;
     String name;
+
+    LinearLayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +45,8 @@ public class CookMenu extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userId = user.getUid();
         meals = new ArrayList<Meal>();
-        mealsListView = (ListView) findViewById(R.id.cooKMenu);
+        mealsListView = (RecyclerView) findViewById(R.id.cooKMenuRecycler);
+
 
 
 
@@ -74,8 +79,7 @@ public class CookMenu extends AppCompatActivity {
                         Meal meal = dataSnapshot.getValue(Meal.class);
                         meals.add(meal);
                     }
-                    CookMenuAdapter menuAdapter = new CookMenuAdapter(CookMenu.this,meals);
-                    mealsListView.setAdapter(menuAdapter);
+                    setToRecycler();
                 }
 
             @Override
@@ -83,91 +87,15 @@ public class CookMenu extends AppCompatActivity {
             }
         });
 
-        mealsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Meal meal = meals.get(i);
-                //testing.setText(complaint.getTimeOfComplaint());
-                Intent intent = new Intent(CookMenu.this,UpdateMeal.class);
-                intent.putExtra("mealName",meal.getMealName());
-                intent.putExtra("homePage","CookMenu");
-                startActivity(intent);
-                //showUpdateDeleteDialog(meal);
-            }
-        });
     }
 
-//    private void showUpdateDeleteDialog(Meal aMeal){
-//        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
-//        LayoutInflater inflater = getLayoutInflater();
-//        final View dialogView = inflater.inflate(R.layout.activity_update_meal, null);
-//        dialogBuilder.setView(dialogView);
-//
-//        final EditText mealNameText = (EditText) dialogView.findViewById(R.id.mealName);
-//        final EditText mealTypeText  = (EditText) dialogView.findViewById(R.id.mealType);
-//        final EditText cuisineTypeText  = (EditText) dialogView.findViewById(R.id.cuisineType);
-//        final EditText mealPriceText  = (EditText) dialogView.findViewById(R.id.mealPrice);
-//        final EditText mealDescriptionText  = (EditText) dialogView.findViewById(R.id.mealDescription);
-//
-//
-//
-//        final Button buttonUpdateMeal = (Button) dialogView.findViewById(R.id.updateMeal);
-//        final Button buttonDeleteMeal = (Button) dialogView.findViewById(R.id.deleteMeal);
-//
-//        mealNameText.setEnabled(true);
-//        mealTypeText.setEnabled(true);
-//        cuisineTypeText.setEnabled(true);
-//        mealPriceText.setEnabled(true);
-//        mealDescriptionText.setEnabled(true);
-//
-//
-//        mealNameText.setText(aMeal.getMealName());
-//        mealTypeText.setText(aMeal.getMealType());
-//        cuisineTypeText.setText(aMeal.getCuisineType());
-//        mealPriceText.setText(aMeal.getMealPrice());
-//
-//        //dialogBuilder.setTitle(complaint);
-//        final AlertDialog b = dialogBuilder.create();
-//        b.show();
-//
-//        buttonDeleteMeal.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //dismiss(aMeal.getTimeOfComplaint());
-//                meals.remove(aMeal);
-//                deleteMeal(aMeal);
-//                b.dismiss();
-//            }
-//        });
-//
-//        buttonUpdateMeal.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //dismiss(aMeal.getTimeOfComplaint());
-//                String originalName = aMeal.getMealName();
-//                meals.remove(aMeal);
-//                aMeal.setMealName(mealNameText.getText().toString());
-//                aMeal.setMealType(mealTypeText.getText().toString());
-//                aMeal.setCuisineType(cuisineTypeText.getText().toString());
-//                aMeal.setDescription(mealDescriptionText.getText().toString());
-//                aMeal.setMealPrice(mealPriceText.getText().toString());
-//                updateMeal(aMeal, originalName);
-//                b.dismiss();
-//
-//            }
-//        });
 
-    //}
+    void setToRecycler(){
 
-//    private void deleteMeal(Meal meal){
-//        meals.remove(meal);
-//        myRef.child(meal.getMealName()).removeValue();
-//    }
-//
-//    private void updateMeal(Meal meal, String originalName){
-//        meals.add(meal);
-//        myRef.child(originalName).removeValue();
-//        myRef.child(meal.getMealName()).setValue(meal);
-//
-//    }
+        layoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        CookMenuRecycler cookMenuRecycler = new CookMenuRecycler(CookMenu.this,meals);
+        RecyclerView recyclerView = findViewById(R.id.cooKMenuRecycler);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(cookMenuRecycler);
+    }
 }
