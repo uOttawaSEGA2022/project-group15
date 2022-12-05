@@ -35,9 +35,6 @@ public class CookComplaintAdapter extends ArrayAdapter<Complaint> {
         returnCook.setText(complaint.getCookName());
         returnComplaint.setText(complaint.getComplaint());
 
-
-
-
         return listViewItem;
     }
 }

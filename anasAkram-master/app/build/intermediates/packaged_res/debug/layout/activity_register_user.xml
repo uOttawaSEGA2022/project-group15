@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterUser"
+    android:background="@drawable/mainbackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <ImageView
+            android:id="@+id/bannerc"
+            android:layout_width="200dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo2"
+            app:layout_constraintBottom_toTopOf="@+id/rectangle_at_the_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/firstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:drawableLeft="@drawable/ic_person_icon"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                />
+
+            <EditText
+                android:id="@+id/lastName"
+                android:drawableLeft="@drawable/ic_person_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+        <EditText
+            android:id="@+id/email_reg"
+            android:layout_width="371dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Email"
+            android:drawableLeft="@drawable/ic_email_icon"
+            android:inputType="textEmailAddress"
+            tools:ignore="MissingConstraints"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/pswrd_reg"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Account password"
+            android:drawableLeft="@drawable/ic_lock_icon"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="370dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Address"
+            android:drawableLeft="@drawable/ic_location_icon"
+            android:inputType="text"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/credit_card"
+            android:layout_width="189dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Credit card number"
+            android:inputType="number"
+            android:maxLength="16"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/expiry_date"
+            android:layout_width="101dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="-55dp"
+            android:ems="10"
+            android:hint="MM/YY"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/CVV"
+            android:layout_width="62dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="310dp"
+            android:layout_marginTop="-55dp"
+            android:ems="10"
+            android:hint="CCV"
+            android:inputType="number"
+            android:maxLength="3" />
+
+
+        <Button
+            android:id="@+id/registerUser"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Register USER"
+            android:backgroundTint="@color/dbrown"
+            android:textSize="20dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/reg_cook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/dbrown"
+            android:text="COOK REGISTRATION"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

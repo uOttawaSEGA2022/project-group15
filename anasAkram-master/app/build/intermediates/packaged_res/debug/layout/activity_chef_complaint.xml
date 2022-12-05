@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChefComplaint"
+    android:orientation="vertical"
+    android:background="@drawable/new_background"
+    android:padding="15dp">
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Complete the Form\nIt Will be Assessed by the Administrator"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"/>
+    <!--android:fontFamily="@font/oswald"-->
+
+
+<EditText
+    android:id="@+id/cookName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Bob"
+    android:minHeight="48dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+
+<EditText
+    android:id="@+id/complaint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="100dp"
+    android:hint="Let us know about your experience."/>
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Description"
+    android:layout_marginBottom="40dp"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Please Rate the Chef Out of 5 (5 being the best)"
+    android:textSize="20sp"
+    android:layout_marginBottom="30dp"/>
+    <!--android:fontFamily="@font/oswald"-->
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:orientation="horizontal">
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating_one_button"
+        android:text="1"
+        android:backgroundTint="@color/black"/>
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating_two_button"
+        android:text="2"
+        android:backgroundTint="@color/black"/>
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating_three_button"
+        android:text="3"
+        android:backgroundTint="@color/black"/>
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating_four_button"
+        android:text="4"
+        android:backgroundTint="@color/black"/>
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating_five_button"
+        android:text="5"
+        android:backgroundTint="@color/black"/>
+
+</LinearLayout>
+
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/submit_complaint_button"
+    android:text="Submit Complaint"
+    android:backgroundTint="@color/white"
+    android:textColor="@color/black"/>
+
+</LinearLayout>
