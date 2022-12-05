@@ -95,6 +95,11 @@ public class UpdateMeal extends AppCompatActivity {
         updateFoodImage = (ImageView) findViewById(R.id.updateFoodImage);
 
 
+
+
+        retrieveImageFromFirebase();
+
+
         deleteMeal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
