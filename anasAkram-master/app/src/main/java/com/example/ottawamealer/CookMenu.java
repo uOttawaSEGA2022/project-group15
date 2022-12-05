@@ -30,6 +30,7 @@ public class CookMenu extends AppCompatActivity {
     DatabaseReference myRef;
     Button addFoodBtn, goHome;
     ArrayList<Meal> meals;
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
