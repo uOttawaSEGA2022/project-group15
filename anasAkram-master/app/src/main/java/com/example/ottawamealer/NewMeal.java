@@ -3,6 +3,7 @@ package com.example.ottawamealer;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,12 +20,15 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -104,6 +108,12 @@ public class NewMeal extends AppCompatActivity {
         addMeal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final ProgressDialog pd = new ProgressDialog(NewMeal.this);
+                pd.setTitle("Checking");
+
+
+
+
                 //get the mealname as a string
                 String mealNameString = mealName.getText().toString().trim();
                 if (mealNameString.isEmpty()){
@@ -172,11 +182,24 @@ public class NewMeal extends AppCompatActivity {
 
                 reference.child(mealNameString).setValue(meal);
 
+                pd.show();
                 storageReference = FirebaseStorage.getInstance().getReference("Cook").child(userID).child("Menu").child(mealNameString);
-                storageReference.putFile(imageUri);
+                storageReference.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        pd.dismiss();
+                        Intent intent = new Intent(NewMeal.this,CookMenu.class);
+                        startActivity(intent);
+                    }
+                }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>(){
+                    @Override
+                    public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                        double percentComplete = 100*taskSnapshot.getBytesTransferred()/taskSnapshot.getTotalByteCount();
+                        pd.setMessage("Progress "+(int) percentComplete+"%");
+                    }
+                });
 
-                Intent intent = new Intent(NewMeal.this,CookMenu.class);
-                startActivity(intent);
+
 
             }
         });
