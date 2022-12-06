@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="472946c1-c0c2-4c2b-8f7a-3599e708bf9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GIT-ADOP.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/anasAkram-master/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anasAkram-master/app/src/main/java/com/example/ottawamealer/CookMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/app/src/main/java/com/example/ottawamealer/CookMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anasAkram-master/app/src/main/java/com/example/ottawamealer/UpdateMeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/app/src/main/java/com/example/ottawamealer/UpdateMeal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anasAkram-master/app/src/main/res/layout/activity_cook_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/app/src/main/res/layout/activity_cook_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anasAkram-master/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/anasAkram-master/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

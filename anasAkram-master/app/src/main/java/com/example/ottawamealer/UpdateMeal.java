@@ -268,6 +268,7 @@ public class UpdateMeal extends AppCompatActivity {
                 referenceUpdate.child("cuisineType").setValue(cuisineType.getText().toString().trim());
                 referenceUpdate.child("status").setValue(activateMeal.isChecked());
                 referenceUpdate.child("description").setValue(description.getText().toString().trim());
+                referenceUpdate.child("listOfIngredients").setValue(ingredientArrayList);
                 Intent intent;
                 intent = new Intent(UpdateMeal.this,CookMenu.class);
                 startActivity(intent);
