@@ -89,6 +89,23 @@ android:background="@drawable/new_background">
         android:textSize="20sp"/>
 
     <TextView
+        android:id="@+id/searchMealCook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Meal Cook"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Cook"
+        android:textSize="20sp"/>
+
+    <TextView
         android:id="@+id/searchMealDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

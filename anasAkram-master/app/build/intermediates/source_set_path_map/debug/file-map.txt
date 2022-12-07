@@ -26,12 +26,12 @@ com.example.ottawamealer.app-annotation-experimental-1.1.0-24 C:\Users\97154\.gr
 com.example.ottawamealer.app-material-1.6.1-25 C:\Users\97154\.gradle\caches\transforms-3\eca7f236a70dbe7915fa899436e02571\transformed\material-1.6.1\res
 com.example.ottawamealer.app-savedstate-1.2.0-26 C:\Users\97154\.gradle\caches\transforms-3\ed198c72db21bb204f52d58b627e783f\transformed\savedstate-1.2.0\res
 com.example.ottawamealer.app-appcompat-resources-1.5.1-27 C:\Users\97154\.gradle\caches\transforms-3\f50893122efcee79e80072a2d630c9f0\transformed\appcompat-resources-1.5.1\res
-com.example.ottawamealer.app-google-services-28 C:\Users\97154\Documents\SEG Deliverable\The Deliverable\project-group15\anasAkram-master\app\build\generated\res\google-services\debug
-com.example.ottawamealer.app-pngs-29 C:\Users\97154\Documents\SEG Deliverable\The Deliverable\project-group15\anasAkram-master\app\build\generated\res\pngs\debug
-com.example.ottawamealer.app-resValues-30 C:\Users\97154\Documents\SEG Deliverable\The Deliverable\project-group15\anasAkram-master\app\build\generated\res\resValues\debug
-com.example.ottawamealer.app-rs-31 C:\Users\97154\Documents\SEG Deliverable\The Deliverable\project-group15\anasAkram-master\app\build\generated\res\rs\debug
-com.example.ottawamealer.app-packageDebugResources-32 C:\Users\97154\Documents\SEG Deliverable\The Deliverable\project-group15\anasAkram-master\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.ottawamealer.app-packageDebugResources-33 C:\Users\97154\Documents\SEG Deliverable\The Deliverable\project-group15\anasAkram-master\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.ottawamealer.app-merged_res-34 C:\Users\97154\Documents\SEG Deliverable\The Deliverable\project-group15\anasAkram-master\app\build\intermediates\merged_res\debug
-com.example.ottawamealer.app-debug-35 C:\Users\97154\Documents\SEG Deliverable\The Deliverable\project-group15\anasAkram-master\app\src\debug\res
-com.example.ottawamealer.app-main-36 C:\Users\97154\Documents\SEG Deliverable\The Deliverable\project-group15\anasAkram-master\app\src\main\res
+com.example.ottawamealer.app-google-services-28 C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\build\generated\res\google-services\debug
+com.example.ottawamealer.app-pngs-29 C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\build\generated\res\pngs\debug
+com.example.ottawamealer.app-resValues-30 C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\build\generated\res\resValues\debug
+com.example.ottawamealer.app-rs-31 C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\build\generated\res\rs\debug
+com.example.ottawamealer.app-packageDebugResources-32 C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.ottawamealer.app-packageDebugResources-33 C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.ottawamealer.app-merged_res-34 C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\build\intermediates\merged_res\debug
+com.example.ottawamealer.app-debug-35 C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\debug\res
+com.example.ottawamealer.app-main-36 C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\res

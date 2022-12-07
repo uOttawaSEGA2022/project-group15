@@ -2666,6 +2666,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id approvedRequestList
 id arc
 id asConfigured
 id async
@@ -2977,6 +2978,7 @@ id password_toggle
 id path
 id pathRelative
 id peekHeight
+id pendingRequestList
 id percent
 id pin
 id position
@@ -3006,6 +3008,7 @@ id reg_cook
 id registerCook
 id registerUser
 id reloadBtn
+id requestPage
 id resetPassword
 id returnComplaint
 id returnCook
@@ -3030,6 +3033,7 @@ id searchAll
 id searchCuisineType
 id searchMealAllergens
 id searchMealButton
+id searchMealCook
 id searchMealDescription
 id searchMealIngredients
 id searchMealName
@@ -3285,6 +3289,7 @@ layout activity_meal_search_result_details
 layout activity_new_meal
 layout activity_register_cook
 layout activity_register_user
+layout activity_requests
 layout activity_search_meal
 layout activity_submit_complaint
 layout activity_temporarily_suspended

@@ -4,7 +4,7 @@
             "outputFile": "com.example.ottawamealer.app-mergeDebugResources-32:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\97154\\Documents\\SEG Deliverable\\The Deliverable\\project-group15\\anasAkram-master\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\97154\\Documents\\SEG Deliverable\\Testing Github\\project-group15\\anasAkram-master\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

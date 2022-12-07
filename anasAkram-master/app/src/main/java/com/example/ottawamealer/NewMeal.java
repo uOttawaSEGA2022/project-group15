@@ -1,5 +1,6 @@
 package com.example.ottawamealer;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,8 +24,11 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -52,6 +56,10 @@ public class NewMeal extends AppCompatActivity {
 
     StorageReference storageReference;
     Uri imageUri;
+
+
+
+    String cookName;
 
 
 
@@ -84,7 +92,19 @@ public class NewMeal extends AppCompatActivity {
         mealTypeAutoCompleteTextView.setAdapter(adapterMealType);
 
 
+        //get CookName
+        DatabaseReference refForCookName = FirebaseDatabase.getInstance().getReference("Users").child("Cook").child(userID).child("fullName");
+        refForCookName.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                cookName = snapshot.getValue(String.class);
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
 
@@ -178,7 +198,7 @@ public class NewMeal extends AppCompatActivity {
 
                 //mealTypeAutoCompleteTextView.setText(mealTp);
 
-                Meal meal = new Meal(mealNameString,mealTp,cuisineTypeString,description,priceString,arrayListOfIngredients,allergensString,activeFood);
+                Meal meal = new Meal(mealNameString,mealTp,cuisineTypeString,description,priceString,arrayListOfIngredients,allergensString,activeFood,cookName);
 
                 reference.child(mealNameString).setValue(meal);
 

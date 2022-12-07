@@ -45,6 +45,14 @@
         android:textSize="25sp"
         android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/requestPage"
+        android:text="Request"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25sp"
+        android:layout_marginTop ="30dp"/>
 
         <Button
             android:id="@+id/logOutc"
@@ -53,6 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:textSize="25sp"
-            android:layout_marginTop ="50dp"/>
+            android:layout_marginTop ="20dp"/>
+
 
 </LinearLayout>

@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class WelcomeCook extends AppCompatActivity {
 
-    private Button logOut, menu, activeMenuBtn;
+    private Button logOut, menu, activeMenuBtn,goToRequestBtn;
     TextView textView;
     String first;
     String last;
@@ -50,9 +50,8 @@ public class WelcomeCook extends AppCompatActivity {
             }
         });
 
-
+        //log out
         logOut = (Button) findViewById(R.id.logOutc);
-
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +60,7 @@ public class WelcomeCook extends AppCompatActivity {
             }
         });
 
-
+        //go to the menu
         menu = (Button) findViewById(R.id.menuButton);
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +71,7 @@ public class WelcomeCook extends AppCompatActivity {
             }
         });
 
+        //go to the active menu
         activeMenuBtn = (Button) findViewById(R.id.activeMenuBtn);
         activeMenuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +82,16 @@ public class WelcomeCook extends AppCompatActivity {
         });
 
 
+        //go to the request page
+        goToRequestBtn = (Button) findViewById(R.id.requestPage);
+        goToRequestBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WelcomeCook.this,Requests.class);
+                startActivity(intent);
+            }
+        });
 
 
-}
+    }
 }

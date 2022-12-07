@@ -6,16 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Meal {
-    private String mealName, mealType, cuisineType, description, mealPrice, Allergens;
+    private String mealName, mealType, cuisineType, description, mealPrice, allergens, cookName;
     //double mealPrice;
-    private List<String> listOfIngredients;
+    private ArrayList<String> listOfIngredients;
 
     private Boolean status; //available (true) or notAvailable (false)
 
     public Meal(){
 
     }
-    public Meal(String mealName, String mealType, String cuisineType, String description, String mealPrice, List<String> listOfIngredients, Boolean status) {
+
+
+    public Meal(String mealName, String mealType, String cuisineType, String description, String mealPrice, ArrayList<String> listOfIngredients, Boolean status, String cookName) {
         this.mealName = mealName;
         this.mealType = mealType;
         this.cuisineType = cuisineType;
@@ -23,17 +25,19 @@ public class Meal {
         this.mealPrice = mealPrice;
         this.listOfIngredients = listOfIngredients;
         this.status = status;
+        this.cookName = cookName;
     }
 
-    public Meal(String mealName, String mealType, String cuisineType, String description, String mealPrice, List<String> listOfIngredients, String listOfAllergens, Boolean status) {
+    public Meal(String mealName, String mealType, String cuisineType, String description, String mealPrice, ArrayList<String> listOfIngredients, String listOfAllergens, Boolean status, String cookName) {
         this.mealName = mealName;
         this.mealType = mealType;
         this.cuisineType = cuisineType;
         this.description = description;
         this.mealPrice = mealPrice;
         this.listOfIngredients = listOfIngredients;
-        Allergens = listOfAllergens;
+        this.allergens = listOfAllergens;
         this.status = status;
+        this.cookName = cookName;
     }
 
     public String getMealName() {
@@ -76,20 +80,20 @@ public class Meal {
         this.mealPrice = mealPrice;
     }
 
-    public List<String> getListOfIngredients() {
+    public ArrayList<String> getListOfIngredients() {
         return listOfIngredients;
     }
 
-    public void setListOfIngredients(List<String> listOfIngredients) {
+    public void setListOfIngredients(ArrayList<String> listOfIngredients) {
         this.listOfIngredients = listOfIngredients;
     }
 
     public String getListOfAllergens() {
-        return Allergens;
+        return allergens;
     }
 
-    public void setAllergens(String Allergens) {
-        this.Allergens = Allergens;
+    public void setAllergens(String allergens) {
+        this.allergens = allergens;
     }
 
     public Boolean getStatus() {
@@ -99,4 +103,8 @@ public class Meal {
     public void setStatus(Boolean status) {
         this.status = status;
     }
+
+    public String getCookName(){return cookName;}
+
+    public void setCookName(String cookName){this.cookName = cookName;}
 }

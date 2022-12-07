@@ -39,44 +39,6 @@ public class ExampleUnitTest {
     }
 
 
-    // Additional 4 test cases units
-    @Test
-    public void TestMealName(){
-        List<String> listOfIngredients, listOfAllergens;
-        listOfIngredients=new ArrayList<>();
-        listOfIngredients.add("Onions");
+    // Additional 3 test cases units
 
-        Meal meal = new Meal("lasagna","Main Dish","Italian","This food is good","",listOfIngredients,true);
-        assertEquals("lasagna", meal.getMealName());
     }
-
-    @Test
-    public void TestMealType(){
-        List<String> listOfIngredients, listOfAllergens;
-        listOfIngredients=new ArrayList<>();
-        listOfIngredients.add("Onions");
-
-        Meal meal = new Meal("lasagana","Main Dish","Italian","This food is good","19.89",listOfIngredients,true);
-        assertEquals("Main Dish", meal.getMealType());
-    }
-
-    @Test
-    public void TestCuisineType(){
-        List<String> listOfIngredients, listOfAllergens;
-        listOfIngredients=new ArrayList<>();
-        listOfIngredients.add("Onions");
-
-        Meal meal = new Meal("lasagana","Main Dish","Italian","This food is good","0",listOfIngredients,true);
-        assertEquals("Italian", meal.getCuisineType());
-    }
-
-    @Test
-    public void TestStatus(){
-        List<String> listOfIngredients, listOfAllergens;
-        listOfIngredients=new ArrayList<>();
-        listOfIngredients.add("Onions");
-
-        Meal meal = new Meal("lasagana","Main Dish","Italian","This food is good","90",listOfIngredients,true);
-        assertEquals(true, meal.getStatus());
-    }
-}
