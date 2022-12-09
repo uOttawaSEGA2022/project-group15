@@ -49,26 +49,19 @@ public class ExampleUnitTest {
 
 
     @Test
-    public void checkIngredientList(){
-        String[] list = {"sauce","garlic", "beef","chicken","bbq sauce"};
-        int i = 0;
-        DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("Users").child("Cook")
-                .child("OG6DM41uDzWLJsgNBZjiJzOfeFl1").child("Menu").child("All Meat Pizza")
-                .child("listOfIngredients");
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    String meal = dataSnapshot.getValue(String.class);
-                    assertEquals(list[i], meal);
-                }
-            }
+    public void testPendingRequest(){
+        Meal meal = new Meal();
+        MealRequest mealRequest = new MealRequest(meal);
+        assertEquals(true,mealRequest.isPending());
+    }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+    @Test
+    public void testAcceptedRequest(){
+        Meal meal = new Meal();
+        MealRequest mealRequest = new MealRequest(meal);
+        mealRequest.acceptRequest();
+        assertEquals(true,mealRequest.isAccepted());
 
-            }
-        });
     }
 
 

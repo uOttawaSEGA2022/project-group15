@@ -434,12 +434,7 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
         checkoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseReference tmpRef = FirebaseDatabase.getInstance().getReference("Requests").child("Pending");
-                for(Meal meal: cartList){
-                    String cook = meal.getCookName();
-                    tmpRef.child(cook).push().setValue(meal);
-
-                }
+                makeARequest(cartList);
                 Toast.makeText(SearchMeal.this, "Your meal requests have been sent to the cooks, please check your PENDING orders!", Toast.LENGTH_SHORT).show();
                 b.dismiss();
             }
@@ -451,6 +446,27 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                 b.dismiss();
             }
         });
+    }
+
+
+    /**
+     * sends each meal as its own request
+     * @param meals
+     */
+    void makeARequest(ArrayList<Meal> meals){
+        //firebase reference
+        DatabaseReference tmpRef = FirebaseDatabase.getInstance().getReference("Requests").child("Pending");
+        for(Meal meal : meals){
+            //update tmpRef
+            String cookName = meal.getCookName();
+
+
+            //create request
+            MealRequest mealRequest = new MealRequest(meal);
+
+            tmpRef.child(cookName).push().setValue(mealRequest);
+
+        }
     }
 
     //check cook status for cook!!!!!!!!
