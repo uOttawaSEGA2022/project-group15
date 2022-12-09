@@ -2718,6 +2718,7 @@ id chip_group
 id chronometer
 id circle_center
 id clear_text
+id clickThisButton
 id clip_horizontal
 id clip_vertical
 id clockwise
@@ -2768,6 +2769,7 @@ id disablePostScroll
 id disableScroll
 id disjoint
 id dismiss
+id doSomething
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2783,6 +2785,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editTest1
 id edit_query
 id edittext_dropdown_editable
 id edittext_dropdown_noneditable
@@ -3108,6 +3111,11 @@ id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id tempSuspended
+id testView1
+id testView2
+id testView3
+id testView4
+id testView5
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -3287,6 +3295,7 @@ layout activity_list_of_cooks
 layout activity_main
 layout activity_meal_search_result_details
 layout activity_new_meal
+layout activity_random_test
 layout activity_register_cook
 layout activity_register_user
 layout activity_requests

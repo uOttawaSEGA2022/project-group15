@@ -42,6 +42,7 @@ id cancelBtn
 id cart
 id cartListView
 id checkoutBtn
+id clickThisButton
 id complaint
 id container
 id cooKMenuRecycler
@@ -52,6 +53,8 @@ id date_view
 id deleteMeal
 id description
 id dismiss
+id doSomething
+id editTest1
 id email
 id email_reg
 id email_regc
@@ -125,6 +128,11 @@ id stringOfAllergens
 id submit_complaint_button
 id subtotalTextView
 id tempSuspended
+id testView1
+id testView2
+id testView3
+id testView4
+id testView5
 id textView
 id textView2
 id theSearch
@@ -151,6 +159,7 @@ layout activity_list_of_cooks
 layout activity_main
 layout activity_meal_search_result_details
 layout activity_new_meal
+layout activity_random_test
 layout activity_register_cook
 layout activity_register_user
 layout activity_requests

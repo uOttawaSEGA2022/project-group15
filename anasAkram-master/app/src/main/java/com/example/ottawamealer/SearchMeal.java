@@ -17,12 +17,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.StorageReference;
 
 import org.w3c.dom.Text;
 
@@ -47,6 +50,9 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
     ArrayList<String> ingredients, ingredients2;
 
     int numberOfItemsInCartInt;
+
+    String userID;
+
 
 
     @Override
@@ -129,6 +135,7 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                         if(String.valueOf(cookStatus.getValue()).equals("active")){
 
                             for (DataSnapshot dspMenu : cookUid.getChildren()) {
+                                ArrayList<String> someIngredientList = new ArrayList<>();
                                 Boolean statusBool;
                                 //set the statusBool based on Meal's status
                                 if (String.valueOf(dspMenu.child("status").getValue()).equals("true")) {
@@ -139,12 +146,12 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                                 //iterate through the list of ingredients for the Meal
                                 
                                 for (DataSnapshot ing : dspMenu.child("listOfIngredients").getChildren()) {
-                                    ingredients.add(String.valueOf(ing.getValue()));
+                                    someIngredientList.add(String.valueOf(ing.getValue()));
                                 }
                                 //create a new object of type Meal
                                 mealFound = new Meal(String.valueOf(dspMenu.child("mealName").getValue()), String.valueOf(dspMenu.child("mealType").getValue()),
                                         String.valueOf(dspMenu.child("cuisineType").getValue()), String.valueOf(dspMenu.child("description").getValue()),
-                                        String.valueOf(dspMenu.child("mealPrice").getValue()), ingredients,
+                                        String.valueOf(dspMenu.child("mealPrice").getValue()), someIngredientList,
                                         String.valueOf(dspMenu.child("listOfAllergens").getValue()), statusBool, String.valueOf(cookFullName.getValue()));
 
 
@@ -210,7 +217,6 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
                                         statusBool2 = false;
                                     }
                                     //iterate through the list of ingredients for the Meal
-
                                     for (DataSnapshot ing : dspMenu.child("listOfIngredients").getChildren()) {
                                         ingredients.add(String.valueOf(ing.getValue()));
                                     }
@@ -346,13 +352,14 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
         searchMealDescription.setText(aMeal.getDescription());
         searchMealCook.setText(aMeal.getCookName());
 
-        ArrayList<String> ingredientsList = aMeal.getListOfIngredients();
-
-        String ingredientsString = "";
-        ingredientsString += ingredientsList.get(0);
-        for (int i = 1; i < ingredientsList.size(); i++) {
-            ingredientsString += (", " + ingredientsList.get(i));
-        }
+//        ArrayList<String> ingredientsList = aMeal.getListOfIngredients();
+//
+//        String ingredientsString = "";
+//
+//        for (int i = 0; i < ingredientsList.size(); i++) {
+//            ingredientsString += (", " + ingredientsList.get(i));
+//        }
+        String ingredientsString = aMeal.ingredientsToString();
 
         Toast.makeText(this, ingredientsString, Toast.LENGTH_SHORT).show();
 
@@ -427,6 +434,12 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
         checkoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                DatabaseReference tmpRef = FirebaseDatabase.getInstance().getReference("Requests").child("Pending");
+                for(Meal meal: cartList){
+                    String cook = meal.getCookName();
+                    tmpRef.child(cook).push().setValue(meal);
+
+                }
                 Toast.makeText(SearchMeal.this, "Your meal requests have been sent to the cooks, please check your PENDING orders!", Toast.LENGTH_SHORT).show();
                 b.dismiss();
             }

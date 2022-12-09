@@ -93,5 +93,16 @@ public class WelcomeCook extends AppCompatActivity {
         });
 
 
+
+        Button clickThisButton = (Button) findViewById(R.id.clickThisButton);
+        clickThisButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WelcomeCook.this,RandomTest.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

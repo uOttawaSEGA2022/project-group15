@@ -24,6 +24,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.OttawaMealer" >
         <activity
+            android:name="com.example.ottawamealer.RandomTest"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name="com.example.ottawamealer.Requests"
             android:exported="false" >
             <meta-data

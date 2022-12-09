@@ -32,12 +32,12 @@
         "source": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-debug-35:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-merged_res-34:\\layout_cook_menu_item.xml.flat",
-        "source": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-main-36:\\layout\\cook_menu_item.xml"
-    },
-    {
         "merged": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-merged_res-34:\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-debug-35:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-merged_res-34:\\layout_cook_menu_item.xml.flat",
+        "source": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-main-36:\\layout\\cook_menu_item.xml"
     },
     {
         "merged": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-merged_res-34:\\drawable_cart.png.flat",
@@ -124,6 +124,10 @@
         "source": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-main-36:\\layout\\activity_indefinetly_suspended.xml"
     },
     {
+        "merged": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-merged_res-34:\\layout_activity_random_test.xml.flat",
+        "source": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-main-36:\\layout\\activity_random_test.xml"
+    },
+    {
         "merged": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-merged_res-34:\\layout_activity_new_meal.xml.flat",
         "source": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-main-36:\\layout\\activity_new_meal.xml"
     },
@@ -144,10 +148,6 @@
         "source": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-debug-35:\\mipmap-xhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "com.example.ottawamealer.app-merged_res-34:/layout_activity_requests.xml.flat",
-        "source": "com.example.ottawamealer.app-main-36:/layout/activity_requests.xml"
-    },
-    {
         "merged": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-merged_res-34:\\layout_activity_welcome_admin.xml.flat",
         "source": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-main-36:\\layout\\activity_welcome_admin.xml"
     },
@@ -162,6 +162,10 @@
     {
         "merged": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-merged_res-34:\\layout_activity_search_meal.xml.flat",
         "source": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-main-36:\\layout\\activity_search_meal.xml"
+    },
+    {
+        "merged": "com.example.ottawamealer.app-merged_res-34:/layout_activity_random_test.xml.flat",
+        "source": "com.example.ottawamealer.app-main-36:/layout/activity_random_test.xml"
     },
     {
         "merged": "C:\\Users\\97154\\.gradle\\daemon\\7.4\\com.example.ottawamealer.app-merged_res-34:\\mipmap-xxhdpi_ic_launcher_background.png.flat",

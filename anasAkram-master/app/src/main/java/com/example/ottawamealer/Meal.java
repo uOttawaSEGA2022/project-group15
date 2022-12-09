@@ -107,4 +107,12 @@ public class Meal {
     public String getCookName(){return cookName;}
 
     public void setCookName(String cookName){this.cookName = cookName;}
+
+    public String ingredientsToString(){
+        String ingredients = listOfIngredients.get(0);
+        for(int i=1;i<listOfIngredients.size();i++){
+            ingredients+= ", "+listOfIngredients.get(i);
+        }
+        return ingredients;
+    }
 }
