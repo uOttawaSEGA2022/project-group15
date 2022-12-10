@@ -6,510 +6,510 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml
+8-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml
+9-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:23:5-67
-11-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:23:22-64
+11-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:23:5-67
+11-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:23:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:24:5-79
-12-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:24:22-76
+12-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:24:5-79
+12-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:24:22-76
 13
 14    <application
-14-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:5:5-189:19
+14-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:5:5-189:19
 15        android:allowBackup="true"
-15-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:6:9-35
+15-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:6:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.8.0] /Users/royahradaideh/.gradle/caches/transforms-3/102215101d21fdb02f0f27bbfd4ebd5d/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+16-->[androidx.core:core:1.8.0] C:\Users\97154\.gradle\caches\transforms-3\102215101d21fdb02f0f27bbfd4ebd5d\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 17        android:dataExtractionRules="@xml/data_extraction_rules"
-17-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:7:9-65
+17-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:7:9-65
 18        android:debuggable="true"
 19        android:fullBackupContent="@xml/backup_rules"
-19-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:8:9-54
+19-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:8:9-54
 20        android:icon="@mipmap/ic_launcher"
-20-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:9:9-43
+20-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:9:9-43
 21        android:label="@string/app_name"
-21-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:10:9-41
+21-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:10:9-41
 22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:11:9-54
+22-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:11:9-54
 23        android:supportsRtl="true"
-23-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:12:9-35
+23-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:12:9-35
 24        android:testOnly="true"
 25        android:theme="@style/Theme.OttawaMealer" >
-25-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:13:9-50
+25-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:13:9-50
 26        <activity
-26-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:15:9-21:20
+26-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:15:9-21:20
 27            android:name="com.example.ottawamealer.Orders"
-27-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:16:13-35
+27-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:16:13-35
 28            android:exported="false" >
-28-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:17:13-37
+28-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:17:13-37
 29            <meta-data
-29-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+29-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 30                android:name="android.app.lib_name"
-30-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+30-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 31                android:value="" />
-31-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+31-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 32        </activity>
 33        <activity
-33-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:22:9-28:20
+33-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:22:9-28:20
 34            android:name="com.example.ottawamealer.Cart"
-34-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:23:13-33
+34-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:23:13-33
 35            android:exported="false" >
-35-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:24:13-37
+35-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:24:13-37
 36            <meta-data
-36-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+36-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 37                android:name="android.app.lib_name"
-37-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+37-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 38                android:value="" />
-38-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+38-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 39        </activity>
 40        <activity
-40-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:29:9-35:20
+40-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:29:9-35:20
 41            android:name="com.example.ottawamealer.VoidCheckUploadPage"
-41-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:30:13-48
+41-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:30:13-48
 42            android:exported="false" >
-42-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:31:13-37
+42-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:31:13-37
 43            <meta-data
-43-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+43-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 44                android:name="android.app.lib_name"
-44-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+44-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 45                android:value="" />
-45-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+45-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 46        </activity>
 47        <activity
-47-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:36:9-42:20
+47-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:36:9-42:20
 48            android:name="com.example.ottawamealer.SubmitComplaint"
-48-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:37:13-44
+48-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:37:13-44
 49            android:exported="false" >
-49-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:38:13-37
+49-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:38:13-37
 50            <meta-data
-50-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+50-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 51                android:name="android.app.lib_name"
-51-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+51-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 52                android:value="" />
-52-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+52-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 53        </activity>
 54        <activity
-54-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:43:9-49:20
+54-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:43:9-49:20
 55            android:name="com.example.ottawamealer.SearchMeal"
-55-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:44:13-39
+55-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:44:13-39
 56            android:exported="false" >
-56-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:45:13-37
+56-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:45:13-37
 57            <meta-data
-57-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+57-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 58                android:name="android.app.lib_name"
-58-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+58-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 59                android:value="" />
-59-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+59-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 60        </activity>
 61        <activity
-61-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:50:9-56:20
+61-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:50:9-56:20
 62            android:name="com.example.ottawamealer.CookActiveMenu"
-62-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:51:13-43
+62-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:51:13-43
 63            android:exported="false" >
-63-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:52:13-37
+63-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:52:13-37
 64            <meta-data
-64-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+64-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 65                android:name="android.app.lib_name"
-65-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+65-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 66                android:value="" />
-66-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+66-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 67        </activity>
 68        <activity
-68-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:57:9-63:20
+68-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:57:9-63:20
 69            android:name="com.example.ottawamealer.UpdateDeletePage"
-69-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:58:13-45
+69-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:58:13-45
 70            android:exported="false" >
-70-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:59:13-37
+70-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:59:13-37
 71            <meta-data
-71-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+71-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 72                android:name="android.app.lib_name"
-72-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+72-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 73                android:value="" />
-73-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+73-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 74        </activity>
 75        <activity
-75-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:64:9-70:20
+75-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:64:9-70:20
 76            android:name="com.example.ottawamealer.UpdateMeal"
-76-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:65:13-39
+76-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:65:13-39
 77            android:exported="false" >
-77-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:66:13-37
+77-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:66:13-37
 78            <meta-data
-78-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+78-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 79                android:name="android.app.lib_name"
-79-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+79-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 80                android:value="" />
-80-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+80-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 81        </activity>
 82        <activity
-82-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:71:9-77:20
+82-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:71:9-77:20
 83            android:name="com.example.ottawamealer.AddIngrediants"
-83-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:72:13-43
+83-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:72:13-43
 84            android:exported="false" >
-84-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:73:13-37
+84-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:73:13-37
 85            <meta-data
-85-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+85-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 86                android:name="android.app.lib_name"
-86-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+86-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 87                android:value="" />
-87-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+87-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 88        </activity>
 89        <activity
-89-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:78:9-84:20
+89-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:78:9-84:20
 90            android:name="com.example.ottawamealer.NewMeal"
-90-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:79:13-36
+90-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:79:13-36
 91            android:exported="false" >
-91-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:80:13-37
+91-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:80:13-37
 92            <meta-data
-92-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+92-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 93                android:name="android.app.lib_name"
-93-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+93-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 94                android:value="" />
-94-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+94-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 95        </activity>
 96        <activity
-96-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:85:9-91:20
+96-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:85:9-91:20
 97            android:name="com.example.ottawamealer.CookMenu"
-97-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:86:13-37
+97-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:86:13-37
 98            android:exported="false" >
-98-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:87:13-37
+98-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:87:13-37
 99            <meta-data
-99-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+99-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 100                android:name="android.app.lib_name"
-100-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+100-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 101                android:value="" />
-101-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+101-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 102        </activity>
 103        <activity
-103-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:92:9-98:20
+103-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:92:9-98:20
 104            android:name="com.example.ottawamealer.ChefComplaint"
-104-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:93:13-42
+104-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:93:13-42
 105            android:exported="false" >
-105-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:94:13-37
+105-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:94:13-37
 106            <meta-data
-106-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+106-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 107                android:name="android.app.lib_name"
-107-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+107-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 108                android:value="" />
-108-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+108-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 109        </activity>
 110        <activity
-110-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:99:9-105:20
+110-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:99:9-105:20
 111            android:name="com.example.ottawamealer.IndefinetlySuspended"
-111-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:100:13-49
+111-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:100:13-49
 112            android:exported="false" >
-112-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:101:13-37
+112-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:101:13-37
 113            <meta-data
-113-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+113-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 114                android:name="android.app.lib_name"
-114-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+114-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 115                android:value="" />
-115-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+115-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 116        </activity>
 117        <activity
-117-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:106:9-112:20
+117-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:106:9-112:20
 118            android:name="com.example.ottawamealer.TemporarilySuspended"
-118-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:107:13-49
+118-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:107:13-49
 119            android:exported="false" >
-119-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:108:13-37
+119-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:108:13-37
 120            <meta-data
-120-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+120-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 121                android:name="android.app.lib_name"
-121-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+121-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 122                android:value="" />
-122-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+122-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 123        </activity>
 124        <activity
-124-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:113:9-119:20
+124-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:113:9-119:20
 125            android:name="com.example.ottawamealer.FireCook"
-125-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:114:13-37
+125-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:114:13-37
 126            android:exported="false" >
-126-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:115:13-37
+126-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:115:13-37
 127            <meta-data
-127-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+127-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 128                android:name="android.app.lib_name"
-128-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+128-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 129                android:value="" />
-129-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+129-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 130        </activity>
 131        <activity
-131-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:120:9-126:20
+131-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:120:9-126:20
 132            android:name="com.example.ottawamealer.ListOfCooks"
-132-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:121:13-40
+132-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:121:13-40
 133            android:exported="false" >
-133-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:122:13-37
+133-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:122:13-37
 134            <meta-data
-134-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+134-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 135                android:name="android.app.lib_name"
-135-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+135-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 136                android:value="" />
-136-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+136-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 137        </activity>
 138        <activity
-138-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:127:9-133:20
+138-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:127:9-133:20
 139            android:name="com.example.ottawamealer.AdminInbox"
-139-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:128:13-39
+139-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:128:13-39
 140            android:exported="false" >
-140-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:129:13-37
+140-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:129:13-37
 141            <meta-data
-141-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+141-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 142                android:name="android.app.lib_name"
-142-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+142-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 143                android:value="" />
-143-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+143-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 144        </activity>
 145        <activity
-145-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:134:9-140:20
+145-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:134:9-140:20
 146            android:name="com.example.ottawamealer.WelcomeAdmin"
-146-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:135:13-41
+146-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:135:13-41
 147            android:exported="false" >
-147-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:136:13-37
+147-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:136:13-37
 148            <meta-data
-148-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+148-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 149                android:name="android.app.lib_name"
-149-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+149-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 150                android:value="" />
-150-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+150-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 151        </activity>
 152        <activity
-152-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:141:9-147:20
+152-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:141:9-147:20
 153            android:name="com.example.ottawamealer.WelcomeCook"
-153-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:142:13-40
+153-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:142:13-40
 154            android:exported="false" >
-154-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:143:13-37
+154-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:143:13-37
 155            <meta-data
-155-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+155-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 156                android:name="android.app.lib_name"
-156-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+156-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 157                android:value="" />
-157-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+157-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 158        </activity>
 159        <activity
-159-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:148:9-154:20
+159-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:148:9-154:20
 160            android:name="com.example.ottawamealer.RegisterCook"
-160-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:149:13-41
+160-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:149:13-41
 161            android:exported="false" >
-161-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:150:13-37
+161-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:150:13-37
 162            <meta-data
-162-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+162-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 163                android:name="android.app.lib_name"
-163-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+163-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 164                android:value="" />
-164-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+164-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 165        </activity>
 166        <activity
-166-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:155:9-161:20
+166-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:155:9-161:20
 167            android:name="com.example.ottawamealer.ForgotPassword"
-167-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:156:13-43
+167-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:156:13-43
 168            android:exported="false" >
-168-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:157:13-37
+168-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:157:13-37
 169            <meta-data
-169-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+169-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 170                android:name="android.app.lib_name"
-170-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+170-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 171                android:value="" />
-171-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+171-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 172        </activity>
 173        <activity
-173-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:162:9-168:20
+173-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:162:9-168:20
 174            android:name="com.example.ottawamealer.Welcome"
-174-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:163:13-36
+174-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:163:13-36
 175            android:exported="false" >
-175-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:164:13-37
+175-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:164:13-37
 176            <meta-data
-176-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+176-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 177                android:name="android.app.lib_name"
-177-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+177-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 178                android:value="" />
-178-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+178-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 179        </activity>
 180        <activity
-180-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:169:9-175:20
+180-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:169:9-175:20
 181            android:name="com.example.ottawamealer.RegisterUser"
-181-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:170:13-41
+181-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:170:13-41
 182            android:exported="false" >
-182-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:171:13-37
+182-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:171:13-37
 183            <meta-data
-183-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+183-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 184                android:name="android.app.lib_name"
-184-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+184-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 185                android:value="" />
-185-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+185-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 186        </activity>
 187        <activity
-187-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:176:9-188:20
+187-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:176:9-188:20
 188            android:name="com.example.ottawamealer.MainActivity"
-188-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:177:13-41
+188-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:177:13-41
 189            android:exported="true" >
-189-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:178:13-36
+189-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:178:13-36
 190            <intent-filter>
-190-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:179:13-183:29
+190-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:179:13-183:29
 191                <action android:name="android.intent.action.MAIN" />
-191-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:180:17-69
-191-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:180:25-66
+191-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:180:17-69
+191-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:180:25-66
 192
 193                <category android:name="android.intent.category.LAUNCHER" />
-193-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:182:17-77
-193-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:182:27-74
+193-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:182:17-77
+193-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:182:27-74
 194            </intent-filter>
 195
 196            <meta-data
-196-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:18:13-20:36
+196-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 197                android:name="android.app.lib_name"
-197-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:19:17-52
+197-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
 198                android:value="" />
-198-->/Users/royahradaideh/Desktop/SegProject/GitHub/anasAkram-master/app/src/main/AndroidManifest.xml:20:17-33
+198-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 199        </activity>
 200        <activity
-200-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:27:9-44:20
+200-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:27:9-44:20
 201            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-201-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:28:13-80
+201-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:28:13-80
 202            android:excludeFromRecents="true"
-202-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:29:13-46
+202-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:29:13-46
 203            android:exported="true"
-203-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:30:13-36
+203-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:30:13-36
 204            android:launchMode="singleTask"
-204-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:31:13-44
+204-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:31:13-44
 205            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-205-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:32:13-72
+205-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:32:13-72
 206            <intent-filter>
-206-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:33:13-43:29
+206-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:33:13-43:29
 207                <action android:name="android.intent.action.VIEW" />
-207-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:34:17-69
-207-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:34:25-66
+207-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:17-69
+207-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:25-66
 208
 209                <category android:name="android.intent.category.DEFAULT" />
-209-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:36:17-76
-209-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:36:27-73
+209-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:17-76
+209-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:27-73
 210                <category android:name="android.intent.category.BROWSABLE" />
-210-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:37:17-78
-210-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:37:27-75
+210-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:17-78
+210-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:27-75
 211
 212                <data
-212-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:39:17-42:51
+212-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:39:17-42:51
 213                    android:host="firebase.auth"
-213-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:40:21-49
+213-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:40:21-49
 214                    android:path="/"
-214-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:41:21-37
+214-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:41:21-37
 215                    android:scheme="genericidp" />
-215-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:42:21-48
+215-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:42:21-48
 216            </intent-filter>
 217        </activity>
 218        <activity
-218-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:45:9-62:20
+218-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:45:9-62:20
 219            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-219-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:46:13-79
+219-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:46:13-79
 220            android:excludeFromRecents="true"
-220-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:47:13-46
+220-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:47:13-46
 221            android:exported="true"
-221-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:48:13-36
+221-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:48:13-36
 222            android:launchMode="singleTask"
-222-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:49:13-44
+222-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:49:13-44
 223            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-223-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:50:13-72
+223-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:50:13-72
 224            <intent-filter>
-224-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:51:13-61:29
+224-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:51:13-61:29
 225                <action android:name="android.intent.action.VIEW" />
-225-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:34:17-69
-225-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:34:25-66
+225-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:17-69
+225-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:25-66
 226
 227                <category android:name="android.intent.category.DEFAULT" />
-227-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:36:17-76
-227-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:36:27-73
+227-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:17-76
+227-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:27-73
 228                <category android:name="android.intent.category.BROWSABLE" />
-228-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:37:17-78
-228-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:37:27-75
+228-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:17-78
+228-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:27-75
 229
 230                <data
-230-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:39:17-42:51
+230-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:39:17-42:51
 231                    android:host="firebase.auth"
-231-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:40:21-49
+231-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:40:21-49
 232                    android:path="/"
-232-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:41:21-37
+232-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:41:21-37
 233                    android:scheme="recaptcha" />
-233-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:42:21-48
+233-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:42:21-48
 234            </intent-filter>
 235        </activity>
 236
 237        <service
-237-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:64:9-70:19
+237-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:64:9-70:19
 238            android:name="com.google.firebase.components.ComponentDiscoveryService"
-238-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:65:13-84
+238-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:65:13-84
 239            android:directBootAware="true"
-239-->[com.google.firebase:firebase-common:20.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/480b3dae7120d0220412229c8f9a6223/transformed/firebase-common-20.2.0/AndroidManifest.xml:34:13-43
+239-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:34:13-43
 240            android:exported="false" >
-240-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:66:13-37
+240-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:66:13-37
 241            <meta-data
-241-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:67:13-69:85
+241-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:67:13-69:85
 242                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-242-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:68:17-109
+242-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:68:17-109
 243                android:value="com.google.firebase.components.ComponentRegistrar" />
-243-->[com.google.firebase:firebase-auth:21.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/a0813034fd662e388f39868da2166e2e/transformed/firebase-auth-21.1.0/AndroidManifest.xml:69:17-82
+243-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:69:17-82
 244            <meta-data
-244-->[com.google.firebase:firebase-database:20.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/802044bf6455f412af7a8d2027c59c8b/transformed/firebase-database-20.1.0/AndroidManifest.xml:31:13-33:85
+244-->[com.google.firebase:firebase-database:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\802044bf6455f412af7a8d2027c59c8b\transformed\firebase-database-20.1.0\AndroidManifest.xml:31:13-33:85
 245                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-245-->[com.google.firebase:firebase-database:20.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/802044bf6455f412af7a8d2027c59c8b/transformed/firebase-database-20.1.0/AndroidManifest.xml:32:17-109
+245-->[com.google.firebase:firebase-database:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\802044bf6455f412af7a8d2027c59c8b\transformed\firebase-database-20.1.0\AndroidManifest.xml:32:17-109
 246                android:value="com.google.firebase.components.ComponentRegistrar" />
-246-->[com.google.firebase:firebase-database:20.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/802044bf6455f412af7a8d2027c59c8b/transformed/firebase-database-20.1.0/AndroidManifest.xml:33:17-82
+246-->[com.google.firebase:firebase-database:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\802044bf6455f412af7a8d2027c59c8b\transformed\firebase-database-20.1.0\AndroidManifest.xml:33:17-82
 247            <meta-data
-247-->[com.google.firebase:firebase-storage:20.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/79dc1955f4d9724194dd8a9809fbc5ab/transformed/firebase-storage-20.1.0/AndroidManifest.xml:32:13-34:85
+247-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\79dc1955f4d9724194dd8a9809fbc5ab\transformed\firebase-storage-20.1.0\AndroidManifest.xml:32:13-34:85
 248                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-248-->[com.google.firebase:firebase-storage:20.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/79dc1955f4d9724194dd8a9809fbc5ab/transformed/firebase-storage-20.1.0/AndroidManifest.xml:33:17-107
+248-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\79dc1955f4d9724194dd8a9809fbc5ab\transformed\firebase-storage-20.1.0\AndroidManifest.xml:33:17-107
 249                android:value="com.google.firebase.components.ComponentRegistrar" />
-249-->[com.google.firebase:firebase-storage:20.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/79dc1955f4d9724194dd8a9809fbc5ab/transformed/firebase-storage-20.1.0/AndroidManifest.xml:34:17-82
+249-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\79dc1955f4d9724194dd8a9809fbc5ab\transformed\firebase-storage-20.1.0\AndroidManifest.xml:34:17-82
 250        </service>
 251
 252        <provider
-252-->[com.google.firebase:firebase-common:20.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/480b3dae7120d0220412229c8f9a6223/transformed/firebase-common-20.2.0/AndroidManifest.xml:25:9-30:39
+252-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
 253            android:name="com.google.firebase.provider.FirebaseInitProvider"
-253-->[com.google.firebase:firebase-common:20.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/480b3dae7120d0220412229c8f9a6223/transformed/firebase-common-20.2.0/AndroidManifest.xml:26:13-77
+253-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:26:13-77
 254            android:authorities="com.example.ottawamealer.firebaseinitprovider"
-254-->[com.google.firebase:firebase-common:20.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/480b3dae7120d0220412229c8f9a6223/transformed/firebase-common-20.2.0/AndroidManifest.xml:27:13-72
+254-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:27:13-72
 255            android:directBootAware="true"
-255-->[com.google.firebase:firebase-common:20.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/480b3dae7120d0220412229c8f9a6223/transformed/firebase-common-20.2.0/AndroidManifest.xml:28:13-43
+255-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:28:13-43
 256            android:exported="false"
-256-->[com.google.firebase:firebase-common:20.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/480b3dae7120d0220412229c8f9a6223/transformed/firebase-common-20.2.0/AndroidManifest.xml:29:13-37
+256-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:29:13-37
 257            android:initOrder="100" />
-257-->[com.google.firebase:firebase-common:20.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/480b3dae7120d0220412229c8f9a6223/transformed/firebase-common-20.2.0/AndroidManifest.xml:30:13-36
+257-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:30:13-36
 258
 259        <activity
-259-->[com.google.android.gms:play-services-base:18.0.1] /Users/royahradaideh/.gradle/caches/transforms-3/26b3666345201c303a3333024bb53271/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+259-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\97154\.gradle\caches\transforms-3\26b3666345201c303a3333024bb53271\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
 260            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-260-->[com.google.android.gms:play-services-base:18.0.1] /Users/royahradaideh/.gradle/caches/transforms-3/26b3666345201c303a3333024bb53271/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+260-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\97154\.gradle\caches\transforms-3\26b3666345201c303a3333024bb53271\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
 261            android:exported="false"
-261-->[com.google.android.gms:play-services-base:18.0.1] /Users/royahradaideh/.gradle/caches/transforms-3/26b3666345201c303a3333024bb53271/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+261-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\97154\.gradle\caches\transforms-3\26b3666345201c303a3333024bb53271\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
 262            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-262-->[com.google.android.gms:play-services-base:18.0.1] /Users/royahradaideh/.gradle/caches/transforms-3/26b3666345201c303a3333024bb53271/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+262-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\97154\.gradle\caches\transforms-3\26b3666345201c303a3333024bb53271\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
 263
 264        <meta-data
-264-->[com.google.android.gms:play-services-basement:18.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/0ccd676f36a88f843cf47f86b0f66e38/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+264-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\97154\.gradle\caches\transforms-3\0ccd676f36a88f843cf47f86b0f66e38\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
 265            android:name="com.google.android.gms.version"
-265-->[com.google.android.gms:play-services-basement:18.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/0ccd676f36a88f843cf47f86b0f66e38/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+265-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\97154\.gradle\caches\transforms-3\0ccd676f36a88f843cf47f86b0f66e38\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
 266            android:value="@integer/google_play_services_version" />
-266-->[com.google.android.gms:play-services-basement:18.1.0] /Users/royahradaideh/.gradle/caches/transforms-3/0ccd676f36a88f843cf47f86b0f66e38/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+266-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\97154\.gradle\caches\transforms-3\0ccd676f36a88f843cf47f86b0f66e38\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
 267
 268        <provider
-268-->[androidx.emoji2:emoji2:1.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/2ed499a9972c76584289d61187c198e3/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+268-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 269            android:name="androidx.startup.InitializationProvider"
-269-->[androidx.emoji2:emoji2:1.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/2ed499a9972c76584289d61187c198e3/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+269-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
 270            android:authorities="com.example.ottawamealer.androidx-startup"
-270-->[androidx.emoji2:emoji2:1.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/2ed499a9972c76584289d61187c198e3/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+270-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
 271            android:exported="false" >
-271-->[androidx.emoji2:emoji2:1.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/2ed499a9972c76584289d61187c198e3/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+271-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 272            <meta-data
-272-->[androidx.emoji2:emoji2:1.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/2ed499a9972c76584289d61187c198e3/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+272-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 273                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-273-->[androidx.emoji2:emoji2:1.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/2ed499a9972c76584289d61187c198e3/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+273-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 274                android:value="androidx.startup" />
-274-->[androidx.emoji2:emoji2:1.2.0] /Users/royahradaideh/.gradle/caches/transforms-3/2ed499a9972c76584289d61187c198e3/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+274-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
 275            <meta-data
-275-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/royahradaideh/.gradle/caches/transforms-3/4f04b5d013d4e9a91b26580011dee398/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+275-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\97154\.gradle\caches\transforms-3\4f04b5d013d4e9a91b26580011dee398\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
 276                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-276-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/royahradaideh/.gradle/caches/transforms-3/4f04b5d013d4e9a91b26580011dee398/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+276-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\97154\.gradle\caches\transforms-3\4f04b5d013d4e9a91b26580011dee398\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 277                android:value="androidx.startup" />
-277-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/royahradaideh/.gradle/caches/transforms-3/4f04b5d013d4e9a91b26580011dee398/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+277-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\97154\.gradle\caches\transforms-3\4f04b5d013d4e9a91b26580011dee398\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 278        </provider>
 279    </application>
 280

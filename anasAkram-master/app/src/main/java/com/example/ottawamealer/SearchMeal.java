@@ -51,13 +51,18 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
 
     int numberOfItemsInCartInt;
 
-    String userID;
+    String userID,customerName;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
+
+
         setContentView(R.layout.activity_search_meal);
         listOfMealResults = new ArrayList<>();
         listOfIngredients = new ArrayList<>();
@@ -86,6 +91,13 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
         searchMealButton = (Button) findViewById(R.id.searchMealButton);
         searchMealButton.setOnClickListener(this);
         searchType = "searchAll";
+
+
+
+
+        //get Intent
+        Intent intent = getIntent();
+        customerName = intent.getStringExtra("Customer");
 
         cart = (ImageView) findViewById(R.id.cart);
        // cart.setOnClickListener(this);
@@ -465,7 +477,7 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
 
 
             //create request
-            MealRequest mealRequest = new MealRequest(meal,crntTime);
+            MealRequest mealRequest = new MealRequest(meal,crntTime,customerName);
 
             tmpRef.child(cookName).child(crntTime+"").setValue(mealRequest);
         }

@@ -53,6 +53,7 @@ id cookName
 id credit_card
 id cuisineType
 id customer
+id customerName
 id date_view
 id declineButton
 id deleteMeal
@@ -181,11 +182,12 @@ layout activity_void_check_upload_meal
 layout activity_welcome
 layout activity_welcome_admin
 layout activity_welcome_cook
+layout approved_request_item
 layout complaint_list
 layout cook_menu_item
 layout food_list
 layout meal_type
-layout request_item
+layout pending_request_item
 mipmap ic_launcher
 mipmap ic_launcher_background
 mipmap ic_launcher_foreground

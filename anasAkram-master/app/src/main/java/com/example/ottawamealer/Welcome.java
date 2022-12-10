@@ -18,8 +18,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Welcome extends AppCompatActivity {
-    String first,last;
+public class
+Welcome extends AppCompatActivity {
+    String first,last,fullName;
     TextView textView;
 
     private Button logout, menuButton;
@@ -44,7 +45,8 @@ public class Welcome extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 first = snapshot.child("firstName").getValue(String.class);
                 last = snapshot.child("lastName").getValue(String.class);
-                textView.setText("Welcome "+first + " "+last+"!");
+                fullName = first+" "+last;
+                textView.setText("Welcome "+fullName+"!");
             }
 
             @Override
@@ -65,7 +67,9 @@ public class Welcome extends AppCompatActivity {
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Welcome.this, SearchMeal.class));
+                Intent intent = new Intent(Welcome.this, SearchMeal.class);
+                intent.putExtra("Customer",fullName);
+                startActivity(intent);
             }
         });
 

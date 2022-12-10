@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -31,7 +30,7 @@ public class RequestAdapter extends ArrayAdapter<MealRequest> {
 
 
     public RequestAdapter(Activity context, List<MealRequest> mealRequests){
-        super(context,R.layout.request_item,mealRequests);
+        super(context,R.layout.pending_request_item,mealRequests);
         this.context = context;
         this.mealRequests = mealRequests;
     }
@@ -40,7 +39,7 @@ public class RequestAdapter extends ArrayAdapter<MealRequest> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-        View listViewItem = inflater.inflate(R.layout.request_item,null,true);
+        View listViewItem = inflater.inflate(R.layout.pending_request_item,null,true);
 
 
 
@@ -61,7 +60,7 @@ public class RequestAdapter extends ArrayAdapter<MealRequest> {
         Meal meal = mealRequest.getMeal();
         //return info to respective location
         mealName.setText(meal.getMealName());
-        customerName.setText(meal.getMealPrice());
+        customerName.setText(mealRequest.getCustomer());
 
 
 
