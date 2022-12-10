@@ -18,7 +18,7 @@
 12-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:24:22-76
 13
 14    <application
-14-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:5:5-189:19
+14-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:5:5-196:19
 15        android:allowBackup="true"
 15-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:6:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -41,8 +41,8 @@
 25-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:13:9-50
 26        <activity
 26-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:15:9-21:20
-27            android:name="com.example.ottawamealer.Orders"
-27-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:16:13-35
+27            android:name="com.example.ottawamealer.ClientRequests"
+27-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:16:13-43
 28            android:exported="false" >
 28-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:17:13-37
 29            <meta-data
@@ -54,8 +54,8 @@
 32        </activity>
 33        <activity
 33-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:22:9-28:20
-34            android:name="com.example.ottawamealer.Cart"
-34-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:23:13-33
+34            android:name="com.example.ottawamealer.Orders"
+34-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:23:13-35
 35            android:exported="false" >
 35-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:24:13-37
 36            <meta-data
@@ -67,8 +67,8 @@
 39        </activity>
 40        <activity
 40-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:29:9-35:20
-41            android:name="com.example.ottawamealer.VoidCheckUploadPage"
-41-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:30:13-48
+41            android:name="com.example.ottawamealer.Cart"
+41-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:30:13-33
 42            android:exported="false" >
 42-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:31:13-37
 43            <meta-data
@@ -80,8 +80,8 @@
 46        </activity>
 47        <activity
 47-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:36:9-42:20
-48            android:name="com.example.ottawamealer.SubmitComplaint"
-48-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:37:13-44
+48            android:name="com.example.ottawamealer.VoidCheckUploadPage"
+48-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:37:13-48
 49            android:exported="false" >
 49-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:38:13-37
 50            <meta-data
@@ -93,8 +93,8 @@
 53        </activity>
 54        <activity
 54-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:43:9-49:20
-55            android:name="com.example.ottawamealer.SearchMeal"
-55-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:44:13-39
+55            android:name="com.example.ottawamealer.SubmitComplaint"
+55-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:44:13-44
 56            android:exported="false" >
 56-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:45:13-37
 57            <meta-data
@@ -106,8 +106,8 @@
 60        </activity>
 61        <activity
 61-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:50:9-56:20
-62            android:name="com.example.ottawamealer.CookActiveMenu"
-62-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:51:13-43
+62            android:name="com.example.ottawamealer.SearchMeal"
+62-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:51:13-39
 63            android:exported="false" >
 63-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:52:13-37
 64            <meta-data
@@ -119,8 +119,8 @@
 67        </activity>
 68        <activity
 68-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:57:9-63:20
-69            android:name="com.example.ottawamealer.UpdateDeletePage"
-69-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:58:13-45
+69            android:name="com.example.ottawamealer.CookActiveMenu"
+69-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:58:13-43
 70            android:exported="false" >
 70-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:59:13-37
 71            <meta-data
@@ -132,8 +132,8 @@
 74        </activity>
 75        <activity
 75-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:64:9-70:20
-76            android:name="com.example.ottawamealer.UpdateMeal"
-76-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:65:13-39
+76            android:name="com.example.ottawamealer.UpdateDeletePage"
+76-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:65:13-45
 77            android:exported="false" >
 77-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:66:13-37
 78            <meta-data
@@ -145,8 +145,8 @@
 81        </activity>
 82        <activity
 82-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:71:9-77:20
-83            android:name="com.example.ottawamealer.AddIngrediants"
-83-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:72:13-43
+83            android:name="com.example.ottawamealer.UpdateMeal"
+83-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:72:13-39
 84            android:exported="false" >
 84-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:73:13-37
 85            <meta-data
@@ -158,8 +158,8 @@
 88        </activity>
 89        <activity
 89-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:78:9-84:20
-90            android:name="com.example.ottawamealer.NewMeal"
-90-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:79:13-36
+90            android:name="com.example.ottawamealer.AddIngrediants"
+90-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:79:13-43
 91            android:exported="false" >
 91-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:80:13-37
 92            <meta-data
@@ -171,8 +171,8 @@
 95        </activity>
 96        <activity
 96-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:85:9-91:20
-97            android:name="com.example.ottawamealer.CookMenu"
-97-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:86:13-37
+97            android:name="com.example.ottawamealer.NewMeal"
+97-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:86:13-36
 98            android:exported="false" >
 98-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:87:13-37
 99            <meta-data
@@ -184,8 +184,8 @@
 102        </activity>
 103        <activity
 103-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:92:9-98:20
-104            android:name="com.example.ottawamealer.ChefComplaint"
-104-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:93:13-42
+104            android:name="com.example.ottawamealer.CookMenu"
+104-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:93:13-37
 105            android:exported="false" >
 105-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:94:13-37
 106            <meta-data
@@ -197,8 +197,8 @@
 109        </activity>
 110        <activity
 110-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:99:9-105:20
-111            android:name="com.example.ottawamealer.IndefinetlySuspended"
-111-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:100:13-49
+111            android:name="com.example.ottawamealer.ChefComplaint"
+111-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:100:13-42
 112            android:exported="false" >
 112-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:101:13-37
 113            <meta-data
@@ -210,7 +210,7 @@
 116        </activity>
 117        <activity
 117-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:106:9-112:20
-118            android:name="com.example.ottawamealer.TemporarilySuspended"
+118            android:name="com.example.ottawamealer.IndefinetlySuspended"
 118-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:107:13-49
 119            android:exported="false" >
 119-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:108:13-37
@@ -223,8 +223,8 @@
 123        </activity>
 124        <activity
 124-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:113:9-119:20
-125            android:name="com.example.ottawamealer.FireCook"
-125-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:114:13-37
+125            android:name="com.example.ottawamealer.TemporarilySuspended"
+125-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:114:13-49
 126            android:exported="false" >
 126-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:115:13-37
 127            <meta-data
@@ -236,8 +236,8 @@
 130        </activity>
 131        <activity
 131-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:120:9-126:20
-132            android:name="com.example.ottawamealer.ListOfCooks"
-132-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:121:13-40
+132            android:name="com.example.ottawamealer.FireCook"
+132-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:121:13-37
 133            android:exported="false" >
 133-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:122:13-37
 134            <meta-data
@@ -249,8 +249,8 @@
 137        </activity>
 138        <activity
 138-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:127:9-133:20
-139            android:name="com.example.ottawamealer.AdminInbox"
-139-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:128:13-39
+139            android:name="com.example.ottawamealer.ListOfCooks"
+139-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:128:13-40
 140            android:exported="false" >
 140-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:129:13-37
 141            <meta-data
@@ -262,8 +262,8 @@
 144        </activity>
 145        <activity
 145-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:134:9-140:20
-146            android:name="com.example.ottawamealer.WelcomeAdmin"
-146-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:135:13-41
+146            android:name="com.example.ottawamealer.AdminInbox"
+146-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:135:13-39
 147            android:exported="false" >
 147-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:136:13-37
 148            <meta-data
@@ -275,8 +275,8 @@
 151        </activity>
 152        <activity
 152-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:141:9-147:20
-153            android:name="com.example.ottawamealer.WelcomeCook"
-153-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:142:13-40
+153            android:name="com.example.ottawamealer.WelcomeAdmin"
+153-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:142:13-41
 154            android:exported="false" >
 154-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:143:13-37
 155            <meta-data
@@ -288,8 +288,8 @@
 158        </activity>
 159        <activity
 159-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:148:9-154:20
-160            android:name="com.example.ottawamealer.RegisterCook"
-160-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:149:13-41
+160            android:name="com.example.ottawamealer.WelcomeCook"
+160-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:149:13-40
 161            android:exported="false" >
 161-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:150:13-37
 162            <meta-data
@@ -301,8 +301,8 @@
 165        </activity>
 166        <activity
 166-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:155:9-161:20
-167            android:name="com.example.ottawamealer.ForgotPassword"
-167-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:156:13-43
+167            android:name="com.example.ottawamealer.RegisterCook"
+167-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:156:13-41
 168            android:exported="false" >
 168-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:157:13-37
 169            <meta-data
@@ -314,8 +314,8 @@
 172        </activity>
 173        <activity
 173-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:162:9-168:20
-174            android:name="com.example.ottawamealer.Welcome"
-174-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:163:13-36
+174            android:name="com.example.ottawamealer.ForgotPassword"
+174-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:163:13-43
 175            android:exported="false" >
 175-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:164:13-37
 176            <meta-data
@@ -327,8 +327,8 @@
 179        </activity>
 180        <activity
 180-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:169:9-175:20
-181            android:name="com.example.ottawamealer.RegisterUser"
-181-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:170:13-41
+181            android:name="com.example.ottawamealer.Welcome"
+181-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:170:13-36
 182            android:exported="false" >
 182-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:171:13-37
 183            <meta-data
@@ -339,178 +339,191 @@
 185-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 186        </activity>
 187        <activity
-187-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:176:9-188:20
-188            android:name="com.example.ottawamealer.MainActivity"
+187-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:176:9-182:20
+188            android:name="com.example.ottawamealer.RegisterUser"
 188-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:177:13-41
-189            android:exported="true" >
-189-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:178:13-36
-190            <intent-filter>
-190-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:179:13-183:29
-191                <action android:name="android.intent.action.MAIN" />
-191-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:180:17-69
-191-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:180:25-66
-192
-193                <category android:name="android.intent.category.LAUNCHER" />
-193-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:182:17-77
-193-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:182:27-74
-194            </intent-filter>
-195
-196            <meta-data
-196-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
-197                android:name="android.app.lib_name"
-197-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
-198                android:value="" />
-198-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
-199        </activity>
-200        <activity
-200-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:27:9-44:20
-201            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-201-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:28:13-80
-202            android:excludeFromRecents="true"
-202-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:29:13-46
-203            android:exported="true"
-203-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:30:13-36
-204            android:launchMode="singleTask"
-204-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:31:13-44
-205            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-205-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:32:13-72
-206            <intent-filter>
-206-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:33:13-43:29
-207                <action android:name="android.intent.action.VIEW" />
-207-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:17-69
-207-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:25-66
-208
-209                <category android:name="android.intent.category.DEFAULT" />
-209-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:17-76
-209-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:27-73
-210                <category android:name="android.intent.category.BROWSABLE" />
-210-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:17-78
-210-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:27-75
-211
-212                <data
-212-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:39:17-42:51
-213                    android:host="firebase.auth"
-213-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:40:21-49
-214                    android:path="/"
-214-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:41:21-37
-215                    android:scheme="genericidp" />
-215-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:42:21-48
-216            </intent-filter>
-217        </activity>
-218        <activity
-218-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:45:9-62:20
-219            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-219-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:46:13-79
-220            android:excludeFromRecents="true"
-220-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:47:13-46
-221            android:exported="true"
-221-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:48:13-36
-222            android:launchMode="singleTask"
-222-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:49:13-44
-223            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-223-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:50:13-72
-224            <intent-filter>
-224-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:51:13-61:29
-225                <action android:name="android.intent.action.VIEW" />
-225-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:17-69
-225-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:25-66
-226
-227                <category android:name="android.intent.category.DEFAULT" />
-227-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:17-76
-227-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:27-73
-228                <category android:name="android.intent.category.BROWSABLE" />
-228-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:17-78
-228-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:27-75
-229
-230                <data
-230-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:39:17-42:51
-231                    android:host="firebase.auth"
-231-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:40:21-49
-232                    android:path="/"
-232-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:41:21-37
-233                    android:scheme="recaptcha" />
-233-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:42:21-48
-234            </intent-filter>
-235        </activity>
+189            android:exported="false" >
+189-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:178:13-37
+190            <meta-data
+190-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
+191                android:name="android.app.lib_name"
+191-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
+192                android:value="" />
+192-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
+193        </activity>
+194        <activity
+194-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:183:9-195:20
+195            android:name="com.example.ottawamealer.MainActivity"
+195-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:184:13-41
+196            android:exported="true" >
+196-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:185:13-36
+197            <intent-filter>
+197-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:186:13-190:29
+198                <action android:name="android.intent.action.MAIN" />
+198-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:187:17-69
+198-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:187:25-66
+199
+200                <category android:name="android.intent.category.LAUNCHER" />
+200-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:189:17-77
+200-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:189:27-74
+201            </intent-filter>
+202
+203            <meta-data
+203-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
+204                android:name="android.app.lib_name"
+204-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
+205                android:value="" />
+205-->C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
+206        </activity>
+207        <activity
+207-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:27:9-44:20
+208            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+208-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:28:13-80
+209            android:excludeFromRecents="true"
+209-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:29:13-46
+210            android:exported="true"
+210-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:30:13-36
+211            android:launchMode="singleTask"
+211-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:31:13-44
+212            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+212-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:32:13-72
+213            <intent-filter>
+213-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:33:13-43:29
+214                <action android:name="android.intent.action.VIEW" />
+214-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:17-69
+214-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:25-66
+215
+216                <category android:name="android.intent.category.DEFAULT" />
+216-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:17-76
+216-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:27-73
+217                <category android:name="android.intent.category.BROWSABLE" />
+217-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:17-78
+217-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:27-75
+218
+219                <data
+219-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:39:17-42:51
+220                    android:host="firebase.auth"
+220-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:40:21-49
+221                    android:path="/"
+221-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:41:21-37
+222                    android:scheme="genericidp" />
+222-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:42:21-48
+223            </intent-filter>
+224        </activity>
+225        <activity
+225-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:45:9-62:20
+226            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+226-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:46:13-79
+227            android:excludeFromRecents="true"
+227-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:47:13-46
+228            android:exported="true"
+228-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:48:13-36
+229            android:launchMode="singleTask"
+229-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:49:13-44
+230            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+230-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:50:13-72
+231            <intent-filter>
+231-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:51:13-61:29
+232                <action android:name="android.intent.action.VIEW" />
+232-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:17-69
+232-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:25-66
+233
+234                <category android:name="android.intent.category.DEFAULT" />
+234-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:17-76
+234-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:27-73
+235                <category android:name="android.intent.category.BROWSABLE" />
+235-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:17-78
+235-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:27-75
 236
-237        <service
-237-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:64:9-70:19
-238            android:name="com.google.firebase.components.ComponentDiscoveryService"
-238-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:65:13-84
-239            android:directBootAware="true"
-239-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:34:13-43
-240            android:exported="false" >
-240-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:66:13-37
-241            <meta-data
-241-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:67:13-69:85
-242                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-242-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:68:17-109
-243                android:value="com.google.firebase.components.ComponentRegistrar" />
-243-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:69:17-82
-244            <meta-data
-244-->[com.google.firebase:firebase-database:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\802044bf6455f412af7a8d2027c59c8b\transformed\firebase-database-20.1.0\AndroidManifest.xml:31:13-33:85
-245                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-245-->[com.google.firebase:firebase-database:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\802044bf6455f412af7a8d2027c59c8b\transformed\firebase-database-20.1.0\AndroidManifest.xml:32:17-109
-246                android:value="com.google.firebase.components.ComponentRegistrar" />
-246-->[com.google.firebase:firebase-database:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\802044bf6455f412af7a8d2027c59c8b\transformed\firebase-database-20.1.0\AndroidManifest.xml:33:17-82
-247            <meta-data
-247-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\79dc1955f4d9724194dd8a9809fbc5ab\transformed\firebase-storage-20.1.0\AndroidManifest.xml:32:13-34:85
-248                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-248-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\79dc1955f4d9724194dd8a9809fbc5ab\transformed\firebase-storage-20.1.0\AndroidManifest.xml:33:17-107
-249                android:value="com.google.firebase.components.ComponentRegistrar" />
-249-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\79dc1955f4d9724194dd8a9809fbc5ab\transformed\firebase-storage-20.1.0\AndroidManifest.xml:34:17-82
-250        </service>
-251
-252        <provider
-252-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
-253            android:name="com.google.firebase.provider.FirebaseInitProvider"
-253-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:26:13-77
-254            android:authorities="com.example.ottawamealer.firebaseinitprovider"
-254-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:27:13-72
-255            android:directBootAware="true"
-255-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:28:13-43
-256            android:exported="false"
-256-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:29:13-37
-257            android:initOrder="100" />
-257-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+237                <data
+237-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:39:17-42:51
+238                    android:host="firebase.auth"
+238-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:40:21-49
+239                    android:path="/"
+239-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:41:21-37
+240                    android:scheme="recaptcha" />
+240-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:42:21-48
+241            </intent-filter>
+242        </activity>
+243
+244        <service
+244-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:64:9-70:19
+245            android:name="com.google.firebase.components.ComponentDiscoveryService"
+245-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:65:13-84
+246            android:directBootAware="true"
+246-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+247            android:exported="false" >
+247-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:66:13-37
+248            <meta-data
+248-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:67:13-69:85
+249                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+249-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:68:17-109
+250                android:value="com.google.firebase.components.ComponentRegistrar" />
+250-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\97154\.gradle\caches\transforms-3\a0813034fd662e388f39868da2166e2e\transformed\firebase-auth-21.1.0\AndroidManifest.xml:69:17-82
+251            <meta-data
+251-->[com.google.firebase:firebase-database:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\802044bf6455f412af7a8d2027c59c8b\transformed\firebase-database-20.1.0\AndroidManifest.xml:31:13-33:85
+252                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+252-->[com.google.firebase:firebase-database:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\802044bf6455f412af7a8d2027c59c8b\transformed\firebase-database-20.1.0\AndroidManifest.xml:32:17-109
+253                android:value="com.google.firebase.components.ComponentRegistrar" />
+253-->[com.google.firebase:firebase-database:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\802044bf6455f412af7a8d2027c59c8b\transformed\firebase-database-20.1.0\AndroidManifest.xml:33:17-82
+254            <meta-data
+254-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\79dc1955f4d9724194dd8a9809fbc5ab\transformed\firebase-storage-20.1.0\AndroidManifest.xml:32:13-34:85
+255                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+255-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\79dc1955f4d9724194dd8a9809fbc5ab\transformed\firebase-storage-20.1.0\AndroidManifest.xml:33:17-107
+256                android:value="com.google.firebase.components.ComponentRegistrar" />
+256-->[com.google.firebase:firebase-storage:20.1.0] C:\Users\97154\.gradle\caches\transforms-3\79dc1955f4d9724194dd8a9809fbc5ab\transformed\firebase-storage-20.1.0\AndroidManifest.xml:34:17-82
+257        </service>
 258
-259        <activity
-259-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\97154\.gradle\caches\transforms-3\26b3666345201c303a3333024bb53271\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-260            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-260-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\97154\.gradle\caches\transforms-3\26b3666345201c303a3333024bb53271\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-261            android:exported="false"
-261-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\97154\.gradle\caches\transforms-3\26b3666345201c303a3333024bb53271\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-262            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-262-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\97154\.gradle\caches\transforms-3\26b3666345201c303a3333024bb53271\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-263
-264        <meta-data
-264-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\97154\.gradle\caches\transforms-3\0ccd676f36a88f843cf47f86b0f66e38\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-265            android:name="com.google.android.gms.version"
-265-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\97154\.gradle\caches\transforms-3\0ccd676f36a88f843cf47f86b0f66e38\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-266            android:value="@integer/google_play_services_version" />
-266-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\97154\.gradle\caches\transforms-3\0ccd676f36a88f843cf47f86b0f66e38\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
-267
-268        <provider
-268-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-269            android:name="androidx.startup.InitializationProvider"
-269-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-270            android:authorities="com.example.ottawamealer.androidx-startup"
-270-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-271            android:exported="false" >
-271-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-272            <meta-data
-272-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-273                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-273-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-274                android:value="androidx.startup" />
-274-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-275            <meta-data
-275-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\97154\.gradle\caches\transforms-3\4f04b5d013d4e9a91b26580011dee398\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-276                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-276-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\97154\.gradle\caches\transforms-3\4f04b5d013d4e9a91b26580011dee398\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-277                android:value="androidx.startup" />
-277-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\97154\.gradle\caches\transforms-3\4f04b5d013d4e9a91b26580011dee398\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-278        </provider>
-279    </application>
-280
-281</manifest>
+259        <provider
+259-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+260            android:name="com.google.firebase.provider.FirebaseInitProvider"
+260-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+261            android:authorities="com.example.ottawamealer.firebaseinitprovider"
+261-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+262            android:directBootAware="true"
+262-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+263            android:exported="false"
+263-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+264            android:initOrder="100" />
+264-->[com.google.firebase:firebase-common:20.2.0] C:\Users\97154\.gradle\caches\transforms-3\480b3dae7120d0220412229c8f9a6223\transformed\firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+265
+266        <activity
+266-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\97154\.gradle\caches\transforms-3\26b3666345201c303a3333024bb53271\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+267            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+267-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\97154\.gradle\caches\transforms-3\26b3666345201c303a3333024bb53271\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+268            android:exported="false"
+268-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\97154\.gradle\caches\transforms-3\26b3666345201c303a3333024bb53271\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+269            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+269-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\97154\.gradle\caches\transforms-3\26b3666345201c303a3333024bb53271\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+270
+271        <meta-data
+271-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\97154\.gradle\caches\transforms-3\0ccd676f36a88f843cf47f86b0f66e38\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+272            android:name="com.google.android.gms.version"
+272-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\97154\.gradle\caches\transforms-3\0ccd676f36a88f843cf47f86b0f66e38\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+273            android:value="@integer/google_play_services_version" />
+273-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\97154\.gradle\caches\transforms-3\0ccd676f36a88f843cf47f86b0f66e38\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+274
+275        <provider
+275-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+276            android:name="androidx.startup.InitializationProvider"
+276-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+277            android:authorities="com.example.ottawamealer.androidx-startup"
+277-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+278            android:exported="false" >
+278-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+279            <meta-data
+279-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+280                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+280-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+281                android:value="androidx.startup" />
+281-->[androidx.emoji2:emoji2:1.2.0] C:\Users\97154\.gradle\caches\transforms-3\2ed499a9972c76584289d61187c198e3\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+282            <meta-data
+282-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\97154\.gradle\caches\transforms-3\4f04b5d013d4e9a91b26580011dee398\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+283                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+283-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\97154\.gradle\caches\transforms-3\4f04b5d013d4e9a91b26580011dee398\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+284                android:value="androidx.startup" />
+284-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\97154\.gradle\caches\transforms-3\4f04b5d013d4e9a91b26580011dee398\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+285        </provider>
+286    </application>
+287
+288</manifest>

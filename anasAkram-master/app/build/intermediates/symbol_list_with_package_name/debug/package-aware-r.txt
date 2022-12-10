@@ -2978,6 +2978,7 @@ id off
 id on
 id onInterceptTouchReturnSwipe
 id ordersButton
+id ordersListView
 id outline
 id outward
 id overshoot
@@ -3296,6 +3297,7 @@ layout abc_tooltip
 layout activity_admin_inbox
 layout activity_cart
 layout activity_chef_complaint
+layout activity_client_requests
 layout activity_cook_active_menu
 layout activity_cook_menu
 layout activity_fire_cook

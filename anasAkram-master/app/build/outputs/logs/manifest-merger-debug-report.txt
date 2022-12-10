@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-191:12
-INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-191:12
-INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-191:12
-INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-191:12
+ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-198:12
+INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-198:12
+INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-198:12
+INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-198:12
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\97154\.gradle\caches\transforms-3\eca7f236a70dbe7915fa899436e02571\transformed\material-1.6.1\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\97154\.gradle\caches\transforms-3\44c24a0ba9562c7bda90cd6278db8032\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\97154\.gradle\caches\transforms-3\f50893122efcee79e80072a2d630c9f0\transformed\appcompat-resources-1.5.1\AndroidManifest.xml:17:1-22:12
@@ -58,27 +58,27 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\97154\.gradle\ca
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\97154\.gradle\caches\transforms-3\49bb1e0c9354c895378d519ab1595274\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\97154\.gradle\caches\transforms-3\287e9129767688a74707308a705a82e6\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\97154\.gradle\caches\transforms-3\ebc5cdc968831466331bfc76f957101c\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-191:12
-INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-191:12
-INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-191:12
+INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-198:12
+INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-198:12
+INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-198:12
 	package
 		INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-191:12
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-198:12
 		INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-191:12
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-198:12
 		INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-191:12
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:1-198:12
 		INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:5:5-189:19
+ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:5:5-196:19
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\97154\.gradle\caches\transforms-3\eca7f236a70dbe7915fa899436e02571\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\97154\.gradle\caches\transforms-3\eca7f236a70dbe7915fa899436e02571\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\97154\.gradle\caches\transforms-3\44c24a0ba9562c7bda90cd6278db8032\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -133,166 +133,172 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\97
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:13:9-50
 	android:dataExtractionRules
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.example.ottawamealer.Orders
+activity#com.example.ottawamealer.ClientRequests
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:15:9-21:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:17:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:16:13-35
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:16:13-43
 meta-data#android.app.lib_name
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:18:13-20:36
 	android:value
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:20:17-33
 	android:name
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:19:17-52
-activity#com.example.ottawamealer.Cart
+activity#com.example.ottawamealer.Orders
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:22:9-28:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:23:13-33
-activity#com.example.ottawamealer.VoidCheckUploadPage
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:23:13-35
+activity#com.example.ottawamealer.Cart
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:29:9-35:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:30:13-48
-activity#com.example.ottawamealer.SubmitComplaint
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:30:13-33
+activity#com.example.ottawamealer.VoidCheckUploadPage
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:36:9-42:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:38:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:37:13-44
-activity#com.example.ottawamealer.SearchMeal
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:37:13-48
+activity#com.example.ottawamealer.SubmitComplaint
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:43:9-49:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:44:13-39
-activity#com.example.ottawamealer.CookActiveMenu
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:44:13-44
+activity#com.example.ottawamealer.SearchMeal
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:50:9-56:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:52:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:51:13-43
-activity#com.example.ottawamealer.UpdateDeletePage
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:51:13-39
+activity#com.example.ottawamealer.CookActiveMenu
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:57:9-63:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:59:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:58:13-45
-activity#com.example.ottawamealer.UpdateMeal
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:58:13-43
+activity#com.example.ottawamealer.UpdateDeletePage
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:64:9-70:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:66:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:65:13-39
-activity#com.example.ottawamealer.AddIngrediants
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:65:13-45
+activity#com.example.ottawamealer.UpdateMeal
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:71:9-77:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:73:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:72:13-43
-activity#com.example.ottawamealer.NewMeal
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:72:13-39
+activity#com.example.ottawamealer.AddIngrediants
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:78:9-84:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:80:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:79:13-36
-activity#com.example.ottawamealer.CookMenu
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:79:13-43
+activity#com.example.ottawamealer.NewMeal
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:85:9-91:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:87:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:86:13-37
-activity#com.example.ottawamealer.ChefComplaint
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:86:13-36
+activity#com.example.ottawamealer.CookMenu
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:92:9-98:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:94:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:93:13-42
-activity#com.example.ottawamealer.IndefinetlySuspended
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:93:13-37
+activity#com.example.ottawamealer.ChefComplaint
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:99:9-105:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:101:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:100:13-49
-activity#com.example.ottawamealer.TemporarilySuspended
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:100:13-42
+activity#com.example.ottawamealer.IndefinetlySuspended
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:106:9-112:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:108:13-37
 	android:name
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:107:13-49
-activity#com.example.ottawamealer.FireCook
+activity#com.example.ottawamealer.TemporarilySuspended
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:113:9-119:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:115:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:114:13-37
-activity#com.example.ottawamealer.ListOfCooks
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:114:13-49
+activity#com.example.ottawamealer.FireCook
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:120:9-126:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:122:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:121:13-40
-activity#com.example.ottawamealer.AdminInbox
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:121:13-37
+activity#com.example.ottawamealer.ListOfCooks
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:127:9-133:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:129:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:128:13-39
-activity#com.example.ottawamealer.WelcomeAdmin
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:128:13-40
+activity#com.example.ottawamealer.AdminInbox
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:134:9-140:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:136:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:135:13-41
-activity#com.example.ottawamealer.WelcomeCook
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:135:13-39
+activity#com.example.ottawamealer.WelcomeAdmin
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:141:9-147:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:143:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:142:13-40
-activity#com.example.ottawamealer.RegisterCook
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:142:13-41
+activity#com.example.ottawamealer.WelcomeCook
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:148:9-154:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:150:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:149:13-41
-activity#com.example.ottawamealer.ForgotPassword
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:149:13-40
+activity#com.example.ottawamealer.RegisterCook
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:155:9-161:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:157:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:156:13-43
-activity#com.example.ottawamealer.Welcome
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:156:13-41
+activity#com.example.ottawamealer.ForgotPassword
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:162:9-168:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:164:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:163:13-36
-activity#com.example.ottawamealer.RegisterUser
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:163:13-43
+activity#com.example.ottawamealer.Welcome
 ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:169:9-175:20
 	android:exported
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:171:13-37
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:170:13-41
-activity#com.example.ottawamealer.MainActivity
-ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:176:9-188:20
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:170:13-36
+activity#com.example.ottawamealer.RegisterUser
+ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:176:9-182:20
 	android:exported
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:178:13-36
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:178:13-37
 	android:name
 		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:177:13-41
+activity#com.example.ottawamealer.MainActivity
+ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:183:9-195:20
+	android:exported
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:185:13-36
+	android:name
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:184:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:179:13-183:29
+ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:186:13-190:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:180:17-69
+ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:187:17-69
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:180:25-66
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:187:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:182:17-77
+ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:189:17-77
 	android:name
-		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:182:27-74
+		ADDED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml:189:27-74
 uses-sdk
 INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\97154\Documents\SEG Deliverable\Testing Github\project-group15\anasAkram-master\app\src\main\AndroidManifest.xml

@@ -99,6 +99,7 @@ id nameOfTheCook
 id newMealImage
 id numberOfItemsInCart
 id ordersButton
+id ordersListView
 id pendingRequestList
 id progressBar
 id progressBar2
@@ -160,6 +161,7 @@ id voidCheckUploadBtn
 layout activity_admin_inbox
 layout activity_cart
 layout activity_chef_complaint
+layout activity_client_requests
 layout activity_cook_active_menu
 layout activity_cook_menu
 layout activity_fire_cook

@@ -192,6 +192,10 @@
         "source": "com.example.ottawamealer.app-main-36:/layout/activity_requests.xml"
     },
     {
+        "merged": "com.example.ottawamealer.app-merged_res-34:/layout_activity_client_requests.xml.flat",
+        "source": "com.example.ottawamealer.app-main-36:/layout/activity_client_requests.xml"
+    },
+    {
         "merged": "com.example.ottawamealer.app-merged_res-34:/mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "com.example.ottawamealer.app-debug-35:/mipmap-hdpi/ic_launcher_round.png"
     },
