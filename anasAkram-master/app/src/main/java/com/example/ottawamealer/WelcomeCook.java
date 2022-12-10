@@ -87,18 +87,7 @@ public class WelcomeCook extends AppCompatActivity {
         goToRequestBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(WelcomeCook.this,Requests.class);
-                startActivity(intent);
-            }
-        });
-
-
-
-        Button clickThisButton = (Button) findViewById(R.id.clickThisButton);
-        clickThisButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(WelcomeCook.this,RandomTest.class);
+                Intent intent = new Intent(WelcomeCook.this,Orders.class);
                 startActivity(intent);
             }
         });

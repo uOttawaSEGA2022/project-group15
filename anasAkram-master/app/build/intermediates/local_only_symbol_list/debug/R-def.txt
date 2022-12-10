@@ -11,6 +11,7 @@ drawable admin
 drawable borderbottom
 drawable bordertop
 drawable cart
+drawable check_mark
 drawable ic_description_icon
 drawable ic_email_icon
 drawable ic_launcher_background
@@ -23,6 +24,7 @@ drawable lock1
 drawable logo2
 drawable mainbackground
 drawable new_background
+drawable x_mark
 id CVV
 id ForgotPassword
 id ProfilePic
@@ -36,20 +38,23 @@ id addMeal
 id addToCartBtn
 id address
 id addressc
+id approveButton
 id approvedRequestList
 id bannerc
 id cancelBtn
+id cancelButton
 id cart
 id cartListView
 id checkoutBtn
-id clickThisButton
 id complaint
 id container
 id cooKMenuRecycler
 id cookName
 id credit_card
 id cuisineType
+id customer
 id date_view
+id declineButton
 id deleteMeal
 id description
 id dismiss
@@ -67,6 +72,7 @@ id foodImage
 id foodImageRecycler
 id foodNameRecycler
 id goHome
+id homeButton
 id imageView
 id inbox_admin_button
 id indSuspended
@@ -74,6 +80,8 @@ id lastName
 id lastNamec
 id listOfComplaints
 id listOfIngredients
+id listViewOfApprovedOrders
+id listViewOfPendingOrders
 id listViewSearchResult
 id logOut
 id logOutc
@@ -89,6 +97,7 @@ id nameOfTheComplaint
 id nameOfTheCook
 id newMealImage
 id numberOfItemsInCart
+id ordersButton
 id pendingRequestList
 id progressBar
 id progressBar2
@@ -159,6 +168,7 @@ layout activity_list_of_cooks
 layout activity_main
 layout activity_meal_search_result_details
 layout activity_new_meal
+layout activity_orders
 layout activity_random_test
 layout activity_register_cook
 layout activity_register_user
@@ -175,6 +185,7 @@ layout complaint_list
 layout cook_menu_item
 layout food_list
 layout meal_type
+layout request_item
 mipmap ic_launcher
 mipmap ic_launcher_background
 mipmap ic_launcher_foreground

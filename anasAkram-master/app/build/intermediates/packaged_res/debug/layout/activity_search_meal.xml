@@ -20,8 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="330dp"
             android:text="#"
-            android:textSize="20sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <ImageView
             android:id="@+id/cart"

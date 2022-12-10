@@ -460,13 +460,19 @@ public class SearchMeal extends AppCompatActivity implements View.OnClickListene
             //update tmpRef
             String cookName = meal.getCookName();
 
+            //take time
+            long crntTime = System.nanoTime();
+
 
             //create request
-            MealRequest mealRequest = new MealRequest(meal);
+            MealRequest mealRequest = new MealRequest(meal,crntTime);
 
-            tmpRef.child(cookName).push().setValue(mealRequest);
-
+            tmpRef.child(cookName).child(crntTime+"").setValue(mealRequest);
         }
+
+        meals.clear();
+        numberOfItemsInCartInt = 0;
+        numberOfItemsInCart.setText(Integer. toString(numberOfItemsInCartInt));
     }
 
     //check cook status for cook!!!!!!!!

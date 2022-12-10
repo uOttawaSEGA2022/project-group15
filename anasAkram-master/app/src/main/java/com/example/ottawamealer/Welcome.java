@@ -23,7 +23,7 @@ public class Welcome extends AppCompatActivity {
     TextView textView;
 
     private Button logout, menuButton;
-    private Button makeComplaint;
+    private Button makeComplaint, ordersButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class Welcome extends AppCompatActivity {
 
         logout = (Button) findViewById(R.id.logOut);
         menuButton = (Button) findViewById(R.id.menuButton);
+        ordersButton = (Button) findViewById(R.id.ordersButton);
         textView =(TextView) findViewById(R.id.textView) ;
 
 
@@ -70,6 +71,15 @@ public class Welcome extends AppCompatActivity {
 
         makeComplaint = (Button) findViewById(R.id.makeComplaint);
         makeComplaint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Welcome.this,ChefComplaint.class);
+
+                startActivity(intent);
+            }
+        });
+
+        ordersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Welcome.this,ChefComplaint.class);

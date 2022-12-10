@@ -13,14 +13,7 @@
         android:theme="@style/Theme.OttawaMealer"
         tools:targetApi="31">
         <activity
-            android:name=".RandomTest"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Requests"
+            android:name=".Orders"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

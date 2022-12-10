@@ -4,7 +4,14 @@ public class MealRequest {
     Meal meal;
     enum Status {Pending,Accepted,Denied}
     Status status;
+    String ID;
 
+    public MealRequest(){}
+
+    public MealRequest(Meal meal, long ID) {
+        this.meal = meal;
+        this.ID = ID+"";
+    }
 
     public MealRequest(Meal meal) {
         this.meal = meal;
@@ -56,4 +63,11 @@ public class MealRequest {
         status = Status.Denied;
     }
 
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
 }
