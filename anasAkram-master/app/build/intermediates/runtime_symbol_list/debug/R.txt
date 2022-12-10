@@ -2976,6 +2976,7 @@ int id off 0x7f08018e
 int id on 0x7f08018f
 int id onInterceptTouchReturnSwipe 0x7f080190
 int id ordersButton 0x7f080191
+int id ordersListView 0x7f080273
 int id outline 0x7f080192
 int id outward 0x7f080193
 int id overshoot 0x7f080194
@@ -3294,6 +3295,7 @@ int layout abc_tooltip 0x7f0b001b
 int layout activity_admin_inbox 0x7f0b001c
 int layout activity_cart 0x7f0b001d
 int layout activity_chef_complaint 0x7f0b001e
+int layout activity_client_requests 0x7f0b0096
 int layout activity_cook_active_menu 0x7f0b001f
 int layout activity_cook_menu 0x7f0b0020
 int layout activity_fire_cook 0x7f0b0021

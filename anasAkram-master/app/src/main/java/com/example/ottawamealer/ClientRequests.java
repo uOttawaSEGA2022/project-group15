@@ -19,6 +19,6 @@ public class ClientRequests extends AppCompatActivity {
         ordersListView = (ListView) findViewById(R.id.ordersListView);
         cancelBtn = (Button) findViewById(R.id.cancelBtn);
 
-        
+
     }
 }
