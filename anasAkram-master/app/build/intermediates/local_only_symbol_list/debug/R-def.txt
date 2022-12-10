@@ -83,6 +83,7 @@ id listOfComplaints
 id listOfIngredients
 id listViewOfApprovedOrders
 id listViewOfPendingOrders
+id listViewOfRejectedOrders
 id listViewSearchResult
 id logOut
 id logOutc
@@ -171,6 +172,7 @@ layout activity_list_of_cooks
 layout activity_main
 layout activity_meal_search_result_details
 layout activity_new_meal
+layout activity_order_client
 layout activity_orders
 layout activity_random_test
 layout activity_register_cook

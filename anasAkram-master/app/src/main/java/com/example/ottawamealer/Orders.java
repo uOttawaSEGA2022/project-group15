@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -33,6 +34,9 @@ public class Orders extends AppCompatActivity {
     //full name
     String fullName;
 
+
+    Button goHome;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +54,15 @@ public class Orders extends AppCompatActivity {
 
 
 
+
+        goHome = (Button) findViewById(R.id.homeButton);
+        goHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Orders.this,WelcomeCook.class);
+                startActivity(intent);
+            }
+        });
 
 
         //for accepted list
@@ -94,15 +107,18 @@ public class Orders extends AppCompatActivity {
 
 
                 acceptedReference = FirebaseDatabase.getInstance().getReference("Requests")
-                        .child("Accepted").child(userID);
+                        .child("Accepted").child(fullName);
                 acceptedReference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         approvedArrayList.clear();
                         for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-
-
+                            MealRequest mealRequest = dataSnapshot.getValue(MealRequest.class);
+                            approvedArrayList.add(mealRequest);
                         }
+                        AcceptedRequestAdapter requestAdapter = new AcceptedRequestAdapter(Orders.this,approvedArrayList);
+                        approvedListView.setAdapter(requestAdapter);
+
                     }
 
                     @Override
@@ -112,12 +128,13 @@ public class Orders extends AppCompatActivity {
                 });
 
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+
             }
         });
+
 
 
 

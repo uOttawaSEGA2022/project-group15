@@ -24,47 +24,61 @@ public class ExampleUnitTest {
     @Test
     public void testCheckEmail() {
 
-        User u = new User("Anas","Hammou","anashammou2003@gmail.com");
+        User u = new User("Anas", "Hammou", "anashammou2003@gmail.com");
         assertEquals(true, u.checkEmail(u.getEmail()));
     }
+
     @Test
     public void testCheckFirstName() {
-        User u = new User("","Hammou","anashammou2003@gmail.com");
-        assertEquals(false,u.checkFirstName(u.getFirstName()));
+        User u = new User("", "Hammou", "anashammou2003@gmail.com");
+        assertEquals(false, u.checkFirstName(u.getFirstName()));
     }
 
     @Test
     public void testCheckLastName() {
-        User u = new User("Anas","Hammou","anashammou2003@gmail.com");
-        assertEquals(true,u.checkLastName((u.getLastName())));
+        User u = new User("Anas", "Hammou", "anashammou2003@gmail.com");
+        assertEquals(true, u.checkLastName((u.getLastName())));
 
     }
 
     @Test
     public void testCheckUserClient() {
-        User u = new User("Anas","Hammou","anashammou2003@gmail.com");
-        assertEquals("Anas Hammou",u.getFullName() );
+        User u = new User("Anas", "Hammou", "anashammou2003@gmail.com");
+        assertEquals("Anas Hammou", u.getFullName());
     }
 
 
 
     @Test
-    public void testPendingRequest(){
+    public void testUserCookSetter(){
+        Meal meal = new Meal();
+        MealRequest mealRequest = new MealRequest(meal,121221,"");
+        mealRequest.setID("121212121");
+        assertNotEquals("121221",mealRequest.getID());
+
+    }
+
+    @Test
+    public void testPendingRequest() {
         Meal meal = new Meal();
         MealRequest mealRequest = new MealRequest(meal);
-        assertEquals(true,mealRequest.isPending());
+        assertEquals(true, mealRequest.isPending());
     }
 
     @Test
-    public void testAcceptedRequest(){
+    public void testAcceptedRequest() {
         Meal meal = new Meal();
         MealRequest mealRequest = new MealRequest(meal);
         mealRequest.acceptRequest();
-        assertEquals(true,mealRequest.isAccepted());
+        assertEquals(true, mealRequest.isAccepted());
 
     }
 
-
-    // Additional 3 test cases units
-
+    @Test
+    public void testRejectedRequest() {
+        Meal meal = new Meal();
+        MealRequest mealRequest = new MealRequest(meal, 1232, "Akram");
+        String customer = "Anas";
+        assertNotEquals(customer, "Akram");
     }
+}

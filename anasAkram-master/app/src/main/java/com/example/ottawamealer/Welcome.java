@@ -86,8 +86,8 @@ Welcome extends AppCompatActivity {
         ordersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Welcome.this,ChefComplaint.class);
-
+                Intent intent = new Intent(Welcome.this,OrderClient.class);
+                intent.putExtra("Customer",fullName);
                 startActivity(intent);
             }
         });

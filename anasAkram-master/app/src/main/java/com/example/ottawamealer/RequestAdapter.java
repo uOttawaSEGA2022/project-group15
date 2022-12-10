@@ -103,6 +103,29 @@ public class RequestAdapter extends ArrayAdapter<MealRequest> {
         });
 
 
+        declineButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MealRequest mealRequest = mealRequests.get(position);
+
+                //remove, then update
+                mealRequests.remove(position);
+                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Requests");
+                reference.child("Pending").child(fullName).child(mealRequest.getID()).setValue(null);
+
+
+
+
+                mealRequest.acceptRequest();
+
+
+                //add to firebase
+                reference.child("Declined").child(fullName).child(mealRequest.getID()).setValue(mealRequest);
+                notifyDataSetChanged();
+            }
+        });
+
+
 
 
         return listViewItem;
